@@ -1,4 +1,4 @@
-public class Question11{
+public class Question1_11{
   public static void main(String[] args)
   {
     final long CURRENT_POPULATION = 312032486;
@@ -15,6 +15,6 @@ public class Question11{
       runningPopulationCount = runningPopulationCount + yearlyBirths - yearlyDeaths + yearlyImmigrants;
       System.out.println("After Year " + i +": " + runningPopulationCount);
     }
-    
+
   }
 }

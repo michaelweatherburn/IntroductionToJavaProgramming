@@ -1,4 +1,4 @@
-public class Question4{
+public class Question1_4{
   public static void main(String[] args)
   {
     System.out.println("a\ta^2\ta^3");

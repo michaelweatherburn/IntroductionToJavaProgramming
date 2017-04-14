@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question9{
+public class Question1_9{
   public static void main(String[] args)
   {
       Scanner scannerObject = new Scanner(System.in);
@@ -17,6 +17,6 @@ public class Question9{
       System.out.println("Area: " + area);
       System.out.println("Perimeter: " + perimeter);
 
-      
+
   }
 }

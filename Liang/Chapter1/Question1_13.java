@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question13
+public class Question1_13
 {
   public static void main(String[] args)
   {
