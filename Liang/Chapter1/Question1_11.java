@@ -10,7 +10,7 @@ public class Question1_11{
     long yearlyImmigrants = secondsInAYear/45;
 
     System.out.println("Before: " + CURRENT_POPULATION);
-    for(int i = 0; i <= 5; i++)
+    for(int i = 1; i <= 5; i++)
     {
       runningPopulationCount = runningPopulationCount + yearlyBirths - yearlyDeaths + yearlyImmigrants;
       System.out.println("After Year " + i +": " + runningPopulationCount);
