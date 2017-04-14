@@ -9,7 +9,7 @@ public class IncrementAndDecrementOperators
     i = i++ + i;
     System.out.println(i);
 
-    i = i++ + i;
+    i = i + ++i;
     System.out.println(i);
 
     i = --i + i;
