@@ -1,0 +1,56 @@
+Java:
+
+1) The difference between specific import and wildcard import, and the fact that there is no performance difference between the two forms of import
+
+2) Types of errors, syntactical, semantic and logical errors
+
+3) The fact that you cannot break a string into different lines i.e. you-
+
+System.out.println("This is a <Enter>
+string on two lines");
+
+-CANNOT do this. The right way to do this is:
+
+System.out.println("This is a " +
+"string on two lines");
+
+4) The time in milliseconds since the Unix Epoch (00:00:00 Hours, 01-01-1970)
+is given by the method System.currentTimeMillis()
+
+5) Math.pow(a, b) is used to calculate a raised to the power b. There are differences in the answers of a * a and Math.pow(a, 2).
+
+6) Math.random() is used to obtain a single double value a such that 0<= a < 1. We can extend this to obtain a whole range of random numbers.
+
+7) Java identifiers can contain A-Z, a-z, 0-9, _ and $ as well. An identifier can also begin with a $.
+
+8) You can put _s between numbers to improve the readability. However the _ must be between the beginning numeral and the ending numeral of the number. So 567_798_11 is correct, while _3434 or 9090_ are wrong.
+
+9) Assignments like
+
+a += b;
+a -= b;
+
+and the like are called augmented assignments. There is a seemingly explicit type casting rule being applied here, since:
+
+a op=b;
+
+expands to
+a = ( typeof(a) ) (a op b);
+
+...and not a = a op b as one might naturally assume.
+
+9) System.exit(status) is used to halt the JVM. Status is an integer value that is reffering to the status code you wish to pass to JVM. 0 means successfully executed, while any other interger, usually 1, indicates unsuccessful execution.
+
+10) Using the modulus operator is also possible for floating-point numbers in Java and doing so returns remainder/divisor (yes, as a double/float value, according to the datatypes involved in the expression).
+
+11) Java uses performance improved Logical AND and Logical OR operators. These operators are also called lazy or short-circuit operators.
+
+p1 && p2;
+p1 || p2;
+
+p1 is evaluated first. If p1 is false, p1 && p2 will never be true, so it doesn't bother evaluating p2. Similarly if p1 is true, p1 || p2 will evaluate to true, no matter what. There is no point evaluating p2 to know its truth value.
+
+12) The only allowed values to the input in a switch statement in Java:
+byte, short, int, char, String
+
+13) If you don't 
