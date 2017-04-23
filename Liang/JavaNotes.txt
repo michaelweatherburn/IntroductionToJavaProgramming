@@ -52,5 +52,3 @@ p1 is evaluated first. If p1 is false, p1 && p2 will never be true, so it doesn'
 
 12) The only allowed values to the input in a switch statement in Java:
 byte, short, int, char, String
-
-13) If you don't 
