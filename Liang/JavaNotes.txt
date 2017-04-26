@@ -19,7 +19,7 @@ is given by the method System.currentTimeMillis()
 
 5) Math.pow(a, b) is used to calculate a raised to the power b. There are differences in the answers of a * a and Math.pow(a, 2).
 
-6) Math.random() is used to obtain a single double value a such that 0<= a < 1. We can extend this to obtain a whole range of random numbers.
+6) Math.random() is used to obtain a single double value a such that 0 <= a < 1. We can extend this to obtain a whole range of random numbers. Note that if Math.random() is typecasted to an int, you'll get 0.
 
 7) Java identifiers can contain A-Z, a-z, 0-9, _ and $ as well. An identifier can also begin with a $.
 
