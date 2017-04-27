@@ -23,14 +23,14 @@ public class Question3_27
     y = scannerObject.nextDouble();
 
     //first things first: check whether the point lies in the first quadrant
-    //after that bring in the calculated value of y from the third equation
+    //after that bring in the calculated value of y from the third equation (hypotenuse)
     if(x > 0 && y > 0 && y < (200 - x) / 2)
     {
       System.out.println("The point is in the triangle. ");
     }
     else
     {
-      System.out.println("The point is outside the triangle. ");  
+      System.out.println("The point is outside the triangle. ");
     }
   }
 }
