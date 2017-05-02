@@ -14,7 +14,7 @@ string on two lines");
 System.out.println("This is a " +
 "string on two lines");
 
-4) The time in milliseconds since the Unix Epoch (00:00:00 Hours, 01-01-1970)
+4) The time in milliseconds since the Unix Epoch (00:00:00, 01-01-1970)
 is given by the method System.currentTimeMillis()
 
 5) Math.pow(a, b) is used to calculate a raised to the power b. There are differences in the answers of a * a and Math.pow(a, 2).
@@ -52,3 +52,24 @@ p1 is evaluated first. If p1 is false, p1 && p2 will never be true, so it doesn'
 
 12) The only allowed values to the input in a switch statement in Java:
 byte, short, int, char, String
+
+13) Math class has three categories of methods:
+a) Trigonometric Methods
+b) Exponent Methods
+c) Service Methods
+
+...and two double constants
+
+Math.PI
+Math.E
+
+a) Trigonometric Methods:
+Math.sin(rad), Math.cos(rad), Math.tan(rad) are trig functions
+Math.(rad), Math.toRadians(deg) are unit converters
+Math.asin(double), Math.acos(double) and Math.atan(double) are inverse trig functions
+
+b) Exponent Methods:
+Math.exp(exponent), Math.log(number), Math.log10(number), Math.pow(base, exponent), Math.sqrt(num)
+
+c) Service Methods:
+Math.min(), Math.max(), Math.ceil(), Math.floor(), Math.rint(), Math.round() and others
