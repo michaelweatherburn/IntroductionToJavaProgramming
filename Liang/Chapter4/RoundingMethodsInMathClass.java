@@ -1,5 +1,42 @@
 public class RoundingMethodsInMathClass
 {
+  //overloaded a custom function typeof to behave as we want :)
+  public static String typeof(byte byteValue){
+    return "byte";
+  }
+
+  public static String typeof(short shortValue){
+    return "short";
+  }
+
+  public static String typeof(int intValue){
+    return "int";
+  }
+
+  public static String typeof(long longValue){
+    return "long";
+  }
+
+  public static String typeof(float floatValue){
+    return "float";
+  }
+
+  public static String typeof(double doubleValue){
+    return "double";
+  }
+
+  public static String typeof(char charValue){
+    return "char";
+  }
+
+  public static String typeof(String stringvalue){
+    return "string";
+  }
+
+  public static String typeof(Object objectValue){
+    return "Object";
+  }
+
   public static void main(String[] args)
   {
     System.out.println("Math.ceil(2.30) " + Math.ceil(2.30));
@@ -26,8 +63,12 @@ public class RoundingMethodsInMathClass
       0.5 <= input < 1, Math.ceil() behaviour is observed
     */
 
+    System.out.println(typeof(Math.round(3.4f)));
+    System.out.println(typeof(Math.round(3.4)));
+
     System.out.println(Math.round(3.4));
     System.out.println(Math.round(3.5));
     System.out.println(Math.round(3.6));
+
   }
 }

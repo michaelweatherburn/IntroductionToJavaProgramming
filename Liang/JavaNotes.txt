@@ -73,3 +73,5 @@ Math.exp(exponent), Math.log(number), Math.log10(number), Math.pow(base, exponen
 
 c) Service Methods:
 Math.min(), Math.max(), Math.ceil(), Math.floor(), Math.rint(), Math.round() and others
+
+14) All classes inside the java.lang package are implicitly imported into all Java files. That is why we can use the constants and methods of the  java.lang.Math class directly without having to import it.
