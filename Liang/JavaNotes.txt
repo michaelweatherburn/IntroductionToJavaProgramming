@@ -72,6 +72,38 @@ b) Exponent Methods:
 Math.exp(exponent), Math.log(number), Math.log10(number), Math.pow(base, exponent), Math.sqrt(num)
 
 c) Service Methods:
-Math.min(), Math.max(), Math.ceil(), Math.floor(), Math.rint(), Math.round() and others
+Math.abs(), Math.random(), Math.min(), Math.max(), Math.ceil(), Math.floor(), Math.rint(), Math.round() and others
 
 14) All classes inside the java.lang package are implicitly imported into all Java files. That is why we can use the constants and methods of the  java.lang.Math class directly without having to import it.
+
+15) Exponent Methods:
+Math.log(number) takes a logarithm with Math.E as base. Math.log10() takes a logarithm with 10 as base.
+
+16) Service Methods:
+Math.rint() rounds the number toward the closest even integer if the decimal part of the input is 0.5.
+Math.round() rounds the number forward when the decimal part of the input is 0.5.
+Math.round(), unlike other rounding methods in the Math class, does not return an integer as a double. It:
+
+a) returns long if the input passed to it was in the double format;
+b) returns int if the input passed to it was in the float format
+
+17) Encoding is the process of mapping a character with a corresponding (binary) number. The map itself is called an Encoding Scheme. Examples: ASCII, Unicode.
+ Unicode is a 16-bit character encoding scheme. It was originally designed to have 65,535 (2^16) characters. But the current character set of Unicode has more characters called supplementary characters. But using a char variable we can only store the first 65536 Unicode characters.
+
+18) To represent a:
+a) Binary number literal, use 0B/0b as prefixes:
+0B00001, 0b10101
+b) Hexadecimal number literal, use 0x/0X as prefixes:
+0xAB, 0X16B
+c) Octal number literal, use 0 as prefix:
+012 is octal 12, 12 is decimal 12.
+
+19) To represent Unicode characters, we can use the Unicode (16-bit, or UTF-16) character convention:
+\u followed by 4 hexadecimal characters to represent the Unicode character. Note that UTF-16 has since between updated to support multiple languages that were added after the 65,536 limit was crossed. The char datatype can NOT be used to directly add these characters into Java programs. But Unicode supports most Indian languages, including Hindi (and all other languages using the Devanagari Script) and Odiya.
+
+\u0030 represents '0', \u0041 represents 'A', and so on.
+The range is ideally 0000 to FFFF, but some characters from the range 0800 to 08FF are not used.
+
+Using the \u notation, every character in the UTF-16 set can be escaped (made into an escape sequence character).
+
+20)
