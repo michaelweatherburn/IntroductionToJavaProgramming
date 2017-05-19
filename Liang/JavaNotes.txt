@@ -106,4 +106,62 @@ The range is ideally 0000 to FFFF, but some characters from the range 0800 to 08
 
 Using the \u notation, every character in the UTF-16 set can be escaped (made into an escape sequence character).
 
-20)
+20) Methods in the Character (wrapper) class include:
+a) Relational Methods:
+Character.isLetter(char)
+Character.isDigit(char)
+Character.isLetterOrDigit(char)
+Character.isUpperCase(char)
+Character.isLowerCase(char)
+
+b) Conversion Methods:
+Character.toLowerCase(char)
+Character.toUpperCase(char)
+
+21) Useful instance (non-static) methods in the String object include:
+stringObject.length()
+stringObject.charAt(index)
+stringObject.trim()
+stringObject.toUpperCase()
+stringObject.toLowerCase()
+
+
+22) In Java, both the operators + (addition) and += (augmented addition) serve as overloaded operators. The overloading is contextual.
+
+a) If both the inputs are of the type char/numbers, then addition occurs.
+b) If either or both the inputs are of type String, concatenation occurs. The input which is not of the String type is converted to its' String equivalent.
+
+Remember that all operators in the arithmetic section of the operator precedence table have left-to-right precedence. This means that concatenation is also performed in left-to-right order. For instance:
+
+int a = 3;
+int b = 4;
+System.out.println("The sum is " + a + b);
+
+will output The sum is 34. This is because:
+a) "The sum is " + 3 would be performed first. Seeing as 3 is an integer, it would be converted to its String equivalent, "3".
+b) Concatenation happens. The expression is now "The sum is 3" + 4.
+c) The process repeats for 4. First conversion to "4" and then concatenation. Result: "The sum is 34".
+
+To avoid the use of LTR, use brackets, like so: ("The sum is " + (a + b));
+
+23) The concatenation method and the plus operator can do the same thing. So,
+String thirdString = firstString + secondString;
+and
+String thirdString = firstString.concat(secondString);
+do the same thing.
+
+24) You do NOT NEED a reference variable to carry out computations on an object. An object literal CAN be used in place of the object reference variable.
+
+For instance,
+String message = "thisPersonIsASentientBeing";
+System.out.println(thisPersonIsASentientBeing.charAt(5));
+
+is the same as:
+System.out.println("thisPersonIsASentientBeing".charAt(5));
+
+So yes, you can call non-static (instance) methods of a Class directly from that class' object literal.
+
+25) You should not call nextLine() immediately after the methods:
+nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble(), next()
+
+This is because of the other methods leaving the newline character intact, which is unfortunately picked up by nextLine().
