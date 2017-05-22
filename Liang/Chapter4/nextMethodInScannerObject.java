@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class nextMethodInScannerObject
+public class NextMethodInScannerObject
 {
   public static void main(String[] args)
   {
