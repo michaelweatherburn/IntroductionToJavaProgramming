@@ -1,4 +1,4 @@
-public class MethodsInStringObjects
+public class BasicMethodsInStringObject
 {
   public static void main(String[] args)
   {
