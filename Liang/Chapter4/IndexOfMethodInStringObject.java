@@ -29,6 +29,15 @@ public class IndexOfMethodInStringObject
     System.out.println(greeting.indexOf("there"));  // 4. Notice that the first index of the substring is returned on the index match
     System.out.println(greeting.indexOf("re")); // 7
     System.out.println(greeting.indexOf("he"));   // 0
-    System.out.println(greeting.indexOf("he", 1));  //  
+    System.out.println(greeting.indexOf("he", 1));  //notice that counting from 1, the 'h' in the first occurence of substring "he" is not visible to the program, hence the second instance is considered.
+
+    String s1 = "Welcome to Java";
+    System.out.println(s1.indexOf('W'));  //0
+    System.out.println(s1.indexOf('o'));  //4
+    System.out.println(s1.indexOf('o', 5)); //9
+    System.out.println(s1.indexOf("come")); //3
+    System.out.println(s1.indexOf("Java", 5));  //-1
+    System.out.println(s1.indexOf("Java")); //11
+
   }
 }

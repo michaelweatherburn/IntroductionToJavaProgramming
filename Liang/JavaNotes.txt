@@ -118,13 +118,12 @@ b) Conversion Methods:
 Character.toLowerCase(char)
 Character.toUpperCase(char)
 
-21) Useful instance (non-static) methods in the String object include:
-stringObject.length()
-stringObject.charAt(index)
-stringObject.trim()
-stringObject.toUpperCase()
-stringObject.toLowerCase()
-
+21) Useful basic instance (non-static) methods in the String object include:
+stringObject.length(), returns the length as an int
+stringObject.charAt(index), returns the char at specified index, returns int
+stringObject.trim(), removes whitespaces on both ends of String, returns new String
+stringObject.toUpperCase(), returns new String
+stringObject.toLowerCase(), returns new String
 
 22) In Java, both the operators + (addition) and += (augmented addition) serve as overloaded operators. The overloading is contextual.
 
@@ -164,4 +163,32 @@ So yes, you can call non-static (instance) methods of a Class directly from that
 25) You should not call nextLine() immediately after the methods:
 nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble(), next()
 
-This is because of the other methods leaving the newline character intact, which is unfortunately picked up by nextLine().
+These methods (also called token-delimited methods) do not remove the delimiter called newline ('\n') from the buffer when they're done. They are designed to skip over any whitespace characters if they encounter those characters at the beginning of the buffer (i.e. before any reasonable input has begun).
+
+nextLine(), however, is different. nextLine() is delimited ONLY by a newline character, not any other whitespace character. Also, nextLine() does not skip over any newline characters already present inside the input buffer.
+
+26) String object methods on String Comparison include:
+
+a) stringObject.equals(s2), checks first for reference equality, and then content equality, returns boolean
+b) stringObject.equalsIgnoreCase(s2), same as above, ignores the difference between uppercase and lowercase, returns boolean
+c) stringObject.compareTo(s2) Compares both strings character-by-character from beginning-to-end, scanning for differences. If a character mismatch is found, it returns the difference between the Unicode values of the two characters.
+
+If compareTo returned 0, both strings are identical.
+If compareTo returned a positive value, the character which marks the point of difference between stringObject and s2, has a higher Unicode value for StringObject than that in s2,
+returns int.
+d) stringObject.compareToIgnoreCase(s2) Same as above method, but does not consider the differences between uppercase and lowercase letters, returns int.
+e) stringObject.startsWith(s2) Checks if s2 is a prefix (substring) of stringObject, returns boolean
+f) stringObject.endsWith(s2) Checks if s2 is a suffix (substring) of StringObject, returns boolean
+g) stringObject.contains(s2) Checks whether s2 is a substring of stringObject. (Literally checks whether stringObject "contains" s2).
+
+27) String object methods on Finding Characters/Substrings are:
+a) stringObject.indexOf(ch) Returns the (int) index of the first occurrence of the character ch. Checks from beginning to end (in the forward direction).
+b) stringObject.indexOf(ch, fromIndex) Same as above, but checks from the index fromIndex (inclusive) to the end (in the forward direction).
+c) stringObject.indexOf(s2) Same as a), but works for substrings.
+d) stringObject.indexOf(s2, fromIndex) Same as b), but works for substrings.
+
+e) stringObject.lastIndexOf(ch)
+f) stringObject.lastIndexOf(ch, fromIndex)
+g) stringObject.lastIndexOf(s2)
+h) stringObject.lastIndexOf(s2, fromIndex)
+These methods are analogous to indexOf, but check from end to beginning (in the reverse direction).
