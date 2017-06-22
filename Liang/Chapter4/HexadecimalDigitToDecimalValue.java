@@ -19,7 +19,7 @@ public class HexadecimalDigitToDecimalValue
     }
     else
     {
-      System.out.print("The decimal equivalent: ");
+      System.out.print("The decimal value for hex digit " + userInput.charAt(0) + ": ");
       switch(userInput.charAt(0))
       {
         case '0':
