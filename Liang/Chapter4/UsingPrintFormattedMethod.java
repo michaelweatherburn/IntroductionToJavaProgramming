@@ -9,6 +9,8 @@ public class UsingPrintFormattedMethod
     System.out.printf("A few integers are: %5d, %6d and %7d", 1, 34, 456);
     System.out.printf("\nA few characters are: %5c, %6c, %7c", 'a', 'b', 'c');
     System.out.printf("\nA few floating-point numbers are: %5.2f, %10.5f, %7.4f", 1.1, 23.32, 45.45);
+    System.out.printf("\nBoolean numbers are: %10b, %11b", true, false);
+    System.out.printf("\nRandom string value: %10s", "hello");
 
     /* In case of floating point numbers, there is this takeaway:
       1) If there are more digits of precision provided than there are numbers after the zero, there would be extra zeroes added after the number is written.
