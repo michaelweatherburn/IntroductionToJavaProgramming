@@ -1,5 +1,3 @@
-Java:
-
 1) The difference between specific import and wildcard import, and the fact that there is no performance difference between the two forms of import
 
 2) Types of errors, syntactical, semantic and logical errors
@@ -192,3 +190,17 @@ f) stringObject.lastIndexOf(ch, fromIndex)
 g) stringObject.lastIndexOf(s2)
 h) stringObject.lastIndexOf(s2, fromIndex)
 These methods are analogous to indexOf, but check from end to beginning (in the reverse direction).
+
+28) The System.out.printf method allows us to print formatted output the same way printf() function in C allowed us to. As an example:
+
+System.out.printf("\n %5.2f", 12.345);
+Here, the result would be 12.35.
+
+The % symbol inside the printf method is used to mark the beginning of a format placeholder.
+5 is the minimum field width specified for this number. A minimum of 5 places would be reserved for printing this number. Each character within the representation counts as one place.
+2 represents the exact precision reserved for the decimal part of the number. The precision value is non-negotiable. If two units are mentioned for the precision, and there are three numbers after the decimal point in the actual number, there will be rounding off observed. If there would have been less digits in the actual number than what the precision in the format demands, the extra space after the number would be filled by adding the required number of trailing zeroes.
+For minimum field width the logic is different. If there are less number of characters to occupy the minimum width (on the left hand side of the number/String/character/boolean) the extra places would be filled with blank spaces (' '). If there are more characters to represent than the minimum field width can possibly represent, that width is not observed (hence the name, MINIMUM field width).
+You can also flip the way the content inside the placeholder is aligned (it is right-aligned by defult) to left-aligned by adding a minus sign directly after the % symbol. Examples:
+
+System.out.printf("%6.2f", 34.3456);  //<blank-space>34.35  Notice that rounding off occurs, and the decimal point is also considered as taking up a place
+System.out.printf("5.4e", 34.2345); //3.4235e+01    Notice the rounding off occurs. Also, since the end result includes characters such as e and the positive sign after it, the number of places used in this placeholder was 10. Which is why the minimum field width is not used.
