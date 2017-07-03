@@ -33,6 +33,7 @@ public class Question4_3
     charlotte_latitude = Math.toRadians(charlotte_latitude);
     charlotte_longitude = Math.toRadians(charlotte_longitude);
 
+    //calculate distance between the two cities
     double ao_distance = EARTH_RADIUS * Math.acos(Math.sin(atlanta_latitude) * Math.sin(orlando_latitude) + Math.cos(atlanta_latitude) * Math.cos(orlando_latitude) * Math.cos(atlanta_longitude - orlando_longitude));
 
     double os_distance = EARTH_RADIUS * Math.acos(Math.sin(orlando_latitude) * Math.sin(savannah_latitude) + Math.cos(orlando_latitude) * Math.cos(savannah_latitude) * Math.cos(savannah_longitude - orlando_longitude));
