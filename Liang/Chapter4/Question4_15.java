@@ -6,16 +6,56 @@ public class Question4_15
     Scanner scannerObject = new Scanner(System.in);
     System.out.println("Enter a letter: ");
     char character = scannerObject.next().charAt(0);
-    int lowerCaseStartingCharacter = 65;
-    int upperCaseStartingCharacter = 97;
+    int correspondingNumber = 0;
+    String englishAlphabetLowerCase = "abcdefghijklmnopqrstuvwxyz";
+    String englishAlphabetUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String alphabetInUse = null;
 
-    if(Character.isLowerCase(character))
+    if(Character.isLetter(character))
     {
+      if(Character.isUpperCase(character))
+      {
+        alphabetInUse = englishAlphabetUpperCase;
+      }
+      else if(Character.isLowerCase(character))
+      {
+        alphabetInUse = englishAlphabetLowerCase;
+      }
 
-    }
-    else if(Character.isUpperCase(character))
-    {
+      if(alphabetInUse.substring(0,3).indexOf(character) != -1)
+      {
+        correspondingNumber = 2;
+      }
+      else if(alphabetInUse.substring(3,6).indexOf(character) != -1)
+      {
+        correspondingNumber = 3;
+      }
+      else if(alphabetInUse.substring(6,9).indexOf(character) != -1)
+      {
+        correspondingNumber = 4;
+      }
+      else if(alphabetInUse.substring(9,12).indexOf(character) != -1)
+      {
+        correspondingNumber = 5;
+      }
+      else if(alphabetInUse.substring(12,15).indexOf(character) != -1)
+      {
+        correspondingNumber = 6;
+      }
+      else if(alphabetInUse.substring(15,19).indexOf(character) != -1)
+      {
+        correspondingNumber = 7;
+      }
+      else if(alphabetInUse.substring(19,22).indexOf(character) != -1)
+      {
+        correspondingNumber = 8;
+      }
+      else if(alphabetInUse.substring(22).indexOf(character) != -1)
+      {
+        correspondingNumber = 9;
+      }
 
+      System.out.println("The corresponding number is " + correspondingNumber);
     }
     else
     {
