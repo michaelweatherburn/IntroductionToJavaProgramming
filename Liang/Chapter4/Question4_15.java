@@ -63,3 +63,4 @@ public class Question4_15
     }
   }
 }
+//the real question is: how do I prevent myself from using the above hardcoded numbers to achieve the result?
