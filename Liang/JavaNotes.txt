@@ -204,3 +204,43 @@ You can also flip the way the content inside the placeholder is aligned (it is r
 
 System.out.printf("%6.2f", 34.3456);  //<blank-space>34.35  Notice that rounding off occurs, and the decimal point is also considered as taking up a place
 System.out.printf("5.4e", 34.2345); //3.4235e+01    Notice the rounding off occurs. Also, since the end result includes characters such as e and the positive sign after it, the number of places used in this placeholder was 10. Which is why the minimum field width is not used.
+
+29) Loops are programming constructs that allow you to repeat the execution of code blocks attached to them for a certain number of times.
+The three types of loops central to many programming languages, among Java, are while loop, do-while loop, and for loop.
+
+All loops have a control variable, usually a number, that controls the number of iterations the loop will run for. Also, each loop has the following phases:
+
+1) Initialisation. This phase occurs once and "sets up" the control variable so that it can be used by the loop.
+2) Conditional check. This phase causes the control value to be used in a boolean expression. If the value of that Boolean expression amounts to true, the loop will continue executing, else the loop will cease to execute and the execution context will start from the line following the conditional check (a phenomenon called "being taken out of the loop. ")
+3) Update. This phase causes changes in the control variable so that it can eventually amount to false, while the setup allows the loop to run for the intended number of times, but no further. Update expressions are usually a part of the loop body (while, do-while loops) but are taken out of the loop body in the for loop.
+
+30) A while loop has the following syntax:
+
+initialisation;
+while (conditional-check)
+{
+  //loop body
+  statements;
+  update-expression;
+  //end-of-loop body
+}
+
+31) A for loop has the following syntax:
+
+for (initialisation; conditional-check; update-expression)
+{
+  //loop-body
+  statements;
+  //end-of-loop-body
+}
+
+32) A do-while loop has the following syntax:
+
+initialisation;
+do
+{
+  //loop-body
+  statements;
+  update-expression;
+  //end-of-loop-body
+} while(conditional-check);
