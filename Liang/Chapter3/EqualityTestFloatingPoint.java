@@ -1,24 +1,40 @@
+
 public class EqualityTestFloatingPoint
 {
-  static private final double EPSILON_DOUBLE = 1E-14;
-  static private final float EPSILON_FLOAT = 1E-7f;
+  public static float EPSILON_FLOAT = 1E-7f;
+  public static double EPSILON_DOUBLE = 1E-15;
+
+  public static boolean areEqualFloatingPoint(float a, float b)
+  {
+    if(Math.abs(a - b) <= EPSILON_FLOAT)
+    {
+      return true;
+    }
+    return false;
+  }
+
+  public static boolean areEqualFloatingPoint(double a, double b)
+  {
+    if(Math.abs(a - b) <= EPSILON_DOUBLE)
+    {
+      return true;
+    }
+    return false;
+  }
 
   public static void main(String[] args)
   {
-    double x = 1 - 0.1 - 0.1 - 0.1 - 0.1 - 0.1;
-
+    float x = 1.0f - 0.1f - 0.1f - 0.1f - 0.1f - 0.1f;
     System.out.println(x);
     System.out.println(x == 0.5);
 
-    //apparently double arithmetic is messed up. Not a fault of the Java language. This problem is with the IEEE 754 specification.
-
-    /*  the way to avoid this problem? Define infinitesimal. Define a value so small that if two numbers have differences less than that value, they must be one and the same. Then, arbitrarily choose which of the numbers' values you wish to use thereafter.
-
-    */
-    if(Math.abs(x - 0.5) < EPSILON_DOUBLE)
+    if(areEqualFloatingPoint(x, 0.5f))
     {
-      System.out.println("The difference between the numbers is so small, that we can say they're equal. ");
+      System.out.println("The two numbers are equal. ");
     }
-
+    else
+    {
+      System.out.println("The two numbers are not equal. ");
+    }
   }
 }
