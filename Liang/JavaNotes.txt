@@ -10,8 +10,7 @@ string on two lines");
 -CANNOT do this. The right way to do this is:
 
 System.out.println("This is a " +
-"string on two lines");
-
+"string on two lines")ab
 4) The time in milliseconds since the Unix Epoch (00:00:00, 01-01-1970)
 is given by the method System.currentTimeMillis()
 
@@ -245,5 +244,34 @@ do
   //end-of-loop-body
 } while(conditional-check);
 
-33) For and while loops are called entry-controlled loops because the condition is checked before every iteration of the loop (yes, even the first iteration, even though that is not always obvious for the for loop.)
+33) Loops are classified into two types:
+
+a) Entry-controlled Loops (for, while)
+b) Exit-controlled loops (do..while)
+
+For and while loops are called entry-controlled loops because the condition is checked before every iteration of the loop (yes, even the first iteration, even though that is not always obvious for the for loop.)
+
 Do-while loop, on the other hand is called exit-controlled loop, because the conditional check is carried out at the end of each iteration. (This is why the first iteration of a do-while loop would definitely occur, since the conditional-check is not occuring before that first iteration.)
+
+33) Loops are also classified as follows:
+
+a) Counter-controlled loops
+b) Sentinel-controlled loops
+
+Counter-controlled loops have a counter variable that literally counts through the iterations of the loop.
+Example: common for counters:
+for(int i = 1; i < 5; i++)
+{
+  //code
+}
+This executes code 5 times.
+
+Sentinel-controlled loops have a variable, which when set/deviated from a predefined value, causes the loop to terminate. Generally sentinel controlled loops are written when the programmer wants the loop to run an indeterminate number of times.
+Example:
+while(input != 0)
+{
+  input = scannerObject.nextInt();
+  //more code goes here
+}
+In this example, the while loop will continue to run until the user has entered 0 among the inputs it has given.
+
