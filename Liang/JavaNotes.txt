@@ -246,8 +246,8 @@ do
 
 33) Loops are classified into two types:
 
-a) Entry-controlled Loops (for, while)
-b) Exit-controlled loops (do..while)
+a) Entry-controlled Loops, aka pretest loops (for, while)
+b) Exit-controlled loops aka posttest loops (do..while)
 
 For and while loops are called entry-controlled loops because the condition is checked before every iteration of the loop (yes, even the first iteration, even though that is not always obvious for the for loop.)
 
