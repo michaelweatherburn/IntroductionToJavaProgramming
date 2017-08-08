@@ -22,6 +22,8 @@ public class RepeatAdditionQuizDoWhile
 				System.out.printf("Wrong answer. Try again: What is %d + %d? ", firstRandomNumber, secondRandomNumber);
 			}
 			providedAnswer = scannerObject.nextInt();
-		} while(expectedAnswer != providedAnswer);		
+		} while(expectedAnswer != providedAnswer);
+
+		
 	}
 }

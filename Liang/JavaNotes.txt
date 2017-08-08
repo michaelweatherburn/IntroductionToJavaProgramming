@@ -244,3 +244,6 @@ do
   update-expression;
   //end-of-loop-body
 } while(conditional-check);
+
+33) For and while loops are called entry-controlled loops because the condition is checked before every iteration of the loop (yes, even the first iteration, even though that is not always obvious for the for loop.)
+Do-while loop, on the other hand is called exit-controlled loop, because the conditional check is carried out at the end of each iteration. (This is why the first iteration of a do-while loop would definitely occur, since the conditional-check is not occuring before that first iteration.)
