@@ -275,3 +275,79 @@ while(input != 0)
 }
 In this example, the while loop will continue to run until the user has entered 0 among the inputs it has given.
 
+34) If the loop-control variable that you're using in a for-loop will not be used anywhere else, it is a good practice to declare it inside the initialisation section of the for-loop. This will cause the variable to only have scope inside the braces of that for-loop (and, of course, the conditional-check expression/update expression as well).
+
+It is allowed to have:
+
+a) Multiple initialisation/declaration statements
+b) Multiple update expressions/Java statements
+
+...in a for loop. For instance:
+
+for(int a = 10, b = 20; a < 20; a++)
+  System.out.println(a + " " + b);
+
+for(int a = 10, b = 20; a < 20; a++, b+=2)
+  System.out.println(a + " " + b);
+
+for(int a = 10, b; a < 20; a++)
+  System.out.println(a + " " + b);
+
+for(int a = 10; a < 20; System.out.println(a), a++);
+
+
+
+If multiple initialisations/update-expressions exists, they need to be separated by commas.
+However, it is not possible to have multiple conditional-checks. If you wish to have multiple conditional-checks, you can combine them using the LAND and LOR operators, as in:
+
+for(int a = 10, b = 20; a < 20 || b < 40; a++, b+=2)
+  System.out.println(a + " " + b);
+
+It is possible to omit certain sections of the for loop altogether.
+
+a) You can skip initialisation if the loop counter variable has already been initialised before the body of the loop.
+b) You can skip update-expression if you prefer to write the update-expression inside the body of the loop.
+c) Skipping the conditional-check actually means IMPLICITLY SETTING IT TO TRUE.
+
+For instance, 
+
+a)
+int i = 5;  //initialisation already done
+for(; i < 10; i++)
+  System.out.println("Hello");  //prints hello 5 times
+
+b)
+int i = 5;
+for(; i < 10; )
+{
+  System.out.println("Hello");
+  i++;  //updating the loop control variable inside the loop body, as we would do for a while loop
+}
+
+c)
+int i = 5;
+for(; ;)
+{
+  System.out.println("Hello");
+  i++;  //does not matter, this is an infinite loop 
+}
+
+The above loop is equivalent to:
+int i = 5;
+for(; true; )
+{
+  System.out.println("Hello");
+  i++;
+}
+
+This is not the case with while() and do..while() loops. For those loops if you leave the conditional-check expression blank, an error would be thrown.
+In case an infinite loop is intended, it is best to write it as such:
+
+while(true)
+{
+  //loop body
+}
+
+This removes ambiguity.
+
+35) It is allowed to omit braces for selection or iteration statements if there's only one statement inside the loop.
