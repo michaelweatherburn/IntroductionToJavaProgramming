@@ -34,11 +34,10 @@ public class EmptyLoops
 		do
 		{
 
-		}
-		while(b < 10);	//infinite loop
+		} while(b < 10);	//infinite loop
 
 		/*
-		Even a while loop should have braces. Trying to write a while loop like so:
+		Even a do-while loop should have braces. Trying to write a while loop like so:
 
 		do while(b < 10);
 		or...
@@ -46,6 +45,13 @@ public class EmptyLoops
 		while(b < 10);
 
 		results in an error.
+
+		Oddly, if you wish to write a single line inside a do-while loop, you CAN omit the braces, like so:
+
+		do
+			i++;
+		while(b < 10);
+		
 		*/
 	}
 }
