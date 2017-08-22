@@ -350,4 +350,29 @@ while(true)
 
 This removes ambiguity.
 
-35) It is allowed to omit braces for selection or iteration statements if there's only one statement inside the loop.
+35) It is allowed to omit braces for selection or iteration statements if there's only one statement inside the loop. This also applies to do-while loops.
+
+Strangely, empty do-while loops look like this:
+
+do {
+} while(condition);
+
+You can't omit the braces if there is no loop body.
+
+But:
+
+do
+  statement1
+while(condition);
+
+is valid. In a do-while loop, you can omit the braces if there's only one statement inside the loop, but not if there are 0 statements inside the loop.
+
+36) If you have the following situation
+
+char characterValue = 10;
+int doubleValue = 11;
+String x;
+x = y ? characterValue : doubleValue;
+
+Here, the character will automatically get converted to a double value.
+Implicit casting occurs to ensure that the final value returned by the conditional operator would not have datatype ambiguity.
