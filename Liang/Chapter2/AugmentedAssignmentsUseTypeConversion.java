@@ -4,9 +4,13 @@ public class AugmentedAssignmentsUseTypeConversion
   public static void main(String[] args)
   {
 
-    int a = 3;
+    int a = 200;
     int b = a += 4.5;
-    System.out.println(b);
+    int c = a *= 4.5;
+    int d = a -= 4.5;
+    int e = a /= 4.5;
+    int f = a %= 4L;
+    System.out.println(b + " " + c + " " + d + " " + e + " " + f);
     /* expressions of the form:
 
     a += b
