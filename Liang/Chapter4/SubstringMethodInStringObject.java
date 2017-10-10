@@ -4,9 +4,10 @@ public class SubstringMethodInStringObject
   public static void main(String[] args)
   {
     String testString = "Welcome";
-    /* okay, this is a tricky one to remember.
+    /* 
+    Substring method has a confusing syntax.
 
-    The substring method is used to extract substrings from the current string. The syntax is as follows:
+    The substring method is used to extract substrings from the current string.
 
     stringObject.substring(a, b);
 
@@ -51,6 +52,7 @@ public class SubstringMethodInStringObject
 
     System.out.println(testString.substring(0,0));  //empty string
     System.out.println(testString.substring(2,2));  //empty string
+    // System.out.println(testString.substring(3,2));  //throws StringIndexOutOfBounds exception
     System.out.println(testString.substring(0,3));
     System.out.println(testString.substring(2,5));  //three characters only
     System.out.println(testString.substring(0, testString.length()));

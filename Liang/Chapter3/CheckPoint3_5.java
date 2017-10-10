@@ -15,7 +15,5 @@ public class CheckPoint3_5
       payScale *= 1.03;
       System.out.print("The pay scale is now " + payScale);
     }
-
-
   }
 }
