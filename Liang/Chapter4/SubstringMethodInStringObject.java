@@ -52,16 +52,17 @@ public class SubstringMethodInStringObject
 
     System.out.println(testString.substring(0,0));  //empty string
     System.out.println(testString.substring(2,2));  //empty string
-    // System.out.println(testString.substring(3,2));  //throws StringIndexOutOfBounds exception
     System.out.println(testString.substring(0,3));
     System.out.println(testString.substring(2,5));  //three characters only
+
+    //these three cases accept testString.length() as input, and do not throw any errors
     System.out.println(testString.substring(0, testString.length()));
     System.out.println(testString.substring(testString.length()));
     System.out.println(testString.substring(testString.length(), testString.length()));
 
     //runtime errors follow:
-    System.out.println(testString.substring(0,testString.length() + 1));  //out of bounds
-    System.out.println(testString.substring(testString.length() + 1));  //out of bounds
-    System.out.println(testString.substring(5,4)); //a cannot be greater than b
+    System.out.println(testString.substring(0,testString.length() + 1));  //throws StringIndexOutOfBoundsException
+    System.out.println(testString.substring(testString.length() + 1));  //throws StringIndexOutOfBoundsException
+    System.out.println(testString.substring(5,4)); //throws StringIndexOutOfBoundsException (why?)
   }
 }
