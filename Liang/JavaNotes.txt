@@ -204,6 +204,19 @@ You can also flip the way the content inside the placeholder is aligned (it is r
 System.out.printf("%6.2f", 34.3456);  //<blank-space>34.35  Notice that rounding off occurs, and the decimal point is also considered as taking up a place
 System.out.printf("5.4e", 34.2345); //3.4235e+01    Notice the rounding off occurs. Also, since the end result includes characters such as e and the positive sign after it, the number of places used in this placeholder was 10. Which is why the minimum field width is not used.
 
+When the precision specified is lower than the number of digits in the input floating-point number, rounding or truncation occurs (rounding if the left-most digit left behind after truncation is > 5, truncation otherwise).
+
+Input must match the format specifiers in exact type.
+The input passed to:
+%b - boolean (boolean)
+%c - character (char)
+%d - integer number (int/long)
+%e, %f - floating-point number (float/double) in either notation (regular/scientific)
+
+The % character signifies the beginning of a format specifier in a format string. To use the '%'' character literal in a format string, we need to escape the character with itself (no, backslash is not used for this character).
+
+%% is the right way to display a single '%' in a format string.
+
 29) Loops are programming constructs that allow you to repeat the execution of code blocks attached to them for a certain number of times.
 The three types of loops central to many programming languages, among Java, are while loop, do-while loop, and for loop.
 
