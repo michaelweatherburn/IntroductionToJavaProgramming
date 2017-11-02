@@ -389,3 +389,11 @@ x = y ? characterValue : doubleValue;
 
 Here, the character will automatically get converted to a double value.
 Implicit casting occurs to ensure that the final value returned by the conditional operator would not have datatype ambiguity.
+
+37) Loop control statements break and continue
+
+a) break statement brings the execution control directly out of the loop
+b) continue statement skips over the rest of the statements in the current iteration
+c)
+
+In while and do-while loops, on execution of a continue statement, the loop-continuation-condition is directly executed. In a for loop, the action-after-each-iteration is executed first. continue ONLY skips over the REST OF THE LOOP BODY in the current iteration - it doesn't impact anything in the loop flowchart.
