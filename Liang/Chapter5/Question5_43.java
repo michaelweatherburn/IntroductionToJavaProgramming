@@ -9,7 +9,7 @@ public class Question5_43
 			for (int j = i + 1; j <= 7; j++)
 			{
 				System.out.println(i + " " + j);
-				count++;
+				count++;	//add one to the number of combinations
 			}
 			System.out.println("The total number of combinations is " + count);
 	}
