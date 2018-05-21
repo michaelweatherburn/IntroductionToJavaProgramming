@@ -12,5 +12,4 @@ public class MultipleInitialisationsInForLoop
 			System.out.println(i + " " + (j = 5));
 	}
 	//If there are multiple initialisations in a for-loop, they need to be separated by commas
-
 }
