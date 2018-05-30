@@ -15,10 +15,9 @@ public class ComparisionMethodsInStringObject
     System.out.println("Are s1 and s2 logically the same, not considering the case? " + s1.equalsIgnoreCase(s2));
 
     /* the compareTo and CompareToIgnoreCase methods are used to check how apart the characters are ("lexicographically", in terms of Unicode ordering) from the the first point of difference when considered beginning to end
-    Strangely, on ignoring the case s1 and s2 are the same. So the equalsIgnoreCase should return 0. Should look into this.
     */
     System.out.println("How does s1 fare with s2 in a dictionary? " + s1.compareTo(s2));
-    System.out.println("How does s1 fare with s2 in a dictionary, not considering the case? " + s1.compareTo(s2));
+    System.out.println("How does s1 fare with s2 in a dictionary, not considering the case? " + s1.compareToIgnoreCase(s2));
 
     /*
       startsWith and endsWith check whether the input String starts or ends the current String, respectively.

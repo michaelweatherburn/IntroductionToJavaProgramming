@@ -397,3 +397,18 @@ b) continue statement skips over the rest of the statements in the current itera
 c)
 
 In while and do-while loops, on execution of a continue statement, the loop-continuation-condition preceding the next iteration is directly executed. In a for loop, the action-after-each-iteration following the lines of code that were skipped is executed first. continue ONLY skips over the REST OF THE LOOP BODY in the current iteration - it doesn't impact anything in the loop flowchart.
+
+38) There are parse methods present within wrapper classes to convert any valid String value to a valid corresponding primitive datatype.
+
+Byte.parseByte("validByte")
+Short.parseShort("validShort");
+Integer.parseInt("validInteger");
+Long.parseLong("validLong");
+Float.parseFloat("validFloat");
+Double.parseDouble("validDouble");
+
+39) Methods are reusable entities which house business logic within them. Once defined, methods can be invoked as required. There are three parts to using a method:
+
+Method Declaration/Method Prototype
+Method Definition
+Method Invocation/Method Call
