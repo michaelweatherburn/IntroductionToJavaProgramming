@@ -483,11 +483,19 @@ public static void printWelcome() {
 }
 
 This method prints a fixed String to the console, but doesn't return any value.
+Return statements can also be used in void methods, to prematurely terminating the method and returning the execution control back to the caller. For example, 
 
-42)
+public static void addAndPrintPositiveIntegers(int i1, int i2)
+{
+  if (i1 < 0 || i2 < 0)
+  {
+      System.out.println("One or both the integers provided as input are negative. Sum not calculated. ");
+      return;
+  }
+  return (i1 + i2);
+}
 
-
-43) Methods cannot exist independently of classes in Java. Method definitions have to be encapsulated inside class definitions.
+42) Methods cannot exist independently of classes in Java. Method definitions have to be encapsulated inside class definitions.
 Inside classes, methods perform two roles, which defines whether the modifier "static" would be assigned to them.
 
 a) Static Methods - These methods are written on the "class level". They are independent of any objects that the class might have, although they can be executed using an object.
