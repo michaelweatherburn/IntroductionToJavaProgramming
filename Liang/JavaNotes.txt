@@ -514,3 +514,25 @@ b) Instance Methods - These methods are written on the "object/instance level" a
 Instance Methods' Invocation Syntax:
 
 objectName.staticMethodName(list-of-actual-parameters);
+
+43) When a method is called, the values of the actual parameters (arguments) are used to initalize the formal parameters (parameters). A copy of each actual parameter is created and assigned to the corresponding formal parameter. This is called Pass By Value.
+
+For pass-by-value to happen, the arguments provided in the method invocation must have been provided in the same order as that of the corresponding parameters in the method definition's signature. This is called parameter order association. This is necessary because we need formal parameters and actual parameters to have a one-to-one correspondence for the values to be copied over.
+
+The list of parameters must match the list of arguments exactly in
+a) Order
+b) Number
+c) Compatible Type
+
+Examples:
+public static void increaseGrade(char currentGrade, int numberOfGradesToIncrease) // method header
+
+// Method invocation - Valid examples
+increaseGrade('A', 1);
+increaseGrade('B', 2);
+
+// Method Invocation - Invalid examples
+increaseGrade(1, 'A'); // Parameter order association does not hold - the order of the arguments does not match the order of the parameters
+increaseGrade(145L, 1);
+increaseGrade(4.5, 2);  // Incompatible type  - the first long/double argument can not be implicitly cast to a char value
+increaseGrade('A'); // Number of arguments are different - the number of arguments does not match the number of parameters
