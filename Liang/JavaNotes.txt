@@ -536,3 +536,30 @@ increaseGrade(1, 'A'); // Parameter order association does not hold - the order 
 increaseGrade(145L, 1);
 increaseGrade(4.5, 2);  // Incompatible type  - the first long/double argument can not be implicitly cast to a char value
 increaseGrade('A'); // Number of arguments are different - the number of arguments does not match the number of parameters
+
+44) Pass-by-value causes new memory to be created for each formal parameter. This memory is created inside the activation frame of the method that was called. After that, the values of the actual parameters are copied to the formal parameters in a one-to-one fashion. After that, all changes made to the parameters will exist only for the length of the method that was called. As soon as the method is finished executing, the activation frame of the called method is removed from the call stack, and so do the values of the formal parameters. The actual parameters cannot be changed by this call.
+
+Example:
+
+public class SwapLogic {
+  public static void swap (int i1, int i2)
+  {
+    int temp = i1;
+    i1 = i2;
+    i2 = temp;
+    System.out.println("First Value: " + i1 + ", Second Value: " + i2);
+  }
+
+  public static void main(String[] args)
+  {
+    int firstArgument = 1;
+    int secondArgument = 2;
+    System.out.println("First Value: " + firstArgument + ", Second Value: " + secondArgument);
+    swap(firstArgument, secondArgument);
+    System.out.println("First Value: " + firstArgument + ", Second Value: " + secondArgument);
+  }
+}
+
+Here, the values of the variables firstArgument and secondArgument would be used to initialize the values of i1 and i2. The values i1 and i2 (present in the activation record corresponding to swap) would be swapped using a third variable. After that, the control returns to main from swap, as the activation record for swap is removed when swap finishes execution. The values firstArgument and secondArgument, present in the activation record corresponding to main, remain unaffected by the events that occurred within swap.
+
+That is why the values aren't swapped in the main method. However, if you check the values in the swap method after its execution, the values would be swapped.
