@@ -563,3 +563,38 @@ public class SwapLogic {
 Here, the values of the variables firstArgument and secondArgument would be used to initialize the values of i1 and i2. The values i1 and i2 (present in the activation record corresponding to swap) would be swapped using a third variable. After that, the control returns to main from swap, as the activation record for swap is removed when swap finishes execution. The values firstArgument and secondArgument, present in the activation record corresponding to main, remain unaffected by the events that occurred within swap.
 
 That is why the values aren't swapped in the main method. However, if you check the values in the swap method after its execution, the values would be swapped.
+
+45) A method and a variable can have the same name within the same scope. The compiler doesn't confuse between the two. That is because the invocation of a method has fundamentally different syntax:
+
+a) ClassName.methodName(list-of-arguments)
+b) objectName.methodName(list-of-arguments)
+c) methodName(list-of-arguments)
+
+...than that of a variable when it is used in an expression/statement:
+
+variableName
+
+However, two variables, even of different types, cannot have the same name. On trying to declare the second variable with the same name, the compiler would show an error - variable already declared.
+
+46) Method Overloading
+Multiple methods within a class can have the same name, but different definitions. This is possible if the method signatures of the methods are different. The method signature is:
+
+methodName(datatype1 formalParameter1, datatype2 formalParameter2...)
+
+In other words, the method signature is characterized by:
+a) the method's name
+b) the number of formal parameters
+c) the order of formal parameters
+d) the datatype of each formal parameter
+
+In order for methods to have the same name, one or more of the other three properties that characterize the method must be different. Here's an example of method overloading:
+
+public static int sum(int firstNumber, int secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+public static double sum(double firstNumber, double secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+Note that for method overloading to work, the method signature must be unique. Modifiers and returntypes don't form part of the method signature, so having the same method signature but different returntypes/modifiers would result in a compiler error.
