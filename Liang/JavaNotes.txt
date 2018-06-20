@@ -620,3 +620,21 @@ The error shown would be:
 
 Reference to <methodName> is ambiguous
 
+48) For loop has the following syntax:
+
+for (initial-action; loop-continuation-condition; action-after-each-iteration)
+{
+  // loop body
+}
+
+initial-action - any variable declared within this portion of the for loop will have the scope of the entire for loop (all the iterations of the for loop). This makes the for loop different from the while and do-while loop - there is no area where you can create variables that are not exclusive to each loop block, but are shared across all iterations.
+
+For example:
+
+for (int i = 1; i < 10; i++)  // Here, the variable i has a scope that covers all blocks (across all iterations) of the for loop
+{
+  boolean b = false;  // This variable is BEING DECLARED and assigned, again and again in each loop iteration (since all loop iterations have separate blocks) and the value's scope ends at the end of each loop block
+  System.out.println(i);  
+}
+
+49) 
