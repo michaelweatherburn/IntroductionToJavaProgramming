@@ -598,3 +598,25 @@ public static double sum(double firstNumber, double secondNumber) {
 }
 
 Note that for method overloading to work, the method signature must be unique. Modifiers and returntypes don't form part of the method signature, so having the same method signature but different returntypes/modifiers would result in a compiler error.
+
+47) If there are two definitions of an overloaded method, and the compiler is confused about which definition to adhere to when calling the method, owing to the nature of the actual parameters provided, this is called ambiguous invocation.
+
+/* Method Definitions */
+public static double sum(int firstNumber, double secondNumber)
+{
+  return (firstNumber + secondNumber);
+}
+
+public static double sum(double firstNumber, int secondNumber)
+{
+  return (firstNumber + secondNumber);
+}
+
+/* Method Invocation */
+sum(3,4);
+
+Just as 3, the integer argument is a compatible type for the first parameter of the second definition, 4, the integer argument is a compatible type for the second argument of the first method. The compiler sees the two method definitions as equally plausible. This is called ambiguous invocation.
+The error shown would be:
+
+Reference to <methodName> is ambiguous
+
