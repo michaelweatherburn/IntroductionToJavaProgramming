@@ -637,4 +637,45 @@ for (int i = 1; i < 10; i++)  // Here, the variable i has a scope that covers al
   System.out.println(i);  
 }
 
-49) 
+49) Scope of a variable is the part of the program in which the variable can be referenced.
+Variables that are declared inside methods are called local variables.
+
+Variables that are declared within a particular block have scope from the variable declaration to the end of the block in which they're defined.
+
+Formal parameters of the method are actually local variables that have the scope of the entire method block. They're declared in the parantheses of the method header, and are initalized using the values of the actual parameters.
+
+50) Two variables can have the same name, as long as their scopes do NOT intersect. Thus, two variables declared in separate blocks of code can have the same time, as the separation of the blocks causes the scope of the variables to not intersect.
+
+Allowed - Discrete Blocks of code having variables with the same name
+{
+  // Block 1
+  int i = 1;  //i's scope in block 1 starts
+...
+} //i's scope in block 1 ends
+
+{
+  // Block 2
+  int i = 5;  //i's scope in block 2 starts
+...
+} //i's scope in block 2 ends
+
+Not Allowed - Nested Blocks with the same variable declared within each block
+
+{
+  // Block 1
+  int i = 4;  //i's scope in block 1 starts
+...
+  {
+    // (Inner Block) Block 2 
+    int i = 3;  //shows a variable already defined error, since i's scope covers this line as well, so the compiler knows what i is (the name "i" is taken as far as the Java compiler is concerned)
+  }
+} //i's scope in block 1 ends
+
+51) Method Abstraction and Stepwise Refinement
+Method Abstraction is the process of separating method implementation from method usage.
+As a method call requires no knowledge of the method beyond the method header, the usage of a method requires the user to only know the inputs to the method, the name of the method, and the outputs to the method. The user does not require knowledge of the implementation of the method.
+
+The caller and the method being called could be in separate classes (or separate physical machines, called by Remote Method Invocation) and it wouldn't matter. The details of the method are hidden in the method definition and are not visible to the client that invokes the method. This is also referred to as data hiding or encapsulation.
+
+Changing the implementation wouldn't matter to the client, since the result obtained from the method call would be the same. As long as you don't modify the method header, the client can keep using the method.
+This becomes the foundation for concepts like black-box testing which is perfect for method functionality testing. (Testing when not keeping in consideration the business logic of the method). Black box testing is when the tester is not concerned with the output, and NOT how it is obtained from the input. The method's body then becomes a black box, to which input is passed (by the arguments specified within parantheses of the method invocation). The method may return a value, which becomes the output - and this output is all that matters in black box testing.
