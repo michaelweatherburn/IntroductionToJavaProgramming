@@ -57,6 +57,6 @@ public class PrintCalendar
 	}
 
 	public static void printMonthBody(int year, int monthNumber) {
-		//method stub
+		
 	}
 }

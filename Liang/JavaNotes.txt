@@ -1,9 +1,24 @@
-1) The difference between specific import and wildcard import, and the fact that there is no performance difference between the two forms of import
+1)
+Specific Import
+when the exact class you're trying to import is defined.
+Example:
+java.util.Scanner //This will import the Scanner class into the current file's context
+Wildcard Import
+When there is no exact class to import
+Example:
+java.util.*   //This will import all classes inside the java.lang package
 
-2) Types of errors, syntactical, semantic and logical errors
+There is no performance difference between Specific Import and Wildcard Import, since both imports simply tell the compiler where the files are
+
+2) Types of errors, syntax, semantic and logical errors
+Syntax Errors
+The errors that are present in the grammar of your source code. Every programming language has rules, and if source code is not created according to those rules, syntax errors follow. These errors are caught by the compiler. (The compiler is the program that checks for Syntax Errors, and proceeds to convert source code to bytecode in Java, if there are no syntax errors).
+
+Semantic Errors (Also called Runtime Errors)
+The errors 
 
 3) The fact that you cannot break a string into different lines i.e. you-
-`
+
 System.out.println("This is a <Enter>
 string on two lines");
 
@@ -307,8 +322,6 @@ for(int a = 10, b; a < 20; a++)
   System.out.println(a + " " + b);
 
 for(int a = 10; a < 20; System.out.println(a), a++);
-
-
 
 If multiple initialisations/update-expressions exists, they need to be separated by commas.
 However, it is not possible to have multiple conditional-checks. If you wish to have multiple conditional-checks, you can combine them using the LAND and LOR operators, as in:
@@ -667,7 +680,7 @@ Not Allowed - Nested Blocks with the same variable declared within each block
 ...
   {
     // (Inner Block) Block 2 
-    int i = 3;  //shows a variable already defined error, since i's scope covers this line as well, so the compiler knows what i is (the name "i" is taken as far as the Java compiler is concerned)
+    int i = 3;  //shows a variable already defined error, since i's scope covers this line as well, so the compiler knows what i is (the name "i" is already taken, according to the compiler)
   }
 } //i's scope in block 1 ends
 
@@ -675,7 +688,4 @@ Not Allowed - Nested Blocks with the same variable declared within each block
 Method Abstraction is the process of separating method implementation from method usage.
 As a method call requires no knowledge of the method beyond the method header, the usage of a method requires the user to only know the inputs to the method, the name of the method, and the outputs to the method. The user does not require knowledge of the implementation of the method.
 
-The caller and the method being called could be in separate classes (or separate physical machines, called by Remote Method Invocation) and it wouldn't matter. The details of the method are hidden in the method definition and are not visible to the client that invokes the method. This is also referred to as data hiding or encapsulation.
-
-Changing the implementation wouldn't matter to the client, since the result obtained from the method call would be the same. As long as you don't modify the method header, the client can keep using the method.
-This becomes the foundation for concepts like black-box testing which is perfect for method functionality testing. (Testing when not keeping in consideration the business logic of the method). Black box testing is when the tester is not concerned with the output, and NOT how it is obtained from the input. The method's body then becomes a black box, to which input is passed (by the arguments specified within parantheses of the method invocation). The method may return a value, which becomes the output - and this output is all that matters in black box testing.
+The caller and the method being called could be in separate classes (or separate physical machines, called by Remote Method Invocation) and it wouldn't matter. The details of the method are hidden in the method definition and are not visible to the client that invokes the method. This is also referred to as data hiding or encapsulation. The method body becomes a black box to the client, while only the method header needs to be exposed to the client.

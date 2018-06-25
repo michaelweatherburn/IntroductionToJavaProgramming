@@ -16,7 +16,6 @@ public class CheckPoint5_10
 		System.out.println("Count: " + count);
 
 		/*
-
 		Input: 2 3 4 5 0
 		Output:
 

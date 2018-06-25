@@ -5,15 +5,15 @@ public class RandomCharacter
 	}
 
 	public static char getRandomLowerCaseLetter() {
-		return (char)('a' + Math.random() * ('z' - 'a' + 1));
+		return getRandomCharacter('a','z');
 	}
 
 	public static char getRandomUpperCaseLetter() {
-		return (char)('A' + Math.random() * ('Z' - 'A' + 1));
+		return getRandomCharacter('A','Z');
 	}
 
 	public static char getRandomDigitCharacter() {
-		return (char)('0' + Math.random() * ('9' - '0' + 1));
+		return getRandomCharacter('0', '9');
 	}
 
 	public static char getRandomCharacter() {
