@@ -7,6 +7,10 @@ public class PrintCalendar
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter full year (e.g. 2012): ");
 		int year = scanner.nextInt();
+		if (year < 1800) {
+			System.out.println("This calendar program can only show results for years 1800 and ahead. Terminating program. ");
+			System.exit(0);
+		}
 		System.out.println("Enter month as number between 1 and 12: ");
 		int monthNumber = scanner.nextInt();
 
