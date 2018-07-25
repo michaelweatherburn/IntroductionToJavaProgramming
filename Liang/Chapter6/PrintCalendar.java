@@ -22,7 +22,7 @@ public class PrintCalendar
 		String monthName = getMonthName(monthNumber);
 		System.out.printf("\t%s %s\n", monthName, year);
 		System.out.printf("-----------------------------------\n");
-		System.out.printf("%4s %4s %4s %4s %4s %4s %4s\n", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
+		System.out.printf("%5s%5s%5s%5s%5s%5s%5s\n", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
 	}
 
 	public static String getMonthName(int monthNumber) {
@@ -57,6 +57,66 @@ public class PrintCalendar
 	}
 
 	public static void printMonthBody(int year, int monthNumber) {
-		
+			int startDay = getStartDay(year, monthNumber);	// a number between 1 and 7
+			int numberOfDaysInCurrentMonth = getNumberOfDaysInMonth(year, monthNumber);	// a number between 1 and 31
+			int currentPosition = 0;
+			for (int i = 1; i < startDay; i++) {
+				System.out.printf("%5s", " ");
+				currentPosition++;
+			}
+			for (int i = 1; i <= numberOfDaysInCurrentMonth; i++) {
+				if (currentPosition % 7 == 0) {
+					System.out.println();
+					currentPosition = 0;
+				}
+				System.out.printf("%5s", i);
+				currentPosition++;
+			}
+		}
+
+		public static int getStartDay(int year, int monthNumber) {
+			final int START_DAY_FOR_1_JAN_1800 = 2;
+			return ((getTotalNumberOfDays(year, monthNumber) + START_DAY_FOR_1_JAN_1800) % 7) + 1;
+		}
+
+		public static int getNumberOfDaysInMonth(int year, int monthNumber) {
+			int numberOfDaysInMonth = 0;
+			switch (monthNumber) {
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+				numberOfDaysInMonth = 31;
+				break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+				numberOfDaysInMonth = 30;
+				break;
+				case 2: 
+				numberOfDaysInMonth = isLeapYear(year) ? 29 : 28;
+				break;
+			}
+			return numberOfDaysInMonth;
+		}
+
+		public static boolean isLeapYear(int year) {
+			return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+		}
+
+		public static int getTotalNumberOfDays(int currentYear, int monthNumber) {
+			int totalNumberOfDays = 0;
+			for (int i = 1800; i < currentYear; i++) {
+				totalNumberOfDays += (isLeapYear(i) ? 366 : 365);
+			}
+			for (int j = 1; j < monthNumber; j++) {
+				totalNumberOfDays += getNumberOfDaysInMonth(currentYear, j);
+			}
+			return totalNumberOfDays;
+		}
+
 	}
-}
