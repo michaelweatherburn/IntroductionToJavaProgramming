@@ -686,10 +686,14 @@ Not Allowed - Nested Blocks with the same variable declared within each block
 
 51) Method Abstraction and Stepwise Refinement
 Method Abstraction is the process of separating method implementation from method usage.
-<<<<<<< HEAD
 As a method call requires no knowledge of the method beyond the method header, the usage of a method requires the user to only know the inputs to the method, the name of the method, and the outputs to the method. The user does not require knowledge of the implementation of the method.
 
 Stepwise Refinement (also known as divide-and-conquer) is referred to as the process of breaking a problem into subproblems, until you arrive at the simplest ones. This is a top-down design approach. Once the mental division is done, the program can be written in a top-down or bottom-up fashion.
-=======
-As a method call requires no knowledge of the method beyond the method header, the usage of a method requires the user to only know the inputs to the method, the name of the method, and the outputs to the method. The user does not require knowledge of the implementation of the method.
->>>>>>> ba6c9b48dff0d49219f9eb8b8f480f2f6b1fd932
+
+52) It is not possible to do declarations of multiple types in a for loop.
+
+for (int i = 1, j = 3, k; j < k; i++) {
+  // valid for loop
+}
+
+for (int i = 1, double j = 4.0...) // invalid initial-action for the for loop
