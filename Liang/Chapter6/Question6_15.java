@@ -32,7 +32,7 @@ public class Question6_15 {
 			}
 		}
 		else if (status == 1) {
-			// compute tax for married filing jointly - issue with this part of the program
+			// compute tax for married filing jointly
 			while (taxableIncome > 0.0) {
 				if (372951.00 <= taxableIncome) {
 					incomeTax += ((taxableIncome - 372950.00) * 0.35);
@@ -51,7 +51,7 @@ public class Question6_15 {
 					taxableIncome = 67900.00;
 				}
 				else if (16701.00 <= taxableIncome && taxableIncome <= 67900.00) {
-					incomeTax += ((taxableIncome - 16700.00) - 0.15);
+					incomeTax += ((taxableIncome - 16700.00) * 0.15);
 					taxableIncome = 16700.00;
 				}
 				else if (0.0 < taxableIncome && taxableIncome <= 16700.00) {
@@ -126,6 +126,7 @@ public class Question6_15 {
 	}
 
 	public static void main(String[] args) {
+		System.out.println(computeTax(1, 50000));
 		System.out.printf("%-20s%-20s%-20s%-20s%-20s\n", "Taxable Income", "Single", "Married Joint", "Married Separate", "Head of a House");
 		System.out.printf("%20s%20s%20s%20s%20s\n", "--------------------", "--------------------", "--------------------", "--------------------", "--------------------");
 		for (int taxableIncome = 50000; taxableIncome <= 60000; taxableIncome += 50) {
