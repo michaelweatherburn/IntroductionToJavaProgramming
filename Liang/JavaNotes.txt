@@ -409,7 +409,11 @@ a) break statement brings the execution control directly out of the loop
 b) continue statement skips over the rest of the statements in the current iteration
 c)
 
-In while and do-while loops, on execution of a continue statement, the loop-continuation-condition preceding the next iteration is directly executed. In a for loop, the action-after-each-iteration following the lines of code that were skipped is executed first. continue ONLY skips over the REST OF THE LOOP BODY in the current iteration - it doesn't impact anything in the loop flowchart.
+In while and do-while loops, on execution of a continue statement, the loop-continuation-condition preceding the next iteration is directly executed.
+In a for loop, the action-after-each-iteration following the lines of code that were skipped is executed first. continue ONLY skips over the REST OF THE LOOP BODY in the current iteration - it doesn't impact anything in the loop flowchart.
+
+In all three types of loops, using a break statement COMPLETELY exits the loop.
+Important: Even in the case of for-loop, the action-after-each-iteration following the loop body where the break is encountered, is NOT executed.
 
 38) There are parse methods present within wrapper classes to convert any valid String value to a valid corresponding primitive datatype.
 
