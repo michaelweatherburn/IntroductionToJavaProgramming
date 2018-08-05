@@ -112,7 +112,7 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 			}
 			int daysSinceYearBeginning = daysSinceUnixEpoch;	//storing values in variables more appropriately named
 			int numberOfDaysInMonth, month, dayOfMonth;
-			System.out.println("Days Since Year Begining: " + daysSinceYearBeginning);
+			// System.out.println("Days Since Year Beginning: " + daysSinceYearBeginning);
 			for (month = 1; month <= 12; month++) {
 				numberOfDaysInMonth = getNumberOfDaysInMonth(month, year);
 				if (daysSinceYearBeginning < numberOfDaysInMonth) {
