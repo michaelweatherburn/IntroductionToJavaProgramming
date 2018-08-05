@@ -1,4 +1,4 @@
-/* Worst-case solution - doing everything in a single method, and using the smaller
+/* Not a great solution - doing everything in a single method, and using the smaller
 utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 
 	Unix Epoch - Thursday, 1/1/1970
@@ -38,7 +38,7 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 		}
 
 		public static boolean isLeapYear(int year) {
-			return (year % 400 != 0 || (year % 4 == 0 && year % 100 != 0));
+			return (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0));
 		}
 
 		public static String getMonthName(int month) {
@@ -106,7 +106,7 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 					break;
 				}
 				else {
-					daysSinceUnixEpoch -= numberOfDaysInYear;
+				daysSinceUnixEpoch -= numberOfDaysInYear;
 				}
 				year++;
 			}
