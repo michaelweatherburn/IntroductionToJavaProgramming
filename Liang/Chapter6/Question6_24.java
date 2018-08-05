@@ -112,13 +112,18 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 			}
 			int daysSinceYearBeginning = daysSinceUnixEpoch;	//storing values in variables more appropriately named
 			int numberOfDaysInMonth, month, dayOfMonth;
+			System.out.println("Days Since Year Begining: " + daysSinceYearBeginning);
 			for (month = 1; month <= 12; month++) {
 				numberOfDaysInMonth = getNumberOfDaysInMonth(month, year);
-				if (daysSinceYearBeginning <= numberOfDaysInMonth) {
+				if (daysSinceYearBeginning < numberOfDaysInMonth) {
+					// System.out.println("\nBreaking out of the loop. Month: " + month + ", daysSinceYearBeginning: " + daysSinceYearBeginning + ", numberOfDaysInMonth: " + numberOfDaysInMonth);
 					break;
 				}
 				else {
+					// System.out.println("\nMonth: " + month + ", numberOfDaysInMonth: " + numberOfDaysInMonth);
+					// System.out.println("Before Subtraction: " + daysSinceYearBeginning);
 					daysSinceYearBeginning -= numberOfDaysInMonth;
+					// System.out.println("After subtraction: " + daysSinceYearBeginning);
 				}
 			}
 			dayOfMonth = daysSinceYearBeginning;	//second instance of values appropriately mapped to variables
@@ -126,7 +131,27 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 		}
 
 		public static void displayTime(int hours, int minutes, int seconds) {
-			System.out.printf("%2d:%2d:%2d\n", hours, minutes, seconds);
+			System.out.printf("%2s:%2s:%2s %2s GMT\n", 
+				formatTimeUnits(convertTo12HourNotation(hours)),
+				formatTimeUnits(minutes),
+				formatTimeUnits(seconds), returnMeridiem(hours));
+		}
+
+		public static String formatTimeUnits(int timeUnit) {
+			if (timeUnit / 10 > 0) {
+				return "" + timeUnit;
+			}
+			else {
+				return "0" + timeUnit;
+			}
+		}
+
+		public static int convertTo12HourNotation(int hours) {
+			return hours > 12 ? hours - 12: hours;
+		}
+
+		public static String returnMeridiem(int hours) {
+			return hours > 12 ? "PM" : "AM";
 		}
 
 		public static void displayDate(int dayOfWeek, int dayOfMonth, int month, int year) {
