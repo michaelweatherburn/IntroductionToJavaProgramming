@@ -4,7 +4,6 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 	Unix Epoch - Thursday, 1/1/1970
 	Week Begins on Sunday
 
-	(Current Situation - Incomplete)
  */
 	import java.util.Scanner;
 	public class Question6_24 {
@@ -111,22 +110,20 @@ utility methods (like isLeapYear, getNumberOfDaysInMonth) to cover all usecases
 				year++;
 			}
 			int daysSinceYearBeginning = daysSinceUnixEpoch;	//storing values in variables more appropriately named
-			int numberOfDaysInMonth, month, dayOfMonth;
-			// System.out.println("Days Since Year Beginning: " + daysSinceYearBeginning);
+			int daysSinceMonthBeginning;
+			int numberOfDaysInMonth, month;
 			for (month = 1; month <= 12; month++) {
 				numberOfDaysInMonth = getNumberOfDaysInMonth(month, year);
 				if (daysSinceYearBeginning < numberOfDaysInMonth) {
-					// System.out.println("\nBreaking out of the loop. Month: " + month + ", daysSinceYearBeginning: " + daysSinceYearBeginning + ", numberOfDaysInMonth: " + numberOfDaysInMonth);
 					break;
 				}
 				else {
-					// System.out.println("\nMonth: " + month + ", numberOfDaysInMonth: " + numberOfDaysInMonth);
-					// System.out.println("Before Subtraction: " + daysSinceYearBeginning);
 					daysSinceYearBeginning -= numberOfDaysInMonth;
-					// System.out.println("After subtraction: " + daysSinceYearBeginning);
 				}
 			}
-			dayOfMonth = daysSinceYearBeginning;	//second instance of values appropriately mapped to variables
+			daysSinceMonthBeginning = daysSinceYearBeginning;
+			// The variable "month" is 1-indexed, while differences between the days are 0-indexed. Adding 1.
+			int dayOfMonth = daysSinceMonthBeginning + 1;
 			displayDate(dayOfWeek, dayOfMonth, month, year);
 		}
 
