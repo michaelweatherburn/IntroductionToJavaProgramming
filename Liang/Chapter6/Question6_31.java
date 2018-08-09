@@ -1,10 +1,3 @@
-/* Wherever I've added my own methods not in the list of methods that were supposed to be used in the solution, I've added my own names for formal parameters that are more suited to the situation. However, I've left the signatures of the method stubs provided in the question untouched 
-
-It might feel as if I've made way too many methods, each having way too little functionality, but that makes individual methods concise and easy to debug
-
-Current Situation - Incomplete
-*/
-
 import java.util.Scanner;
 public class Question6_31 {
 
@@ -78,7 +71,7 @@ public class Question6_31 {
 		//Here getSize can be called with int parameter - since int is a compatible type for long (basically, int can be implicit-cast to long)
 		int divisorSize = getSize(number) - k; //get the number of digits you want to chop off to achieve the result
 		if (divisorSize >= 0) {
-		int divisor = (int)(Math.rint(Math.pow(10, divisorSize)));	//basically 10^inputSize, but due to the nature of floating-point arithmetic, you never know what the outcome can be if you aren't careful
+		long divisor = (long) Math.pow(10, divisorSize);	//basically 10^inputSize, but due to the nature of floating-point arithmetic, you never know what the outcome can be if you aren't careful
 		return number / divisor;
 		}
 		else 
