@@ -1,4 +1,5 @@
 # JavaPractice
-Solutions to Java textbook practice problems.
+Examples and Exercises of some Java textbooks
 
-Currently working through: Introduction to Java Programming, Comprehensive Version, 10th Edition by Daniel Liang.
+Currently:
+* Introduction to Java Programming, Comprehensive Version, 10th Edition by Daniel Liang.
