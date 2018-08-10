@@ -3,11 +3,10 @@
 	Week Begins on Sunday
  */
 	import java.util.Scanner;
-	public class Question6_24 {
+	public class Question6_33 {
 
 		public static final int UNIX_EPOCH_YEAR = 1970;
-		public static final int REFERENCE_YEAR = 1800;
-		public static final int REFERENCE_DAY_OF_WEEK = 3;
+		public static final int UNIX_EPOCH_DAY_OF_WEEK = 4;
 
 		public static int getNumberOfDaysInMonth(int month, int year) {
 			int numberOfDays = 0;
@@ -90,24 +89,24 @@
 			return dayName;
 		}
 
-		public static int getDayOfWeek(int daysSinceReferenceDay) {
-			return (REFERENCE_DAY_OF_WEEK + daysSinceReferenceDay) % 7;
+		public static int getDayOfWeek(int daysSinceUnixEpoch) {
+			return (UNIX_EPOCH_DAY_OF_WEEK + daysSinceUnixEpoch) % 7;
 		}
 
-		public static void calculateAndDisplayDate(int daysSinceReferenceDay) {
-			int dayOfWeek = getDayOfWeek(daysSinceReferenceDay);
-			int year = REFERENCE_YEAR, numberOfDaysInYear;
+		public static void calculateAndDisplayDate(int daysSinceUnixEpoch) {
+			int dayOfWeek = getDayOfWeek(daysSinceUnixEpoch);
+			int year = UNIX_EPOCH_YEAR, numberOfDaysInYear;
 			while (true) {
 				numberOfDaysInYear = isLeapYear(year) ? 366 : 365;
-				if (daysSinceReferenceDay < numberOfDaysInYear) {
+				if (daysSinceUnixEpoch < numberOfDaysInYear) {
 					break;
 				}
 				else {
-				daysSinceReferenceDay -= numberOfDaysInYear;
+				daysSinceUnixEpoch -= numberOfDaysInYear;
 				}
 				year++;
 			}
-			int daysSinceYearBeginning = daysSinceReferenceDay;	//storing values in variables more appropriately named
+			int daysSinceYearBeginning = daysSinceUnixEpoch;	//storing values in variables more appropriately named
 			int daysSinceMonthBeginning;
 			int numberOfDaysInMonth, month;
 			for (month = 1; month <= 12; month++) {
@@ -155,15 +154,6 @@
 			System.out.printf("%s, %s %d, %d", dayName, monthName, dayOfMonth, year);
 		}
 
-		public static int daysBetweenYears(int startingYear, int endingYear) {
-			//number of days from 1/1/startingYear to 1/1/endingYear
-			int numberOfDays = 0;
-			for (int i = startingYear; i < endingYear; i++) {
-				numberOfDays += isLeapYear(i) ? 366 : 365;
-			}
-			return numberOfDays;
-		}
-
 		public static void calculateAndDisplayDateTime() {
 			int seconds = (int) (System.currentTimeMillis() / 1000);
 
@@ -176,10 +166,8 @@
 			int daysSinceUnixEpoch = hours / 24;
 			hours %= 24;
 
-			int daysSinceReferenceDay = daysSinceUnixEpoch + daysBetweenYears(REFERENCE_YEAR, UNIX_EPOCH_YEAR);
-
 			displayTime(hours, minutes, seconds);
-			calculateAndDisplayDate(daysSinceReferenceDay);
+			calculateAndDisplayDate(daysSinceUnixEpoch);
 		}
 
 		public static void main(String[] args) {
