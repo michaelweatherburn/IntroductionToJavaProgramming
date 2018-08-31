@@ -1,4 +1,4 @@
-public class ComparisionsOutputBooleanValue
+public class ComparisonsOutputBooleanValue
 {
   public static void main(String[] args)
   {

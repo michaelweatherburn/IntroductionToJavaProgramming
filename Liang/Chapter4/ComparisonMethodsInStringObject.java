@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class ComparisionMethodsInStringObject
+public class ComparisonMethodsInStringObject
 {
   public static void main(String[] args)
   {
