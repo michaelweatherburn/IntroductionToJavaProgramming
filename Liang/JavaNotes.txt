@@ -701,3 +701,92 @@ for (int i = 1, j = 3, k; j < k; i++) {
 }
 
 for (int i = 1, double j = 4.0...) // invalid initial-action for the for loop
+
+53) Arrays are a fixed-size sequential collection of elements of the same datatype.
+Using primitive variables is different from using array variables.
+
+Primitive Variable Creation:
+
+datatype variableName;  // variable declaration
+
+This is called declaration - it merely creates a named placeholder and asks the compiler to allocate memory for that variable called variableName.
+
+variableName = initialPrimitiveValue;  // variable initialization
+
+This is called initialization - the variable is assigned an initial primitive value. We can combine the declaration and initialization of variables into one statement as follows:
+
+datatype variableName = initialPrimitiveValue;  // declaration-initialization statement
+
+Array Variable Creation:
+
+datatype[] arrayReferenceVariable;  // array variable declaration 
+
+This is called declaration of an array variable - it creates a named placeholder and asks the compiler to allocate memory for storing *a reference to the array* (Note that a reference to the array is different from the array and takes up its own space).
+
+arrayReferenceVariable = new datatype[arraySize];
+
+This is caleld array variable initialization - it initializes the "array variable" i.e. a "reference variable" used to store "references to arrays" with a "reference". The actual array elements are not stored in the object (non-static/instance variable)/class (static variable)/activation record of the method within the runtime stack (method local variable/parameter).
+
+They're stored in a different memory location called the heap. The heap is special because it allows memory allocation at runtime. It is used to store reference variables. When you store something in the heap, you have to assign a reference to it. When your program is running, you use your references to access and manipulate the data stored in the heap.
+
+The new keyword is used to create new objects in the heap. When the new keyword is used, the expression (new XYZ) returns the reference to the newly created data entity in the heap. So in the above code:
+
+new datatype[arraySize]; 
+
+creates an actual array within the heap (of size arraySize), and returns the reference to that array present within the heap. The arrayReferenceVariable variable is simply a placeholder for the reference itself, not the array.
+
+Example:
+
+double[] listOfValues;  // array reference variable declaration - only creates a array reference variable and allocates memory for that variable
+listOfValues = new double[3]; // creation of array inside heap - array reference variable initialization
+
+All primitive variables, when declared as instance/static variables within the class/elements within the array, have their default values. (When variables are declared as formal parameters or local variables within methods, they have no default values. They have to be initialized with a valid value before they can be used).
+
+Primitive Variable Default Values:
+byte, short, int, long: 0
+float, double: 0.0
+char: '\u0000'
+boolean: false
+
+Reference Variable Default Value: null
+
+null is a special literal (one of the three literal keywords, the other two being true and false)
+It is a literal used to denote the absence of reference. (It is similar to void, where void is a keyword which is used to denote the absence of a returntype in methods).
+
+54) We use array indices (unique numbers used to reference each element within the array) along with the array reference variable to access/manipulate individual elements of the array. The index convention is as follows:
+
+If the array is of size 0, it is an empty array, containing no elements.
+If the array is of size n, n >= 1:
+Each element is provided with an index (a number, used to identify the element within the array uniquely)
+
+The indices are 0-indexed i.e.
+first element of the array has the index 0
+second element - index 1
+third element - index 2
+...
+nth element - index (n - 1)
+
+Accessing elements of an array is done like this:
+
+arrayReferenceVariable[elementIndex]
+
+For example, here's how to initialize the elements of the previously defined array:
+
+listOfValues[0] = 4.5;
+listOfValues[1] = 5.6;
+listOfValues[2] = 7.8;
+
+For an array of size n, {0, 1, 2... n - 2, n - 1} are the only valid index values. Using values {... -3, -2, -1} or {n, n + 1, n + 2, n + 3 ...} as indices will result in ArrayIndexOutOfBoundsException.
+listOf
+
+55) There is another syntax used for declaring arrays if you already know their contents. It is called the array initializer:
+
+datatype[] arrayReferenceVariable = {element1, element2, element3...};
+
+Where the element in the curly braces is called an array initalizer. Array initalizers cannot be used as expressions anywhere outside this context. Also, the declaration and initialization of the arrayReferenceVariable must be written as a single statement when using array initializers.
+
+datatype[] arrayReferenceVariable;
+arrayReferenceVariable = {element1, element2..};  // this is not allowed
+
+Example:
+int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}; // using the array initializer to declare-initialize the array
