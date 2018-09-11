@@ -133,7 +133,7 @@ Character.toUpperCase(char)
 21) Useful basic instance (non-static) methods in the String object include:
 stringObject.length(), returns the length as an int
 stringObject.charAt(index), returns the char at specified index, returns int
-stringObject.trim(), removes whitespaces on both ends of String, returns new String
+stringObject.trim(), removes all whitespace characters on both ends of String, returns new String
 stringObject.toUpperCase(), returns new String
 stringObject.toLowerCase(), returns new String
 
@@ -212,9 +212,9 @@ Here, the result would be 12.35.
 
 The % symbol inside the printf method is used to mark the beginning of a format placeholder.
 5 is the minimum field width specified for this number. A minimum of 5 places would be reserved for printing this number. Each character within the representation counts as one place.
-2 represents the exact precision reserved for the decimal part of the number. The precision value is non-negotiable. If two units are mentioned for the precision, and there are three numbers after the decimal point in the actual number, there will be rounding off observed. If there would have been less digits in the actual number than what the precision in the format demands, the extra space after the number would be filled by adding the required number of trailing zeroes.
+2 represents the exact precision reserved for the decimal part of the number. The precision value is non-negotiable. If two units are mentioned for the precision, and there are three numbers after the decimal point in the actual number, there will be rounding off observed. If there would have been less digits in the actual number than what the precision in the format demands, the extra space after the number would be filled by adding the required number of trailing zeros.
 For minimum field width the logic is different. If there are less number of characters to occupy the minimum width (on the left hand side of the number/String/character/boolean) the extra places would be filled with blank spaces (' '). If there are more characters to represent than the minimum field width can possibly represent, that width is not observed (hence the name, MINIMUM field width).
-You can also flip the way the content inside the placeholder is aligned (it is right-aligned by defult) to left-aligned by adding a minus sign directly after the % symbol. Examples:
+You can also flip the way the content inside the placeholder is aligned (it is right-aligned by default) to left-aligned by adding a minus sign directly after the % symbol. Examples:
 
 System.out.printf("%6.2f", 34.3456);  //<blank-space>34.35  Notice that rounding off occurs, and the decimal point is also considered as taking up a place
 System.out.printf("5.4e", 34.2345); //3.4235e+01    Notice the rounding off occurs. Also, since the end result includes characters such as e and the positive sign after it, the number of places used in this placeholder was 10. Which is why the minimum field width is not used.
@@ -237,13 +237,13 @@ The three types of loops central to many programming languages, among Java, are 
 
 All loops have a control variable, usually a number, that controls the number of iterations the loop will run for. Also, each loop has the following phases:
 
-1) Initialisation. This phase occurs once and "sets up" the control variable so that it can be used by the loop.
+1) Initialization. This phase occurs once and "sets up" the control variable so that it can be used by the loop.
 2) Conditional check. This phase causes the control value to be used in a boolean expression. If the value of that Boolean expression amounts to true, the loop will continue executing, else the loop will cease to execute and the execution context will start from the line following the conditional check (a phenomenon called "being taken out of the loop. ")
 3) Update. This phase causes changes in the control variable so that it can eventually amount to false, while the setup allows the loop to run for the intended number of times, but no further. Update expressions are usually a part of the loop body (while, do-while loops) but are taken out of the loop body in the for loop.
 
 30) A while loop has the following syntax:
 
-initialisation;
+initialization;
 while (conditional-check)
 {
   //loop body
@@ -254,7 +254,7 @@ while (conditional-check)
 
 31) A for loop has the following syntax:
 
-for (initialisation; conditional-check; update-expression)
+for (initialization; conditional-check; update-expression)
 {
   //loop-body
   statements;
@@ -263,7 +263,7 @@ for (initialisation; conditional-check; update-expression)
 
 32) A do-while loop has the following syntax:
 
-initialisation;
+initialization;
 do
 {
   //loop-body
@@ -274,12 +274,12 @@ do
 
 33) Loops are classified into two types:
 
-a) Entry-controlled Loops, aka pretest loops (for, while)
-b) Exit-controlled loops aka posttest loops (do..while)
+a) Entry-controlled Loops, aka pre-test loops (for, while)
+b) Exit-controlled loops aka post-test loops (do..while)
 
 For and while loops are called entry-controlled loops because the condition is checked before every iteration of the loop (yes, even the first iteration, even though that is not always obvious for the for loop.)
 
-Do-while loop, on the other hand is called exit-controlled loop, because the conditional check is carried out at the end of each iteration. (This is why the first iteration of a do-while loop would definitely occur, since the conditional-check is not occuring before that first iteration.)
+Do-while loop, on the other hand is called exit-controlled loop, because the conditional check is carried out at the end of each iteration. (This is why the first iteration of a do-while loop would definitely occur, since the conditional-check is not occurring before that first iteration.)
 
 33) Loops are also classified as follows:
 
@@ -303,11 +303,11 @@ while(input != 0)
 }
 In this example, the while loop will continue to run until the user has entered 0 among the inputs it has given.
 
-34) If the loop-control variable that you're using in a for-loop will not be used anywhere else, it is a good practice to declare it inside the initialisation section of the for-loop. This will cause the variable to only have scope inside the braces of that for-loop (and, of course, the conditional-check expression/update expression as well).
+34) If the loop-control variable that you're using in a for-loop will not be used anywhere else, it is a good practice to declare it inside the initialization section of the for-loop. This will cause the variable to only have scope inside the braces of that for-loop (and, of course, the conditional-check expression/update expression as well).
 
 It is allowed to have:
 
-a) Multiple initialisation/declaration statements
+a) Multiple initialization/declaration statements
 b) Multiple update expressions/Java statements
 
 ...in a for loop. For instance:
@@ -323,7 +323,7 @@ for(int a = 10, b; a < 20; a++)
 
 for(int a = 10; a < 20; System.out.println(a), a++);
 
-If multiple initialisations/update-expressions exists, they need to be separated by commas.
+If multiple initializations/update-expressions exists, they need to be separated by commas.
 However, it is not possible to have multiple conditional-checks. If you wish to have multiple conditional-checks, you can combine them using the LAND and LOR operators, as in:
 
 for(int a = 10, b = 20; a < 20 || b < 40; a++, b+=2)
@@ -331,14 +331,14 @@ for(int a = 10, b = 20; a < 20 || b < 40; a++, b+=2)
 
 It is possible to omit certain sections of the for loop altogether.
 
-a) You can skip initialisation if the loop counter variable has already been initialised before the body of the loop.
+a) You can skip initialization if the loop counter variable has already been initialised before the body of the loop.
 b) You can skip update-expression if you prefer to write the update-expression inside the body of the loop.
 c) Skipping the conditional-check actually means IMPLICITLY SETTING IT TO TRUE.
 
 For instance, 
 
 a)
-int i = 5;  //initialisation already done
+int i = 5;  //initialization already done
 for(; i < 10; i++)
   System.out.println("Hello");  //prints hello 5 times
 
@@ -473,7 +473,7 @@ public static int sign(int inputNumber)
     return -1;
 }
 
-This syntax throws an error, because the compiler thinks that there is a possiblity that none of the if-clauses match, in which case, no return statement is reached. (Since the compiler only checks for syntax, not for semantics, it is not smart enough to realise that the cases themselves, i.e. inputNumber > 0, inputNumber == 0, and inputNumber < 0 are mutually exclusive and cover all possibilities of the integer inputNumber. This is why this code, although semantically perfect, won't run. The proper way to write this code would be:
+This syntax throws an error, because the compiler thinks that there is a possibility that none of the if-clauses match, in which case, no return statement is reached. (Since the compiler only checks for syntax, not for semantics, it is not smart enough to realize that the cases themselves, i.e. inputNumber > 0, inputNumber == 0, and inputNumber < 0 are mutually exclusive and cover all possibilities of the integer inputNumber. This is why this code, although semantically perfect, won't run. The proper way to write this code would be:
 
 public static int sign(int inputNumber)
 {
@@ -524,7 +524,7 @@ Static Methods' Invocation Syntax:
 2) staticMethodName(list-of-actual-parameters);
 (only if the class is being invoked within the same class as when it is defined)
 3) objectName.staticMethodName(list-of-actual-parameters);
-(This is possible, but not advisble. Static methods are supposed to be independent of objects. Business logic within those classes should not be related to object-level data members)
+(This is possible, but not advisable. Static methods are supposed to be independent of objects. Business logic within those classes should not be related to object-level data members)
 
 b) Instance Methods - These methods are written on the "object/instance level" and are tied to the instance of the class that invokes them, and these methods usually use the said instance as context for execution.
 
@@ -659,7 +659,7 @@ Variables that are declared inside methods are called local variables.
 
 Variables that are declared within a particular block have scope from the variable declaration to the end of the block in which they're defined.
 
-Formal parameters of the method are actually local variables that have the scope of the entire method block. They're declared in the parantheses of the method header, and are initalized using the values of the actual parameters.
+Formal parameters of the method are actually local variables that have the scope of the entire method block. They're declared in the parentheses of the method header, and are initialized using the values of the actual parameters.
 
 50) Two variables can have the same name, as long as their scopes do NOT intersect. Thus, two variables declared in separate blocks of code can have the same time, as the separation of the blocks causes the scope of the variables to not intersect.
 
@@ -725,7 +725,7 @@ This is called declaration of an array variable - it creates a named placeholder
 
 arrayReferenceVariable = new datatype[arraySize];
 
-This is caleld array variable initialization - it initializes the "array variable" i.e. a "reference variable" used to store "references to arrays" with a "reference". The actual array elements are not stored in the object (non-static/instance variable)/class (static variable)/activation record of the method within the runtime stack (method local variable/parameter).
+This is called array variable initialization - it initializes the "array variable" i.e. a "reference variable" used to store "references to arrays" with a "reference". The actual array elements are not stored in the object (non-static/instance variable)/class (static variable)/activation record of the method within the runtime stack (method local variable/parameter).
 
 They're stored in a different memory location called the heap. The heap is special because it allows memory allocation at runtime. It is used to store reference variables. When you store something in the heap, you have to assign a reference to it. When your program is running, you use your references to access and manipulate the data stored in the heap.
 
@@ -789,4 +789,5 @@ datatype[] arrayReferenceVariable;
 arrayReferenceVariable = {element1, element2..};  // this is not allowed
 
 Example:
-int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}; // using the array initializer to declare-initialize the array
+int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+// using the array initializer to declare-initialize the array
