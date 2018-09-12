@@ -791,3 +791,9 @@ arrayReferenceVariable = {element1, element2..};  // this is not allowed
 Example:
 int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 // using the array initializer to declare-initialize the array
+
+56) Char arrays can be printed as if they are Strings.
+
+Example:
+char[] currencyCode = {'I', 'N', 'R'};
+System.out.println(currencyCode); // "INR"
