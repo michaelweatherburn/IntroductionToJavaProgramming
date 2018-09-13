@@ -797,3 +797,37 @@ int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 Example:
 char[] currencyCode = {'I', 'N', 'R'};
 System.out.println(currencyCode); // "INR"
+
+57) Foreach Loop:
+Foreach loop is a variant of the for loop which is used to traverse the elements of arrays without using any index variables to do so.
+
+Syntax:
+
+for (datatype element: arrayReferenceVariable)
+{
+  // process the element  
+}
+
+Example:
+
+for (double element: list) {    // for each element in the list...
+  System.out.print(element + " ");  // print that element
+}
+
+This is useful in situations where the index of each element has no relevance to the processing that is to be done inside the loop. Note that this only traverses the array in the forward order i.e. from the first index to the last index.
+
+Note that:
+
+for (datatype element: arrayReferenceVariable) {
+  // process element 
+}
+
+is equivalent to:
+
+for (int i = 0, element; i < arrayReferenceVariable.length; i++) {
+  element = arrayReferenceVariable[i];    // copy the value from the current element to this variable "element"
+
+  // process element - any changes made to the variable element here won't affect arrayReferenceVariable[i]
+}
+
+In the above loop, the changes made to the "element" would not be reflected in the original array element. Hence the foreach loop is only useful for array traversal purposes. Modification of array elements cannot be done using this loop.
