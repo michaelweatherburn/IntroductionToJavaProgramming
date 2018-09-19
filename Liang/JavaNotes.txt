@@ -831,3 +831,19 @@ for (int i = 0, element; i < arrayReferenceVariable.length; i++) {
 }
 
 In the above loop, the changes made to the "element" would not be reflected in the original array element. Hence the foreach loop is only useful for array traversal purposes. Modification of array elements cannot be done using this loop.
+
+58) arraycopy method in Java is used to copy certain elements from one array to another.
+
+Syntax:
+
+System.arraycopy(sourceArrayReferenceVariable, sourceArrayStartingIndex, destinationArrayReferenceVariable, destinationArrayStartingIndex, numberOfElements);
+numberOfElements refers to the number of elements that are to be copied from the source array (starting at sourceArrayStartingIndex) to the destination array (starging at destinationArrayStartingIndex)
+The source and destination arrays need to be created and memory allocated
+
+Example:
+int[] source = {'A', 'r', 'r', 'a', 'y'};
+int[] target = new int[source.length];
+System.arraycopy(source, 0, target, 0, source.length);
+System.out.println(target);
+
+System.arraycopy is a method that defies the Java API camelCase naming convention.
