@@ -1,4 +1,4 @@
 # Introduction To Java Programming
-Exercises, Examples and Notes related to Introduction to Java Programming, Comprehensive Version (10th Edition) by Y. Daniel Liang (excl. Chapters 14, 15, 16, 33) (Work in Progress)
+Exercises, Examples and Notes related to Introduction to Java Programming and Data Structures, Comprehensive Version (11th Edition) by Y. Daniel Liang (Work in Progress)
 
 https://www.amazon.com/gp/product/0133761312/
