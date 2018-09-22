@@ -849,3 +849,5 @@ System.out.println(target);
 System.arraycopy is a method that defies the Java API camelCase naming convention.
 
 59) Garbage Collection - when the program is running, there can be arrays/objects in the heap that have no reference variables pointing to them in the program. When that occurs, JVM silently frees up the memory allocated to those objects so that they can be used by other objects (objects that have no references anymore cannot be used by the program anymore, so they are just wasting space in the heap). This process of deallocation of memory in the heap is called Garbage Collection.
+
+60) System.nanoTime() is used to return the number of nanoseconds that have passed since some arbitrary reference point in time. This is useful when one wishes the know the nanosecond level difference between two events that have a very small time difference between them.
