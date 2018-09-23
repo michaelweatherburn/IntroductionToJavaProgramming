@@ -878,3 +878,7 @@ Note that there is a difference between having NO EXPLICIT reference to an array
 
 63) Arrays are objects in Java. That is why an array has a fixed static variable called length that can be accessed by using the dot-operator syntax.
 Yes, even arrays of primitive variables are objects in Java.
+
+64) Returning Arrays from Method - When a method returns an array, the reference variable of that array is returned. All the regular pass-by-value rules concerning reference datatypes apply. The syntax of the method header:
+
+modifiers returnDatatype[] methodName(formalParameterDatatype formalParameter1, formalParameterDatatype formalParameter2...)
