@@ -851,3 +851,30 @@ System.arraycopy is a method that defies the Java API camelCase naming conventio
 59) Garbage Collection - when the program is running, there can be arrays/objects in the heap that have no reference variables pointing to them in the program. When that occurs, JVM silently frees up the memory allocated to those objects so that they can be used by other objects (objects that have no references anymore cannot be used by the program anymore, so they are just wasting space in the heap). This process of deallocation of memory in the heap is called Garbage Collection.
 
 60) System.nanoTime() is used to return the number of nanoseconds that have passed since some arbitrary reference point in time. This is useful when one wishes the know the nanosecond level difference between two events that have a very small time difference between them.
+
+61) Passing Arrays to Methods
+Java has a pass-by-value approach, always. This means that the "passing of a variable to a method" ALWAYS involves copying the actual parameter ("argument") from the caller method, over to the formal parameter ("parameter") of the called method before the execution begins. In case of referenced datatypes like objects and arrays, it just involves passing the array reference variables/object reference variables by value by making copies of them.
+
+The copies of reference still point to the same memory entity within the heap, that is why in case of reference datatypes, passing reference variables as actual parameters (arguments) can be thought of as pass-by-sharing. (Different methods are sharing the same memory entity within the heap using copies of references - and each of those references are present inside the activation frames of the respective methods).
+
+62) Anonymous array:
+When an array's reference variable is not required to be created (example, when it is passed to a method as soon as it is created, so the reference present as the formal parameter in the method would take care of the reference), we can combine the use of new keyword and array initializer to create an array, like so:
+
+Syntax:
+
+new datatype[] {value1, value2.... valuen}
+
+This expression creates an array of size n, and fills it with values present inside the array initializer. When there is no explicit reference to an array, it is called an anonymous array. Note that this simply returns the reference of the new array created. To NOT save that reference would be to use this array as an anonymous array. However, if you save this reference, like so:
+
+datatype[] arrayReferenceVariable = new datatype[] {value1, value2, value3... valuen}
+
+This then becomes a new way to declare a variable using the new keyword and an array initializer.
+
+Example:
+
+printArray(new int[] {4, 5, 6});
+
+Note that there is a difference between having NO EXPLICIT reference to an array, and NO reference to an array. In the above example, the printArray method would have a method formal parameter of type int[], ready to copy the reference over from the caller method. After printArray is done, the array would no longer be required. However if you create an array using the new keyword and do not pass it to a method/do something that would create at least one reference to that array, the array would be UNUSABLE after the creation statement and eligible for garbage collection.
+
+63) Arrays are objects in Java. That is why an array has a fixed static variable called length that can be accessed by using the dot-operator syntax.
+Yes, even arrays of primitive variables are objects in Java.
