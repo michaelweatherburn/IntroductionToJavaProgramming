@@ -473,7 +473,7 @@ public static int sign(int inputNumber)
     return -1;
 }
 
-This syntax throws an error, because the compiler thinks that there is a possibility that none of the if-clauses match, in which case, no return statement is reached. (Since the compiler only checks for syntax, not for semantics, it is not smart enough to realize that the cases themselves, i.e. inputNumber > 0, inputNumber == 0, and inputNumber < 0 are mutually exclusive and cover all possibilities of the integer inputNumber. This is why this code, although semantically perfect, won't run. The proper way to write this code would be:
+This syntax throws an error, because the compiler thinks that there is a possibility that none of the if-clauses match, in which case, no return statement is reached. (Since the compiler only checks for syntax, not for semantics, it is not smart enough to realize that the cases themselves, i.e. inputNumber > 0, inputNumber == 0, and inputNumber < 0 are mutually exclusive and cover all possibilities of the integer inputNumber. This is why this code, although semantically perfect, would show a compilation error. The proper way to write this code would be:
 
 public static int sign(int inputNumber)
 {
@@ -509,7 +509,7 @@ public static void addAndPrintPositiveIntegers(int i1, int i2)
       System.out.println("One or both the integers provided as input are negative. Sum not calculated. ");
       return;
   }
-  return (i1 + i2);
+  System.out.println("Sum: " + (i1 + i2));
 }
 
 42) Methods cannot exist independently of classes in Java. Method definitions have to be encapsulated inside class definitions.
