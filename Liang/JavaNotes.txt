@@ -524,7 +524,7 @@ Static Methods' Invocation Syntax:
 2) staticMethodName(list-of-actual-parameters);
 (only if the class is being invoked within the same class as when it is defined)
 3) objectName.staticMethodName(list-of-actual-parameters);
-(This is possible, but not advisable. Static methods are supposed to be independent of objects. Business logic within those classes should not be related to object-level data members)
+(This is possible, but not advisable. Static methods are supposed to be independent of objects. Business logic within those classes should not be related to object-level data members. This also shows a compiler warning)
 
 b) Instance Methods - These methods are written on the "object/instance level" and are tied to the instance of the class that invokes them, and these methods usually use the said instance as context for execution.
 
@@ -532,7 +532,7 @@ Instance Methods' Invocation Syntax:
 
 objectName.staticMethodName(list-of-actual-parameters);
 
-43) When a method is called, the values of the actual parameters (arguments) are used to initalize the formal parameters (parameters). A copy of each actual parameter is created and assigned to the corresponding formal parameter. This is called Pass By Value.
+43) When a method is called, the values of the actual parameters (arguments) are used to initialize the formal parameters (parameters). A copy of each actual parameter is created and assigned to the corresponding formal parameter. This is called Pass By Value.
 
 For pass-by-value to happen, the arguments provided in the method invocation must have been provided in the same order as that of the corresponding parameters in the method definition's signature. This is called parameter order association. This is necessary because we need formal parameters and actual parameters to have a one-to-one correspondence for the values to be copied over.
 
@@ -579,7 +579,7 @@ public class SwapLogic {
 
 Here, the values of the variables firstArgument and secondArgument would be used to initialize the values of i1 and i2. The values i1 and i2 (present in the activation record corresponding to swap) would be swapped using a third variable. After that, the control returns to main from swap, as the activation record for swap is removed when swap finishes execution. The values firstArgument and secondArgument, present in the activation record corresponding to main, remain unaffected by the events that occurred within swap.
 
-That is why the values aren't swapped in the main method. However, if you check the values in the swap method after its execution, the values would be swapped.
+That is why the values aren't swapped in the main method. However, if you check the values WITHIN the swap method after its execution, the values would be swapped - for it would be swap's copy of those values that were swapped.
 
 45) A method and a variable can have the same name within the same scope. The compiler doesn't confuse between the two. That is because the invocation of a method has fundamentally different syntax:
 
@@ -614,7 +614,7 @@ public static double sum(double firstNumber, double secondNumber) {
   return firstNumber + secondNumber;
 }
 
-Note that for method overloading to work, the method signature must be unique. Modifiers and returntypes don't form part of the method signature, so having the same method signature but different returntypes/modifiers would result in a compiler error.
+Note that for method overloading to work, the method signature must be unique. Modifiers and returntypes don't form part of the method signature, so having the same method signature but different returntypes/modifiers would result in a compilation error.
 
 47) If there are two definitions of an overloaded method, and the compiler is confused about which definition to adhere to when calling the method, owing to the nature of the actual parameters provided, this is called ambiguous invocation.
 
@@ -657,11 +657,11 @@ for (int i = 1; i < 10; i++)  // Here, the variable i has a scope that covers al
 49) Scope of a variable is the part of the program in which the variable can be referenced.
 Variables that are declared inside methods are called local variables.
 
-Variables that are declared within a particular block have scope from the variable declaration to the end of the block in which they're defined.
+Variables that are declared within a particular block have scope from the variable declaration to the end of the block in which they're declared.
 
 Formal parameters of the method are actually local variables that have the scope of the entire method block. They're declared in the parentheses of the method header, and are initialized using the values of the actual parameters.
 
-50) Two variables can have the same name, as long as their scopes do NOT intersect. Thus, two variables declared in separate blocks of code can have the same time, as the separation of the blocks causes the scope of the variables to not intersect.
+50) Two variables can have the same name, as long as their scopes do NOT intersect. Thus, two variables declared in separate blocks of code can have the same name, as the separation of the blocks causes the scope of the variables to not intersect.
 
 Allowed - Discrete Blocks of code having variables with the same name
 {
