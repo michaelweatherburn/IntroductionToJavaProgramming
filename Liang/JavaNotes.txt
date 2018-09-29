@@ -25,7 +25,7 @@ string on two lines");
 -CANNOT do this. The right way to do this is:
 
 System.out.println("This is a " +
-"string on two lines")ab
+"string on two lines");
 4) The time in milliseconds since the Unix Epoch (00:00:00, 01-01-1970)
 is given by the method System.currentTimeMillis()
 
@@ -100,7 +100,7 @@ a) returns long if the input passed to it was in the double format;
 b) returns int if the input passed to it was in the float format
 
 17) Encoding is the process of mapping a character with a corresponding (binary) number. The map itself is called an Encoding Scheme. Examples: ASCII, Unicode.
- Unicode is a 16-bit character encoding scheme. It was originally designed to have 65,535 (2^16) characters. But the current character set of Unicode has more characters called supplementary characters. But using a char variable we can only store the first 65536 Unicode characters.
+ Unicode is a 16-bit character encoding scheme. It was originally designed to have 65,535 (2^16) characters. But the current character set of Unicode has more characters called supplementary characters.
 
 18) To represent a:
 a) Binary number literal, use 0B/0b as prefixes:
@@ -110,7 +110,7 @@ b) Hexadecimal number literal, use 0x/0X as prefixes:
 c) Octal number literal, use 0 as prefix:
 012 is octal 12, 12 is decimal 12.
 
-19) To represent Unicode characters, we can use the Unicode (16-bit, or UTF-16) character convention:
+19) To represent Unicode characters, we can use the Unicode character convention:
 \u followed by 4 hexadecimal characters to represent the Unicode character. Note that UTF-16 has since between updated to support multiple languages that were added after the 65,536 limit was crossed. The char datatype can NOT be used to directly add these characters into Java programs. But Unicode supports most Indian languages, including Hindi (and all other languages using the Devanagari Script) and Odiya.
 
 \u0030 represents '0', \u0041 represents 'A', and so on.
@@ -203,7 +203,7 @@ e) stringObject.lastIndexOf(ch)
 f) stringObject.lastIndexOf(ch, fromIndex)
 g) stringObject.lastIndexOf(s2)
 h) stringObject.lastIndexOf(s2, fromIndex)
-These methods are analogous to indexOf, but check from end to beginning (in the reverse direction).
+These methods are analogous to indexOf, but check from end to beginning (in the reverse direction). If no match is found, all of these methods return -1.
 
 28) The System.out.printf method allows us to print formatted output the same way printf() function in C allowed us to. As an example:
 
@@ -228,7 +228,7 @@ The input passed to:
 %d - integer number (int/long)
 %e, %f - floating-point number (float/double) in either notation (regular/scientific)
 
-The % character signifies the beginning of a format specifier in a format string. To use the '%'' character literal in a format string, we need to escape the character with itself (no, backslash is not used for this character).
+The % character signifies the beginning of a format specifier in a format string. To use the '%' character literal in a format string, we need to escape the character with itself (no, backslash is not used for this character).
 
 %% is the right way to display a single '%' in a format string.
 
@@ -323,7 +323,7 @@ for(int a = 10, b; a < 20; a++)
 
 for(int a = 10; a < 20; System.out.println(a), a++);
 
-If multiple initializations/update-expressions exists, they need to be separated by commas.
+If multiple initializations/update-expressions exists, they need to be separated by commas. Also, the variables declared in the initialization section have to be of the same datatype.
 However, it is not possible to have multiple conditional-checks. If you wish to have multiple conditional-checks, you can combine them using the LAND and LOR operators, as in:
 
 for(int a = 10, b = 20; a < 20 || b < 40; a++, b+=2)
@@ -331,7 +331,7 @@ for(int a = 10, b = 20; a < 20 || b < 40; a++, b+=2)
 
 It is possible to omit certain sections of the for loop altogether.
 
-a) You can skip initialization if the loop counter variable has already been initialised before the body of the loop.
+a) You can skip initialization if the loop counter variable has already been initialized before the body of the loop.
 b) You can skip update-expression if you prefer to write the update-expression inside the body of the loop.
 c) Skipping the conditional-check actually means IMPLICITLY SETTING IT TO TRUE.
 
@@ -366,7 +366,7 @@ for(; true; )
   i++;
 }
 
-This is not the case with while() and do..while() loops. For those loops if you leave the conditional-check expression blank, an error would be thrown.
+This is not the case with while() and do..while() loops. For those loops if you leave the conditional-check expression blank, a compilation error would occur.
 In case an infinite loop is intended, it is best to write it as such:
 
 while(true)
@@ -426,7 +426,7 @@ Double.parseDouble("validDouble");
 
 39) Methods are reusable entities which house business logic within them. Once defined, methods can be invoked as required. There are three parts to using a method:
 
-Method Declaration/Method Prototype
+Method Declaration
 Method Definition
 Method Invocation/Method Call
 
