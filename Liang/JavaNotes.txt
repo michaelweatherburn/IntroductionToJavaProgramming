@@ -165,7 +165,7 @@ do the same thing.
 
 For instance,
 String message = "thisPersonIsASentientBeing";
-System.out.println(thisPersonIsASentientBeing.charAt(5));
+System.out.println(message.charAt(5));
 
 is the same as:
 System.out.println("thisPersonIsASentientBeing".charAt(5));
@@ -173,7 +173,7 @@ System.out.println("thisPersonIsASentientBeing".charAt(5));
 So yes, you can call non-static (instance) methods of a Class directly from that class' object literal.
 
 25) You should not call nextLine() immediately after the methods:
-nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble(), next()
+nextByte(), nextShort(), nextInt(), nextLong(), nextFloat(), nextDouble(), next(), nextBoolean()
 
 These methods (also called token-delimited methods) do not remove the delimiter called newline ('\n') from the buffer when they're done. They are designed to skip over any whitespace characters if they encounter those characters at the beginning of the buffer (i.e. before any reasonable input has begun).
 
