@@ -439,12 +439,12 @@ methodHeader {
 }
 
 Where the methodHeader is as follows:
-modifier returnTypeValue methodName(dataType1 formalParameter1, dataType2 formalParameter2...)
+modifier returnValueType methodName(dataType1 formalParameter1, dataType2 formalParameter2...)
 
 41)
 The modifier provides contextual information about the method.
 
- A method in Java is a programming language construct that mirrors the mathematical construct called functions. In mathematics, functions are supposed to return a single unambiguous value. Multiple values are not allowed, and the value must be defined. Just like mathematical functions, methods in Java may return values, if they're defined so. Based on this, there are two kinds of methods:
+ A method in Java is a programming language construct that mirrors the mathematical construct called functions. In mathematics, functions are supposed to return a single unambiguous value. Multiple values are not allowed, and the value must be defined. Just like mathematical functions, methods in Java may return values. Based on this, there are two kinds of methods:
 
 a) Value-returning method
 The method returns a value (of any primitive or reference type). Mathematically saying this means "providing a unique answer". The returnValueType can then contain any valid Java datatype or class, like int, double, boolean, String, ArrayList<String>, or Student. Programming constructs like these are called functions in other languages.
@@ -500,7 +500,7 @@ public static void printWelcome() {
 }
 
 This method prints a fixed String to the console, but doesn't return any value.
-Return statements can also be used in void methods, to prematurely terminating the method and returning the execution control back to the caller. For example, 
+Return statements can also be used in void methods, to prematurely terminate the method and return the execution control back to the caller. For example, 
 
 public static void addAndPrintPositiveIntegers(int i1, int i2)
 {
