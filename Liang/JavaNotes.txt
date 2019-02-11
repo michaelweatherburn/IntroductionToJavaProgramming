@@ -215,9 +215,9 @@ The % symbol inside the printf method is used to mark the beginning of a format 
 2 represents the exact precision reserved for the decimal part of the number. The precision value is non-negotiable. If two units are mentioned for the precision, and there are three numbers after the decimal point in the actual number, there will be rounding off observed. If there would have been less digits in the actual number than what the precision in the format demands, the extra space after the number would be filled by adding the required number of trailing zeros.
 For minimum field width the logic is different. If there are less number of characters to occupy the minimum width (on the left hand side of the number/String/character/boolean) the extra places would be filled with blank spaces (' '). If there are more characters to represent than the minimum field width can possibly represent, that width is not observed (hence the name, MINIMUM field width).
 Format Flags provide additional information as to how to format the string. For example:
-a) , (Comma) (%,10d) Add commas to numbers that are larger than 1,000 according to the international notation system (commas after every three digits).
+a) , (Comma, applicable to numbers only) (%,10d) Add commas to numbers that are larger than 1,000 according to the international notation system (commas after every three digits).
 b) - (Alignment) (%-10s) - Change the alignment to left-aligned. By default, all strings and numbers are right-aligned.
-c) 0 (Zero) (%010d) - By default, leading spaces are not shown if the maximum field width for the formatted output is greater than the number being output.
+c) 0 (Zero) (%010d, applicable to numbers only) - By default, leading spaces are not shown if the maximum field width for the formatted output is greater than the number being output.
 
  Examples:
 

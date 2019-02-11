@@ -6,7 +6,7 @@ public class CheckPoint4_6_3
     //32.3200000 3.232000e+01
 
     System.out.printf("\namount is %5.2f%% %5.4e", 32.327, 32.32);
-    // 32.33 3.2320e+01
+    // 32.33% 3.2320e+01
 
     System.out.printf("\n%6b", (1 > 2));
     //<blank-space>false
@@ -19,5 +19,7 @@ public class CheckPoint4_6_3
 
     System.out.printf("\n%6b%-8s", (1 > 2), "Java");
     //<blank-space>falseJava<blank-space><blank-space><blank-space><blank-space>
+    System.out.printf("\n%,5d %,6.1f\n", 312342, 315562.932);
+    // 312,342 315,562.9
   }
 }
