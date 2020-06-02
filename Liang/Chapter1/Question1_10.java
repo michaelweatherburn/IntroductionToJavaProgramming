@@ -18,6 +18,8 @@ public class Question1_10
     System.out.println("Seconds: ");
     double seconds = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     hours = hours + minutes / 60 + seconds / 3600;
     double distanceMiles = distance / 1.6;
 

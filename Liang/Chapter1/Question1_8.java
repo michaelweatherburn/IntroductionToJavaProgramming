@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question8{
+public class Question1_8{
 
   static final double PI = 3.1416;
 
@@ -9,6 +9,7 @@ public class Question8{
 
     System.out.println("Enter the radius of the circle. ");
     double radius = scannerObject.nextDouble();
+    scannerObject.close();
 
     double perimeter = 2 * PI * radius;
     double area = PI * radius * radius;

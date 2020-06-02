@@ -1,7 +1,4 @@
-import java.util.Scanner;
-
-class Pi
-{
+class Pi {
   static final int counter = 1000;
 
   static int setSignum(int count){
@@ -9,9 +6,6 @@ class Pi
   }
 
   static double calculatePi(){
-    //creating scannerObject
-    Scanner scannerObject = new Scanner(System.in);
-
     double sum = 0;
     double answer;
 

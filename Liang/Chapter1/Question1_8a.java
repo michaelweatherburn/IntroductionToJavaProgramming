@@ -7,6 +7,7 @@ public class Question1_8a{
 
     System.out.println("Enter the radius of the circle. ");
     double radius = scannerObject.nextDouble();
+    scannerObject.close();
 
     double PI = Pi.calculatePi();
 

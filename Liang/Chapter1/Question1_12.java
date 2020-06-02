@@ -20,6 +20,8 @@ public class Question1_12
     System.out.print("Seconds: ");
     double seconds = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     hours = hours + minutes / 60 + seconds / 3600;
     double average = distanceKilometers / hours;
 

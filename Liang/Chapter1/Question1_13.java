@@ -26,6 +26,8 @@ public class Question1_13
     System.out.print("constant term: ");
     double f = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     double x = (e * d - b * f)/(a * d - b * c);
     double y = (a * f - e * c)/(a * d - b * c);
 

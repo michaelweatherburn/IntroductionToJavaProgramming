@@ -11,6 +11,8 @@ public class Question1_9{
       System.out.println("Enter the width of the rectangle. ");
       double width = scannerObject.nextDouble();
 
+      scannerObject.close();
+
       double area = height * width;
       double perimeter = 2 * (height + width);
 

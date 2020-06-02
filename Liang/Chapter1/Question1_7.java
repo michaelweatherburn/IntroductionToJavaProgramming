@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Question7
+public class Question1_7
 {
 
   public static int setSignum(int count){
@@ -13,6 +13,7 @@ public class Question7
 
     System.out.println("Enter the number of terms until which the series is to be calculated. ");
     int n = scannerObject.nextInt();
+    scannerObject.close();
     double sum = 0;
     double answer;
 
