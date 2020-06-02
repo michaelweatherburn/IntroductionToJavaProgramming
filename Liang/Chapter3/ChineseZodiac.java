@@ -7,6 +7,7 @@ public class ChineseZodiac
 
     System.out.println("Enter the year. ");
     short year = scannerObject.nextShort();
+    scannerObject.close();
 
 
     switch(year % 12)

@@ -23,6 +23,7 @@ public class Question3_21
 
     System.out.print("Enter the day of the month(1 - 31): ");
     dayOfTheMonth = scannerObject.nextInt();
+    scannerObject.close();
 
     century = year / 100;
     yearOfTheCentury = year % 100;

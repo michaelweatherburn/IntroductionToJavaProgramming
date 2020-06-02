@@ -22,6 +22,7 @@ public class Question3_10
 
     System.out.print("What is " + firstNumber + " + " + secondNumber + "? ");
     providedAnswer = scannerObject.nextInt();
+    scannerObject.close();
 
     if(providedAnswer == actualAnswer)
     {

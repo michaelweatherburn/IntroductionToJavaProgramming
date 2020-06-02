@@ -19,6 +19,7 @@ public class SubtractionQuiz
 
     System.out.print("What is " + firstNumber + " - " + secondNumber + " ? ");
     answerProvided = scannerObject.nextInt();
+    scannerObject.close();
 
     if(result == answerProvided)
     {

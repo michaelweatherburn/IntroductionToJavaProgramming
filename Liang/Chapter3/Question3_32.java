@@ -25,6 +25,7 @@ public class Question3_32
     y1 = scannerObject.nextDouble();
     x2 = scannerObject.nextDouble();
     y2 = scannerObject.nextDouble();
+    scannerObject.close();
 
     if((y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) > 0)
     {

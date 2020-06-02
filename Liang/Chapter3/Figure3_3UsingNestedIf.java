@@ -8,6 +8,7 @@ public class Figure3_3UsingNestedIf
     int score;
     System.out.print("Enter the score. ");
     score = scannerObject.nextInt();
+    scannerObject.close();
 
     if(score > 90)
     {

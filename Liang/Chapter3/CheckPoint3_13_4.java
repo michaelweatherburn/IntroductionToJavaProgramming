@@ -7,6 +7,7 @@ public class CheckPoint3_13_4
 
     System.out.print("Enter the day number. ");
     byte day = scannerObject.nextByte();
+    scannerObject.close();
 
     switch(day)
     {

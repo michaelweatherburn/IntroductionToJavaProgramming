@@ -16,6 +16,8 @@ public class Question3_33
     secondPackageWeight = scannerObject.nextDouble();
     secondPackagePrice = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     if((firstPackageWeight/firstPackagePrice) > (secondPackageWeight/secondPackagePrice))
     {
       System.out.println("Package 1 has a better price. ");

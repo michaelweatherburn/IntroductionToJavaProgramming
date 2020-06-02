@@ -11,6 +11,7 @@ public class Question3_18
 
     System.out.print("Enter the weight of the product. ");
     weightInPounds = scannerObject.nextDouble();
+    scannerObject.close();
 
     if(weightInPounds > 0 && weightInPounds <= 1)
       costOfShipping = 3.5;

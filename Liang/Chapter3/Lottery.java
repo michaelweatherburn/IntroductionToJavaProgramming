@@ -14,6 +14,7 @@ public class Lottery
 
     System.out.print("Enter your lottery pick (two digits). ");
     enteredNumber = scannerObject.nextInt();
+    scannerObject.close();
 
     generatedNumber = (int)(Math.random() * 100.0);
 

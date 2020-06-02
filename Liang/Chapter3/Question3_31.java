@@ -34,6 +34,7 @@ public class Question3_31
       System.out.print("Invalid option. The program will now exit. ");
       System.exit(1);
     }
+    scannerObject.close();
 
     //set amount and result to contain ONLY two digits after the decimal point, since they're currencies
     amount = (int)(amount * 100)/100.0;

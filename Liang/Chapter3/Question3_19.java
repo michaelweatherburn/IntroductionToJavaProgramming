@@ -13,6 +13,7 @@ public class Question3_19
     firstSide = scannerObject.nextDouble();
     secondSide = scannerObject.nextDouble();
     thirdSide = scannerObject.nextDouble();
+    scannerObject.close();
 
     if(firstSide + secondSide > thirdSide && secondSide + thirdSide > firstSide && thirdSide + firstSide > secondSide)
     {

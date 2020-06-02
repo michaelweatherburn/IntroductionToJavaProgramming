@@ -5,7 +5,7 @@ public class Question3_3
 public static void main(String[] args)
 {
 	Scanner scannerObject = new Scanner(System.in);
-	double a, b, c, d, e, f, x, y, denominator, result;
+	double a, b, c, d, e, f, x, y, denominator;
 
 	System.out.print("Enter a, b, c, d, e and f: ");
 	a = scannerObject.nextDouble();
@@ -14,6 +14,8 @@ public static void main(String[] args)
 	d = scannerObject.nextDouble();
 	e = scannerObject.nextDouble();
 	f = scannerObject.nextDouble();
+
+	scannerObject.close();
 
 	denominator = a * d - b * c;
 	if(denominator == 0)

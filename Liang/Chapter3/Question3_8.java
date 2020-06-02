@@ -12,7 +12,7 @@ public class Question3_8
     firstNumber = scannerObject.nextInt();
     secondNumber = scannerObject.nextInt();
     thirdNumber = scannerObject.nextInt();
-
+    scannerObject.close();
 
     //what is the best way to sort three numbers (if you can't have them as an array)?
     System.out.print("Sorted Order: ");

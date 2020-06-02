@@ -14,6 +14,7 @@ public static void main(String[] args)
 	generatedNumber = (int)(Math.random() * 1000);
 	System.out.print("Enter your guess three digit number. ");
 	providedNumber = scannerObject.nextInt();
+	scannerObject.close();
 
 	providedUnit = providedNumber % 10;
 	providedTens = (providedNumber / 10) % 10;

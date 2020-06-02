@@ -10,6 +10,7 @@ public class Question3_14
 
     System.out.print("Enter 1 for heads, 0 for tails. ");
     coinTossGuess = scannerObject.nextInt();
+    scannerObject.close();
 
     if(coinTossGuess == coinTossResult)
     {

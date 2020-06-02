@@ -18,6 +18,8 @@ public class Question3_29
     y2 = scannerObject.nextDouble();
     r2 = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     double distanceBetweenCenters = Math.pow( Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2), 0.5);
     if(distanceBetweenCenters < Math.abs(r2 - r1))
       System.out.print("circle2 is inside circle1");

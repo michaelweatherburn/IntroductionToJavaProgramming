@@ -8,9 +8,9 @@ public class Question3_20
 
     double windChillTemperature, windSpeed, temperature;
 
-
     System.out.print("Enter the outside temperature. (It should be between -58F and 41F. ) ");
     temperature = scannerObject.nextDouble();
+    scannerObject.close();
 
     if(!(temperature > -58 && temperature < 41))
     {

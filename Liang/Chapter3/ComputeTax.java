@@ -37,6 +37,8 @@ public class ComputeTax {
      System.out.print("Enter the amount of taxable income. ");
      taxableIncome = scannerObject.nextDouble();
 
+     scannerObject.close();
+
      //enable useful error message
      if(taxableIncome <= 0)
      {

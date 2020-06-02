@@ -21,6 +21,8 @@ public class Question3_28
     w2 = scannerObject.nextDouble();
     h2 = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     if((Math.abs(x2 - x1) <= (w1 - w2) / 2.0) && (Math.abs(y2 - y1) <= (h1 - h2) / 2.0))
       System.out.print("r2 is inside r1."); //maybe it touches the periphery, that's why the equals sign is for
     else if((Math.abs(x2 - x1) < (w1 + w2) / 2.0) && (Math.abs(y2 - y1) < (h1 + h2) / 2.0))

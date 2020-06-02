@@ -23,6 +23,8 @@ public class Question3_6
     System.out.print("Enter inches: ");
     heightInInches = scannerObject.nextInt();
 
+    scannerObject.close();
+
     heightInInches = heightInFeet * 12 + heightInInches;
     heightInMeters = heightInInches * METERS_PER_INCH;
 

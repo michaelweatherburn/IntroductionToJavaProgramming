@@ -16,6 +16,8 @@ public class ComputeAndInterpretBMI {
     System.out.print("Enter your height in inches. ");
     heightInInches = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     weightInKilograms = weightInPounds * KILOGRAMS_PER_POUND;
     heightInMeters = heightInInches * METERS_PER_INCH;
 

@@ -9,6 +9,7 @@ public class Figure3_3UsingElseIf
 
     System.out.print("Enter the score obtained. ");
     score = scannerObject.nextInt();
+    scannerObject.close();
 
     if(score > 90)
     {

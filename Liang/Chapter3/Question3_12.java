@@ -11,6 +11,7 @@ public class Question3_12
 
     System.out.print("Enter a three-digit integer. ");
     threeDigitNumber = scannerObject.nextInt();
+    scannerObject.close();
 
     isPalindrome = ( threeDigitNumber % 10 == threeDigitNumber / 100 % 10) ? true : false;
     if(isPalindrome)

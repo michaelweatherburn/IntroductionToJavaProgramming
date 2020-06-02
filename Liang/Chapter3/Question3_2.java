@@ -13,6 +13,7 @@ public static void main(String[] args) {
 
 	System.out.print("Enter the sum of " + firstNumber + ", " + secondNumber + " and " + thirdNumber + ": ");
 	providedSum = scannerObject.nextInt();
+	scannerObject.close();
 	actualSum = firstNumber + secondNumber + thirdNumber;
 
 	if(providedSum == actualSum)

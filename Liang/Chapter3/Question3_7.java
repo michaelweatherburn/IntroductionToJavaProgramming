@@ -11,6 +11,7 @@ public class Question3_7
 
     System.out.print("Enter the amount. ");
     amount = scannerObject.nextDouble();
+    scannerObject.close();
 
     numberOfCents = (int)(amount * 100); //filtered out the unnecessary digits
     numberOfOneDollars = numberOfCents / 100;

@@ -6,6 +6,7 @@ public class SimpleIfDemo
   {
     Scanner scannerObject = new Scanner(System.in);
     int number = scannerObject.nextInt();
+    scannerObject.close();
 
     if(number % 2 == 0)
       System.out.println("This number is divisible by 2. ");

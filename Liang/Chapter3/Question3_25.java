@@ -22,6 +22,8 @@ public class Question3_25
     x4 = scannerObject.nextDouble();
     y4 = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     a = y2 - y1;
     b = x1 - x2;
     e = x1 * (y2 - y1) - y1 * (x2 - x1);

@@ -21,6 +21,7 @@ public class Question3_27
     System.out.print("Enter the co-ordinates of the point. ");
     x = scannerObject.nextDouble();
     y = scannerObject.nextDouble();
+    scannerObject.close();
 
     //first things first: check whether the point lies in the first quadrant
     //after that bring in the calculated value of y from the third equation (hypotenuse)

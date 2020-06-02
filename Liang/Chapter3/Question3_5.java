@@ -15,6 +15,8 @@ public class Question3_5
     System.out.print("Enter the number of days that have elapsed since today: ");
     daysElapsed = scannerObject.nextInt();
 
+    scannerObject.close();
+
     futureDay = (today + daysElapsed) % 7;
 
     switch(today)

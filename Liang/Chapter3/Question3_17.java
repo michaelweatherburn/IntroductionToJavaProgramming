@@ -12,6 +12,7 @@ public class Question3_17
     computerChoice = (byte)(Math.random() * 3);
     System.out.print("Scissor(0), rock(1), paper(2): ");
     yourChoice = scannerObject.nextByte();
+    scannerObject.close();
 
     switch(computerChoice)
     {

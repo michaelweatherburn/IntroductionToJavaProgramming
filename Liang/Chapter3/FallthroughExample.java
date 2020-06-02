@@ -7,6 +7,7 @@ public class FallthroughExample
 
     System.out.println("Enter the day number. (0-6)");
     byte dayOfWeek = scannerObject.nextByte();
+    scannerObject.close();
 
     switch (dayOfWeek)
     {

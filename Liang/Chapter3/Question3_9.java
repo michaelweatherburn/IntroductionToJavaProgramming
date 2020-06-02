@@ -10,6 +10,7 @@ public class Question3_9
 
     System.out.print("Enter the first nine digits as an integer: ");
     firstNineDigits = scannerObject.nextInt();
+    scannerObject.close();
 
     d9 = firstNineDigits % 10;
     d8 = (firstNineDigits / 10) % 10;

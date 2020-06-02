@@ -11,6 +11,7 @@ public class CheckPoint3_4_1
 
     System.out.print("Enter score: ");
     score = scannerObject.nextInt();
+    scannerObject.close();
 
     if(score > 90)
     {

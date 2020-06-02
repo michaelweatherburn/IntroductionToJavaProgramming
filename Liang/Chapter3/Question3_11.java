@@ -15,6 +15,8 @@ public class Question3_11
     System.out.print("Enter the year: ");
     year = scannerObject.nextInt();
 
+    scannerObject.close();
+
     //Step 1: Check the "leapness" of the leap year
     isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 

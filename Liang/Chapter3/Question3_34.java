@@ -19,6 +19,7 @@ public class Question3_34
     y1 = scannerObject.nextDouble();
     x2 = scannerObject.nextDouble();
     y2 = scannerObject.nextDouble();
+    scannerObject.close();
 
     boolean isPointOnTheLine = (y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) == 0;
     boolean isDistancePositive = (x2 - x0)*(x1 - x0) + (y2 - y0)*(y1 - y0) > 0;

@@ -13,6 +13,7 @@ public class Question3_23
 
     x = scannerObject.nextDouble();
     y = scannerObject.nextDouble();
+    scannerObject.close();
 
     System.out.print("Point " + x + ", " + y + " is ");
     if(x > -RECTANGLE_WIDTH / 2 && x < RECTANGLE_WIDTH/2 && y > -RECTANGLE_HEIGHT/2 && y < RECTANGLE_HEIGHT/2)

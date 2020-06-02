@@ -11,6 +11,8 @@ public class Question3_1 {
     b = scannerObject.nextDouble();
     c = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     discriminant = b * b - 4 * a * c;
     if(discriminant > 0)
     {

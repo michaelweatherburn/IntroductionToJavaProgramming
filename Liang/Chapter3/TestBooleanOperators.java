@@ -9,6 +9,7 @@ public class TestBooleanOperators
     //get an integer number from the user
     System.out.print("Enter the integer to be tested. ");
     int input = scannerObject.nextInt();
+    scannerObject.close();
 
     if(input % 2 == 0 && input % 3 == 0)
     {

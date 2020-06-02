@@ -13,6 +13,7 @@ public class AdditionQuiz
 
     System.out.print("What is " + firstNumber + " + " + secondNumber + "? ");
     int answerProvided = scannerObject.nextInt();
+    scannerObject.close();
 
     int expectedSum =  firstNumber + secondNumber;
     boolean result = expectedSum == answerProvided;

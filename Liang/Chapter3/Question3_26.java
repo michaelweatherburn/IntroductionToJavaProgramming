@@ -11,6 +11,7 @@ public class Question3_26
     Scanner scannerObject = new Scanner(System.in);
     System.out.print("Enter the number. ");
     int number = scannerObject.nextInt();
+    scannerObject.close();
 
     if(number % FIRST_DIVISOR == 0 && number % SECOND_DIVISOR == 0)
     {

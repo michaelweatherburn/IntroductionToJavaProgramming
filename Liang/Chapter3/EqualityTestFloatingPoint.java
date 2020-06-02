@@ -1,4 +1,3 @@
-
 public class EqualityTestFloatingPoint
 {
   public static float EPSILON_FLOAT = 1E-7f;

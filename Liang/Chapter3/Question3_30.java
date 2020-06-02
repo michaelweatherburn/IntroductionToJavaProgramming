@@ -21,6 +21,8 @@ public class Question3_30
     //add or subtract the offset from the hours
     System.out.print("Enter the time zone offset to GMT. ");
     long offsetInHours = scannerObject.nextInt();
+    scannerObject.close();
+    
     hours += offsetInHours;
     //remove whole days from hours
     hours %= 24;

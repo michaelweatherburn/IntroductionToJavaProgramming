@@ -11,6 +11,7 @@ public class Question3_22
     System.out.print("Enter the coordinates of the point, in (x, y) format: ");
     x = scannerObject.nextDouble();
     y = scannerObject.nextDouble();
+    scannerObject.close();
 
     if(Math.pow(x * x + y * y, 0.5) < CIRCLE_RADIUS)
     {
