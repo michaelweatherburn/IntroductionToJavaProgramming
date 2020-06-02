@@ -13,6 +13,8 @@ public class Question2_17
     System.out.print("Enter the wind speed (>=2) in miles per hour: ");
     windSpeed = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     windchillTemperature = 35.74 + 0.6215 * outsideTemperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * outsideTemperature * Math.pow(windSpeed, 0.16);
 
     System.out.print("The wind chill index is " + windchillTemperature);

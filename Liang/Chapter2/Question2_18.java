@@ -6,6 +6,7 @@ public class Question2_18
     Scanner scannerObject = new Scanner(System.in);
     System.out.print("Enter the number of entries that should appear in the table. ");
     int numberOfRows = scannerObject.nextInt();
+    scannerObject.close();
 
     for(int i = 1; i <= numberOfRows; i++)
     {

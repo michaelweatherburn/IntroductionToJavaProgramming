@@ -8,6 +8,7 @@ public class DisplayTime
     System.out.println("Enter the time in seconds. ");
 
     long seconds = scannerObject.nextLong();
+    scannerObject.close();
     long minutes = seconds / 60;
     seconds = seconds % 60;
 

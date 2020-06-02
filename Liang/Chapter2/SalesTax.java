@@ -8,6 +8,8 @@ public class SalesTax
     System.out.println("Enter the purchase amount. ");
     double purchaseAmount = scannerObject.nextDouble();
 
+    scannerObject.close();
+
 double tax = purchaseAmount * 0.06;
 
     tax = (int)(tax * 100)/100.0;

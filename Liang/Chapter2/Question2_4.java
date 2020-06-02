@@ -10,6 +10,8 @@ public class Question2_4
     System.out.print("Enter a number in pounds: ");
     pounds = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     kilograms = KILOGRAMS_PER_POUND * pounds;
     System.out.println(pounds + " pounds is " + kilograms + " kilograms");
   }

@@ -10,8 +10,8 @@ public class Question2_12
 
     System.out.print("Enter speed and acceleration: ");
     takeoffSpeed = scannerObject.nextDouble();
-    acceleration =
-    scannerObject.nextDouble();
+    acceleration = scannerObject.nextDouble();
+    scannerObject.close();
 
     minimumRunwayLength = Math.pow(takeoffSpeed, 2)/(2*acceleration);
 

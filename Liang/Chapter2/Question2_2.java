@@ -14,6 +14,8 @@ public class Question2_2
     cylinderRadius = scannerObject.nextDouble();
     cylinderLength = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     cylinderCrossSectionArea = PI * cylinderRadius * cylinderRadius;
     cylinderVolume = cylinderCrossSectionArea * cylinderLength;
 

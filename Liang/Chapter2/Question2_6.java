@@ -8,6 +8,7 @@ public class Question2_6
 
     System.out.print("Enter a number between 0 and 1000: ");
     int number = scannerObject.nextInt();
+    scannerObject.close();
 
     int currentDigit, sumOfDigits = 0;
 

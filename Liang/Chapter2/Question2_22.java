@@ -11,6 +11,7 @@ public class Question2_22
 
     System.out.print("Enter the currency without decimal points, where the last two digits will signify cents. ");
     formattedInput = scannerObject.nextInt();
+    scannerObject.close();
 
     numberOfOneDollars = formattedInput / 100;   //integer division, so no issues
     formattedInput %= 100;  //reduce formattedInput to its remainder (strip all the dollars)

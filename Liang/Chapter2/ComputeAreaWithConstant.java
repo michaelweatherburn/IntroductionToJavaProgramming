@@ -10,6 +10,8 @@ public class ComputeAreaWithConstant
       System.out.println("Enter a radius for the circle. ");
       double radius = scannerObject.nextDouble();
 
+      scannerObject.close();
+
       //compute area
       double area = radius * radius * PI;
 

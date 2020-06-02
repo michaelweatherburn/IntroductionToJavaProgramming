@@ -9,6 +9,7 @@ public class Question2_5
     System.out.print("Enter the subtotal and a gratuity rate: ");
     double subtotal = scannerObject.nextDouble();
     double gratuityRatePercentage = scannerObject.nextDouble();
+    scannerObject.close();
     double gratuityRate = gratuityRatePercentage / 100.0;
 
     double gratuity = subtotal * gratuityRate;

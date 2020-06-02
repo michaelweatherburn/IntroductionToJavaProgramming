@@ -13,6 +13,8 @@ public class Question2_14
     System.out.println("Enter height in inches: ");
     heightInInches = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     weightInKilograms = weightInPounds * KILOGRAMS_PER_POUND;
     heightInMeters = heightInInches * METERS_PER_INCH;
 

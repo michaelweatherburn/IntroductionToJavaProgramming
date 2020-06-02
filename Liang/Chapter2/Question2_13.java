@@ -7,13 +7,14 @@ public class Question2_13
 
     int numberOfMonths;
     double balanceUptoPreviousMonth = 0.0;
-    double monthlyInterestRate = 0.05/12, monthlySavingAmount, runningAccountBalance = 0;
+    double monthlyInterestRate = 0.05/12, runningAccountBalance = 0;
 
     System.out.print("Enter the monthly saving amount: ");
     monthlySavingAmount = scannerObject.nextDouble();
 
     System.out.println("Enter the number of months until which you're to calculate the amount. ");
     numberOfMonths = scannerObject.nextInt();
+    scannerObject.close();
 
     for(int i = 1; i <= numberOfMonths; i++)
     {

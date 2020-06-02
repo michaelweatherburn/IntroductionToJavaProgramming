@@ -11,6 +11,8 @@ public class Question2_11
     System.out.print("Enter the number of years you need to project population for. ");
     int numberOfYears = scannerObject.nextInt();
 
+    scannerObject.close();
+
     for(int i = 1; i <= numberOfYears; i++)
     {
       runningPopulation += (365 * 24 * 60 * 60)*(1/7.0 - 1/13.0 + 1/45.0);

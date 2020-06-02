@@ -9,6 +9,8 @@ public class ComputeChange
     System.out.println("Enter the amount in dollars and cents. ");
     double amount = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     int numberOfCents = (int)(amount * 100.0);
     int numberOfDollars = numberOfCents / 100;
     numberOfCents = numberOfCents % 100;

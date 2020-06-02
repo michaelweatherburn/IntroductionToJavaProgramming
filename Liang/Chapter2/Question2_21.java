@@ -17,6 +17,8 @@ public class Question2_21
     System.out.print("Enter number of years: ");
     numberOfYears = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     monthlyInterestRate = annualInterestRatePercentage / 1200.0;
     futureInvestmentValue = investmentAmount * Math.pow(1 + monthlyInterestRate, numberOfYears * 12.0);
 

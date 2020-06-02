@@ -20,6 +20,8 @@ public class Question2_19
     x3 = scannerObject.nextDouble();
     y3 = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     side1 = Math.pow( Math.pow(x1 - x2 , 2) + Math.pow(y1 - y2, 2), 0.5);
     side2 = Math.pow( Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2), 0.5);
     side3 = Math.pow( Math.pow(x3 - x1, 2) + Math.pow(y3 - y1, 2), 0.5);

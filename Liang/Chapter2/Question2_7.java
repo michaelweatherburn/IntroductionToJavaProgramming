@@ -7,6 +7,7 @@ public class Question2_7
     Scanner scannerObject = new Scanner(System.in);
     System.out.print("Enter the number of minutes: ");
     long minutes = scannerObject.nextLong();
+    scannerObject.close();
 
     long hours = minutes / 60;
     minutes = minutes / 60; //this part of the computation isn't useful

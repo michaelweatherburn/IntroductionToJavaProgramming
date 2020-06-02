@@ -10,6 +10,8 @@ public class Question2_9
     initialVelocity = scannerObject.nextDouble();
     finalVelocity = scannerObject.nextDouble();
     time = scannerObject.nextDouble();
+    scannerObject.close();
+
     double averageAcceleration = (finalVelocity - initialVelocity)/time;
     System.out.println("The average acceleration is " + averageAcceleration);
   }

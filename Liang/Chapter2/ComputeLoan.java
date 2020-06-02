@@ -16,6 +16,8 @@ public class ComputeLoan
     System.out.println("Enter the principal amount. ");
     loanPrincipal = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     double annualInterestRate = annualInterestRatePercentage/100.0;
     double monthlyInterestRate = annualInterestRate / 12.0;
 

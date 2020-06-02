@@ -13,6 +13,8 @@ public class ExponentOperations{
     System.out.println("Enter the exponent you want to raise the number to. ");
     double exponent = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     System.out.println("Answer: " + Math.pow(base, exponent));
   }
 }

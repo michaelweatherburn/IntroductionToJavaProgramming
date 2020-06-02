@@ -8,6 +8,7 @@ public class Question2_16
     double sideOfHexagon, areaOfHexagon;
     System.out.print("Enter the side: ");
     sideOfHexagon = scannerObject.nextDouble();
+    scannerObject.close();
 
     areaOfHexagon = 1.5 * Math.pow(3, 0.5) * Math.pow(sideOfHexagon, 2);
 

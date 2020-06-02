@@ -9,6 +9,8 @@ public class Question2_3
     System.out.print("Enter a value for feet: ");
     double valueInFeet = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     double valueInMeters = valueInFeet * METERS_PER_FOOT;
     System.out.println(valueInFeet + " feet is " + valueInMeters + " meters");
   }

@@ -16,6 +16,8 @@ public class Question2_23
     System.out.println("Enter price per gallon: ");
     fuelEfficiency = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     costOfTrip = distance / mileage * fuelEfficiency;
 
     //since this is a cost, we have to reduce the precision to two digits after the decimal

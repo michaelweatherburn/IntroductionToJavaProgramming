@@ -9,6 +9,7 @@ public class Question2_20
     System.out.println("Enter balance and interest rate: (e.g. 3 for 3%): ");
     double balance = scannerObject.nextDouble();
     double interestRatePercentage = scannerObject.nextDouble();
+    scannerObject.close();
 
     double interest = balance * (interestRatePercentage/1200.0);
 

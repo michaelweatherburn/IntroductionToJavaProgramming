@@ -24,5 +24,6 @@ public class ReadingNumberTypes
     System.out.println("Enter a floating-point double precision value. ");
     double doubleValue = scannerObject.nextDouble();
 
+    scannerObject.close();
   }
 }

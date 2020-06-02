@@ -16,6 +16,8 @@ public class Question2_10
     System.out.print("Enter the final temperature: ");
     finalTemperature = scannerObject.nextDouble();
 
+    scannerObject.close();
+
     energyRequired = massOfWater * (finalTemperature - initialTemperature) * 4184;
 
     System.out.println("The energy needed is  " + energyRequired);
