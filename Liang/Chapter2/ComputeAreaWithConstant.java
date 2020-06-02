@@ -11,9 +11,8 @@ public class ComputeAreaWithConstant
       double radius = scannerObject.nextDouble();
 
       //compute area
-      double area = radius * radius * 3.14159;
+      double area = radius * radius * PI;
 
       System.out.println("The area of the circle of radius " + radius + " is " + area);
-      
   }
 }
