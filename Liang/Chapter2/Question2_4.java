@@ -1,18 +1,15 @@
 import java.util.Scanner;
-public class Question2_4
-{
-  private static final double KILOGRAMS_PER_POUND = 0.454;
-  public static void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
+public class Question2_4 {
+	public static void main(String[] args) {
+		final double PING_PER_SQUARE_METER = 0.3025;
+		Scanner scanner = new Scanner(System.in);
 
-    double kilograms, pounds;
-    System.out.print("Enter a number in pounds: ");
-    pounds = scannerObject.nextDouble();
+		System.out.print("Enter a number in square meters: ");
+		double squareMeters = scanner.nextDouble();
+		scanner.close();
 
-    scannerObject.close();
+		double pings = squareMeters * PING_PER_SQUARE_METER;
 
-    kilograms = KILOGRAMS_PER_POUND * pounds;
-    System.out.println(pounds + " pounds is " + kilograms + " kilograms");
-  }
+		System.out.println(((int) (squareMeters * 1000) / 1000.0) + " square meters is " + ((int) (pings * 1000) / 1000.0) + " pings. ");
+	}
 }

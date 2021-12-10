@@ -1,16 +1,14 @@
 import java.util.Scanner;
-public class Question2_1
-{
-  public static void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
+public class Question2_1{
+	public static void main(String[] args) {
+		final double KILOMETERS_PER_MILE = 1.6;
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter distance in miles. ");
+		double miles = scanner.nextDouble();
+		scanner.close();
 
-    System.out.print("Enter a degree in Celsius: ");
-    double celsiusValue = scannerObject.nextDouble();
+		double kilometers = miles * KILOMETERS_PER_MILE;
 
-    scannerObject.close();
-
-    double fahrenheitValue = 9.0 * celsiusValue / 5.0 + 32;
-    System.out.println(celsiusValue + " Celsius is " + fahrenheitValue + " Fahrenheit. ");
-  }
+		System.out.println(((int) (miles * 1000) / 1000.0) + " miles is " + ((int) (kilometers * 1000) / 1000.0) + " kilometers");
+	}
 }
