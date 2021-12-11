@@ -1,23 +1,22 @@
 import java.util.Scanner;
+public class Question2_7 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		final long MINUTES_PER_DAY = 60 * 24;
+		final long DAYS_PER_YEAR = 365;
+		final long MINUTES_PER_YEAR = MINUTES_PER_DAY * DAYS_PER_YEAR;
 
-public class Question2_7
-{
-  public static void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
-    System.out.print("Enter the number of minutes: ");
-    long minutes = scannerObject.nextLong();
-    scannerObject.close();
+		System.out.print("Enter the number of minutes: ");
+		long minutes = scanner.nextLong();
+		scanner.close();
 
-    long hours = minutes / 60;
-    minutes = minutes / 60; //this part of the computation isn't useful
+		long remainingMinutes = minutes;
 
-    long days = hours / 24;
-    hours = hours / 24; //..and so is this part of the computation
+		long years = remainingMinutes / MINUTES_PER_YEAR;
+		remainingMinutes = remainingMinutes % MINUTES_PER_YEAR;
 
-    long years = days / 365;
-    days = days % 365;
+		long days = remainingMinutes / MINUTES_PER_DAY;
 
-    System.out.println(minutes + " minutes is approximately " + years + " years and " + days + " days");
-  }
+		System.out.println(minutes + " minutes is approximately " + years + " years and " + days + " days. ");
+	}
 }

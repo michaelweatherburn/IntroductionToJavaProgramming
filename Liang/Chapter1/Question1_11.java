@@ -1,14 +1,14 @@
-public class Exercise1_11 {
+public class Question1_11 {
 	public static void main(String[] args) {
-		final int BIRTHS_PER_SECOND = 7;
-		final int DEATHS_PER_SECOND = 13;
-		final int IMMIGRATIONS_PER_SECOND = 45;
+		final int NEW_BIRTH_TIME_IN_SECONDS = 7;
+		final int NEW_DEATH_TIME_IN_SECONDS = 13;
+		final int NEW_IMMIGRATION_TIME_IN_SECONDS = 45;
 		final long SECONDS_PER_YEAR = 60 * 60 * 24 * 365;
 		double currentPopulation = 312_032_486;
 
-		double birthsPerYear = SECONDS_PER_YEAR / BIRTHS_PER_SECOND;
-		double deathsPerYear = SECONDS_PER_YEAR / DEATHS_PER_SECOND;
-		double immigrationsPerYear = SECONDS_PER_YEAR / DEATHS_PER_SECOND;
+		double birthsPerYear = (double) SECONDS_PER_YEAR / NEW_BIRTH_TIME_IN_SECONDS;
+		double deathsPerYear = (double) SECONDS_PER_YEAR / NEW_DEATH_TIME_IN_SECONDS;
+		double immigrationsPerYear = (double) SECONDS_PER_YEAR / NEW_IMMIGRATION_TIME_IN_SECONDS;
 
 		double cumulativeBirthCount = 0;
 		double cumulativeDeathCount = 0;
@@ -20,7 +20,7 @@ public class Exercise1_11 {
 			cumulativeBirthCount += birthsPerYear;
 			cumulativeDeathCount += deathsPerYear;
 			cumulativeImmigrationCount += immigrationsPerYear;
-			runningPopulationCount += (long) (Math.floor(cumulativeBirthCount) - Math.floor(cumulativeDeathCount) + Math.floor(cumulativeImmigrationCount));
+			runningPopulationCount = (long) (currentPopulation) + (long) (cumulativeBirthCount) - (long) cumulativeDeathCount + (long) cumulativeImmigrationCount;
 			System.out.println("Year " + (i + 1) + ": " + runningPopulationCount);
 		}
 	}

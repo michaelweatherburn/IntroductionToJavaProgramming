@@ -7,7 +7,7 @@ public class Question2_22
     Scanner scannerObject = new Scanner(System.in);
     //enter the input as an integer with last two digits as cents
 
-    int formattedInput, numberOfOneDollars, numberOfDimes, numberOfNickels, numberOfQuarters, numberOfPennieswqk;
+    int formattedInput, numberOfOneDollars, numberOfDimes, numberOfNickels, numberOfQuarters, numberOfPennies;
 
     System.out.print("Enter the currency without decimal points, where the last two digits will signify cents. ");
     formattedInput = scannerObject.nextInt();

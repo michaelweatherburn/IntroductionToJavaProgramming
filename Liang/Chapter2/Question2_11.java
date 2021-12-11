@@ -1,22 +1,27 @@
 import java.util.Scanner;
+public class Question2_11 {
+	public static void main(String[] args) {
+		final int NEW_BIRTH_TIME_IN_SECONDS = 7;
+		final int NEW_DEATH_TIME_IN_SECONDS = 13;
+		final int NEW_IMMIGRATION_TIME_IN_SECONDS = 45;
+		final long SECONDS_PER_YEAR = 60 * 60 * 24 * 365;
+		double currentPopulation = 312_032_486;
 
-public class Question2_11
-{
-  public static void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the number of years: ");
+		int numberOfYears = scanner.nextInt();
+		scanner.close();
 
-    long currentPopulation = 312_032_486;
-    long runningPopulation = currentPopulation;
-    System.out.print("Enter the number of years you need to project population for. ");
-    int numberOfYears = scannerObject.nextInt();
+		double birthsPerYear = (double) SECONDS_PER_YEAR / NEW_BIRTH_TIME_IN_SECONDS;
+		double deathsPerYear = (double) SECONDS_PER_YEAR / NEW_DEATH_TIME_IN_SECONDS;
+		double immigrationsPerYear = (double) SECONDS_PER_YEAR / NEW_IMMIGRATION_TIME_IN_SECONDS;
 
-    scannerObject.close();
+		double cumulativeBirthCount = birthsPerYear * numberOfYears;
+		double cumulativeDeathCount = deathsPerYear * numberOfYears;
+		double cumulativeImmigrationCount = immigrationsPerYear * numberOfYears;
 
-    for(int i = 1; i <= numberOfYears; i++)
-    {
-      runningPopulation += (365 * 24 * 60 * 60)*(1/7.0 - 1/13.0 + 1/45.0);
-      System.out.println("After Year " + i + ": " + runningPopulation);
-    }
-  }
+		long runningPopulationCount = (long) currentPopulation + (long) cumulativeBirthCount - (long) cumulativeDeathCount + (long) cumulativeImmigrationCount;
+
+		System.out.println("The population in " + numberOfYears + " years is " + runningPopulationCount);
+	}
 }

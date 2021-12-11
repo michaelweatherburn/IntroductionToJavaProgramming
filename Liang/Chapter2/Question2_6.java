@@ -1,29 +1,37 @@
 import java.util.Scanner;
+public class Question2_6 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-public class Question2_6
-{
-  public static void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
+		System.out.print("Enter a number between 0 and 1000: ");
+		int number = scanner.nextInt();
+		scanner.close();
 
-    System.out.print("Enter a number between 0 and 1000: ");
-    int number = scannerObject.nextInt();
-    scannerObject.close();
+		int unitDigit = number % 10;
+		int tensDigit = number / 10 % 10;
+		int hundredsDigit = number / 100 % 10;
+		int product;
 
-    int currentDigit, sumOfDigits = 0;
+		if (hundredsDigit == 0) {
+			// possibly a one/two digit number
+			if (tensDigit == 0) {
+				// possibly a one digit number
+				if (unitDigit == 0) {
+					// the number is 0
+					product = 0;
+				} else {
+					// one digit number
+					product = unitDigit;
+				}
+			} else {
+				// two digit number
+				product = tensDigit * unitDigit;	
+			}
+		} else {
+			// three digit number
+			product = hundredsDigit * tensDigit * unitDigit;
+		}
 
-    while(number > 0)
-    {
-      currentDigit = number % 10;
-      //extract the last (unit) digit of the remaining number
-
-      number = number / 10;
-      //integer-divide the number by 10, essentially removing the last digit of that number
-
-      sumOfDigits += currentDigit;
-      //add the digit obtained in the current iteration to the sum
-    }
-
-    System.out.println("The sum of the digits is " + sumOfDigits);
-  }
+		System.out.println("The multiplication of all digits in " + number + " is " + product);
+	}
 }
