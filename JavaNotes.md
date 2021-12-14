@@ -26,7 +26,7 @@ string on two lines");
 ```
 This is the correct way:
 ```java
-System.out.println("This is a " +<Enter>
+System.out.println("This is a " + <Enter>
 "string on two lines");
 ```
 #### The Unix Epoch
@@ -379,9 +379,12 @@ The three types of loops central to many programming languages, among Java, are:
 
 All loops have a control variable, usually a number, that controls the number of iterations the loop will run for. Also, each loop has the following phases:
 
-1. Initialization. This phase occurs once and "sets up" the control variable so that it can be used by the loop.
-2. Conditional check. This phase causes the control value to be used in a boolean expression. If the value of that Boolean expression amounts to true, the loop will continue executing, else the loop will cease to execute and the execution context will start from the line following the conditional check (a phenomenon called "being taken out of the loop. ")
-3. Update. This phase causes changes in the control variable so that it can eventually amount to false, while the setup allows the loop to run for the intended number of times, but no further. Update expressions are usually a part of the loop body (while, do-while loops) but are taken out of the loop body in the for loop.
+1. Initialization  
+  This phase occurs once and "sets up" the control variable so that it can be used by the loop.
+2. Conditional check  
+  This phase causes the control value to be used in a boolean expression. If the value of that Boolean expression amounts to true, the loop will continue executing, else the loop will cease to execute and the execution context will start from the line following the conditional check (a phenomenon called "being taken out of the loop. ")
+3. Update  
+  This phase causes changes in the control variable so that it can eventually amount to false, while the setup allows the loop to run for the intended number of times, but no further. Update expressions are usually a part of the loop body (while, do-while loops) but are taken out of the loop body in the for loop.
 
 #### For Loop Syntax
 A for loop has the following syntax:
@@ -1000,16 +1003,16 @@ It is used to denote the absence of reference. It is similar to `void`, which is
 #### Indices in Arrays
 We use array indices (unique numbers used to reference each element within the array) along with the array reference variable to access/manipulate individual elements of the array. The index convention is as follows:
 
-If the array is of size 0, it is an empty array, containing no elements.  
-If the array is of size n, n >= 1:  
-Each element is provided with an index (a number, used to identify the element within the array uniquely)
+- If the array is of size 0, it is an empty array, containing no elements.  
+- If the array is of size >= 1:  
+  Each element is provided with an index (a number, used to identify the element within the array uniquely)
 
-The indices are 0-indexed i.e.  
-first element - index 0  
-second element - index 1  
-third element - index 2  
-...  
-nth element - index (n - 1)
+  The indices are 0-indexed i.e.  
+  first element - index 0  
+  second element - index 1  
+  third element - index 2  
+  ...  
+  nth element - index (n - 1)
 
 Accessing elements of an array is done like this:
 
@@ -1095,7 +1098,7 @@ for (int i = 0, element; i < arrayReferenceVariable.length; i++) {
 In the above loop, the changes made to the "element" would not be reflected in the original array element. Hence the foreach loop is only useful for array traversal purposes. Modification of array elements cannot be done using this loop.
 
 #### The `System.arraycopy()` Method
-`System.arraycopy(arr, source, srcStart, dest, destStart, num)` method in Java is used to copy elements from one array to another.
+`System.arraycopy(source, srcStart, dest, destStart, num)` method in Java is used to copy elements from one array to another.
 
 Syntax:
 ```java
