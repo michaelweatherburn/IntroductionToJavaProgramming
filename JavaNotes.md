@@ -370,7 +370,35 @@ The `%` character signifies the beginning of a format specifier in a format stri
 
 `%%` is the right way to display a single `%` in a format string.
 
-#### Loops
+#### Wrong `;` on the If-Line
+When the if block has a semicolon `;` on the if line, it becomes equivalent to an empty if-statement, followed by a code block.
+
+```java
+if (expr);  // notice the semicolon - this isn't a compiler error, but a compiler warning
+{
+  statement(s);
+}
+```
+...is equivalent to:
+
+```java
+if (expr) { } // empty if block
+{
+  statement(s); // these statements are inside of a regular Java block
+}
+```
+
+#### Dangling Else Ambiguity
+When code is written such that it isn't obvious which if block an else block associates with, the else block will associate itself with the closest if-block before it.
+```java
+if (expr)
+  if (expr2)
+    statement1;
+else
+  statement2; // else is associated with inner if-block, despite the formatting
+```
+
+#### Iterations and Loops
 Loops are programming constructs that allow you to repeat the execution of code blocks attached to them for a certain number of times.
 The three types of loops central to many programming languages, among Java, are:
 - while loop
