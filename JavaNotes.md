@@ -403,8 +403,8 @@ Equality test of two floating-point values does not neccessarily provide the cor
 
 The reason: there are numbers which can be represented in the decimal notation using a finite number of characters, but cannot be represented in binary using finite number of characters.
 
-Example: 0.1<sub>10</sub> is equal to 0.000<span style="text-decoration: overline">1100</span><sub>2</sub>  
-The latter is a recurring decimal. However, floating-point datatypes in Java only have a fixed number of places to denote precision.
+Example: 0.1<sub>10</sub> is equal to 0.00011001100...<sub>2</sub>  
+The latter is a recurring decimal, with 1100 being the recurring part. However, floating-point datatypes in Java only have a fixed number of places to denote precision.
 All mathematical calculations being inherently imprecise to an extent.
 
 Hence, testing for equality of floating-point values isn't reasonable. As an example:
@@ -446,11 +446,7 @@ It is better to use third-party math libraries when precision is of utmost impor
 `!(condition1 && condition2)` is the same as `!condition1 || !condition2`  
 `!(condition1 || condition2)` is the same as `!condition1 && !condition2`  
 
-De Morgan's Law can be summarized by the statement **break the line, change the sign**.  
-This is because Logical NOT is represented as an overline over the expression it is applied to:
-
-<code><span style="text-decoration: overline">condition1 && condition2</span></code> is the same as <code><span style="text-decoration: overline">condition1</span> || <span style="text-decoration: overline">condition2</span></code>  
-<code><span style="text-decoration: overline">condition1 || condition2</span></code> is the same as <code><span style="text-decoration: overline">condition1</span> && <span style="text-decoration: overline">condition2</span></code>
+De Morgan's Law can be summarized by the statement **break the line, change the sign**.
 
 #### Iterations and Loops
 Loops are programming constructs that allow you to repeat the execution of code blocks attached to them for a certain number of times.
