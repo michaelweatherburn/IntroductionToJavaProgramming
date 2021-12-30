@@ -398,6 +398,60 @@ else
   statement2; // else is associated with inner if-block, despite the formatting
 ```
 
+#### Equality Test of Floating-Point Values
+Equality test of two floating-point values does not neccessarily provide the correct result. This is true even if there's no coercion involved and both values are of the same floating-point datatype.
+
+The reason: there are numbers which can be represented in the decimal notation using a finite number of characters, but cannot be represented in binary using finite number of characters.
+
+Example: 0.1<sub>10</sub> is equal to 0.000<span style="text-decoration: overline">1100</span><sub>2</sub>  
+The latter is a recurring decimal. However, floating-point datatypes in Java only have a fixed number of places to denote precision.
+All mathematical calculations being inherently imprecise to an extent.
+
+Hence, testing for equality of floating-point values isn't reasonable. As an example:
+
+```java
+int number = 1.0 - 0.1 - 0.1 - 0.1 - 0.1 - 0.1;
+if (number == 0.5) {
+  System.out.println("Equal");
+} else {
+  System.out.println("Not equal");
+}
+System.out.println(number);
+```
+
+This would return:
+```
+Not equal
+0.5000000000000001
+```
+
+A solution to this problem: use constants to denote very small values for both floating point datatypes:
+```java
+final float EPSILON_FLOAT = 10E-7f;
+final float EPSILON_DOUBLE = 10E-14;
+```
+
+Then, use those constants as the maximum permissible difference between two values for which equality is to be established:
+
+```java
+if (Math.abs(firstNumber - secondNumber) < EPSILON_DOUBLE) {
+  System.out.println(firstNumber + " is equal to " + secondNumber);
+}
+```
+
+It is better to use third-party math libraries when precision is of utmost importance, such as for scientific calculations and for banking purposes.
+
+#### De Morgan's Law
+
+`!(condition1 && condition2)` is the same as `!condition1 || !condition2`  
+`!(condition1 || condition2)` is the same as `!condition1 && !condition2`  
+
+De Morgan's Law can be summarized by the statement **break the line, change the sign**.  
+This is because Logical NOT is represented as an overline over the expression it is applied to:
+
+<code><span style="text-decoration: overline">condition1 && condition2</span></code> is the same as <code><span style="text-decoration: overline">condition1</span> || <span style="text-decoration: overline">condition2</span></code>  
+<code><span style="text-decoration: overline">condition1 || condition2</span></code> is the same as <code><span style="text-decoration: overline">condition1</span> && <span style="text-decoration: overline">condition2</span></code>
+
 #### Iterations and Loops
 Loops are programming constructs that allow you to repeat the execution of code blocks attached to them for a certain number of times.
 The three types of loops central to many programming languages, among Java, are:
