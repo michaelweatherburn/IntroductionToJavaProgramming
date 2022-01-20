@@ -98,9 +98,57 @@ Short-circuiting allows us to chain object member access expressions like this:
 `objectName != null && objectName.dataMemberName != null && objectName.dataMemberName.inner...`  
 without any fear of `NullPointerException`s.
 
-#### Switch-Case Statement
+#### Switch Statement
+A switch statement has the following syntax:  
+
+```java
+switch (inputExpression) {
+  case VALUE_1: statements;
+  break;
+  case VALUE_2: statements;
+  break;
+  case VALUE_3: statements;
+  break;
+  ...
+  case VALUE_N: statements;
+  break;
+  default: statements;
+}
+```
+
+The evalation happens as follows:  
+the computed value of `inputExpression` is compared against each of the provided values, in order.  
+When a value matches, the statements under the corresponding case are executed.  
+
+The break statement at the end of a case causes the execution of the switch statement to be stopped and the control to the moved to the end of the switch statement.  
+
 The only allowed values to the input in a switch statement in Java:  
 byte, short, int, char, String
+
+#### Fall-through Condition in Switch Statements
+When there's no break statement at the end of a particular case, the switch statment executes the statements corresponding to the case directly after it. This is called fall-through.  
+
+This can be intentional, depending on the context.  
+
+For example:  
+```java
+switch (number) {
+  case 0:
+  case 2:
+  case 4:
+  case 6:
+  case 8:
+    System.out.println("Even");
+  break;
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 9:
+    System.out.println("Odd");
+  break;
+}
+```
 
 #### Methods in `java.lang.Math` Class
 The `java.lang.Math` class has three categories of methods:
