@@ -159,12 +159,12 @@ Encoding is the process of mapping/converting characters and numbers into a corr
 Unicode is a 16-bit character encoding scheme. It was originally designed to have 65,535 (2^16) characters. But the current character set of Unicode has more characters called supplementary characters.
 
 #### Integer Literals in Other Radices
-To 
+To use a:
 - Binary number literal, use `0B`/`0b` as prefixes:  
 `0B00001`, `0b10101`
 - Hexadecimal number literal, use `0x`/`0X` as prefixes:  
 `0xAB`, `0X16B`
-- Octal number literal, use `0` as prefix:  
+- Octal number literal, use `0` as a prefix:  
 `012` is octal 12, `12` is decimal 12.
 
 #### Java Characters, Unicode Character Convention
@@ -1129,7 +1129,9 @@ int[] listOfGrades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
 // using the array initializer to declare-initialize the array
 ```
 
-56. Char arrays can be printed as if they are Strings.
+#### Char Arrays as Strings
+
+Char arrays can be printed as if they are Strings.
 
 Example:
 ```java

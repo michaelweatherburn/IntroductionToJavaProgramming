@@ -7,38 +7,38 @@ import java.util.Scanner;
 */
 public class Question3_34
 {
-  static public void main(String[] args)
-  {
-    Scanner scannerObject = new Scanner(System.in);
-    double x0, y0, x1, y1, x2, y2;
+	static public void main(String[] args)
+	{
+		Scanner scannerObject = new Scanner(System.in);
+		double x0, y0, x1, y1, x2, y2;
 
-    System.out.print("Enter the first and second point, as well as the point which has to be checked. ");
-    x0 = scannerObject.nextDouble();
-    y0 = scannerObject.nextDouble();
-    x1 = scannerObject.nextDouble();
-    y1 = scannerObject.nextDouble();
-    x2 = scannerObject.nextDouble();
-    y2 = scannerObject.nextDouble();
-    scannerObject.close();
+		System.out.print("Enter the first and second point, as well as the point which has to be checked. ");
+		x0 = scannerObject.nextDouble();
+		y0 = scannerObject.nextDouble();
+		x1 = scannerObject.nextDouble();
+		y1 = scannerObject.nextDouble();
+		x2 = scannerObject.nextDouble();
+		y2 = scannerObject.nextDouble();
+		scannerObject.close();
 
-    boolean isPointOnTheLine = (y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) == 0;
-    boolean isDistancePositive = (x2 - x0)*(x1 - x0) + (y2 - y0)*(y1 - y0) > 0;
-    boolean isDistanceWithinLimit = Math.pow(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2), 0.5) > Math.pow(Math.pow(x2 - x0, 2) + Math.pow(y2 - y0, 2), 0.5);
+		boolean isPointOnTheLine = (y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) == 0;
+		boolean isDistancePositive = (x2 - x0)*(x1 - x0) + (y2 - y0)*(y1 - y0) > 0;
+		boolean isDistanceWithinLimit = Math.pow(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2), 0.5) > Math.pow(Math.pow(x2 - x0, 2) + Math.pow(y2 - y0, 2), 0.5);
 
 
 
-    System.out.println("isPointOnTheLine: " + isPointOnTheLine);
-    System.out.println("isDistancePositive: " +isDistancePositive);
-    System.out.println("isDistanceWithinLimit: " + isDistanceWithinLimit);
+		System.out.println("isPointOnTheLine: " + isPointOnTheLine);
+		System.out.println("isDistancePositive: " +isDistancePositive);
+		System.out.println("isDistanceWithinLimit: " + isDistanceWithinLimit);
 
-    if(isPointOnTheLine && isDistancePositive && isDistanceWithinLimit)
-    {
-      //the lazy load && operator will only check for the truth value of a boolean if the previous boolean returned a true value :)
-        System.out.println("The point (" + x2 + ", " + y2 + ") is on the line segment from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
-    }
-    else
-    {
-        System.out.println("The point (" + x2 + ", " + y2 + ") is not on the line segment from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
-    }
-  }
+		if(isPointOnTheLine && isDistancePositive && isDistanceWithinLimit)
+		{
+			//the lazy load && operator will only check for the truth value of a boolean if the previous boolean returned a true value :)
+				System.out.println("The point (" + x2 + ", " + y2 + ") is on the line segment from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
+		}
+		else
+		{
+				System.out.println("The point (" + x2 + ", " + y2 + ") is not on the line segment from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
+		}
+	}
 }
