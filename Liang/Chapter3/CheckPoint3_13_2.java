@@ -1,7 +1,6 @@
 public class CheckPoint3_13_2
 {
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		int x = 3, y = 3;
 		switch (x + 3) {
 			case 6: y = 1;	//Since there are no break statements here, fall-through will occur here
@@ -11,9 +10,12 @@ public class CheckPoint3_13_2
 		System.out.println(y);
 
 		x = 3; y = 3;
-		if (x + 3 == 6)
+		if (x + 3 == 6) {
 			y = 1;
-		y += 1;
+			y += 1;
+		} else {
+			y += 1;
+		}
 
 		System.out.println(y);
 	}
