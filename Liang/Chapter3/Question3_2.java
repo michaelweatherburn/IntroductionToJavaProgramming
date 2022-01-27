@@ -1,28 +1,17 @@
 import java.util.Scanner;
-
 public class Question3_2 {
-public static void main(String[] args) {
-	Scanner scannerObject = new Scanner(System.in);
+	public static void main(String[] args) {
+		int firstNumber = (int) (System.currentTimeMillis() % 10);
+		int secondNumber = (int) (System.currentTimeMillis() / 10 % 10);
+		int thirdNumber = (int) (System.currentTimeMillis() / 100 % 10);
 
-	//generate three integers
-	int firstNumber = (int)(Math.random() * 10);
-	int secondNumber = (int)(Math.random() * 10);
-	int thirdNumber = (int)(Math.random() * 10);
+		Scanner scanner = new Scanner(System.in);
 
-	int providedSum = 0, actualSum = 0;
-
-	System.out.print("Enter the sum of " + firstNumber + ", " + secondNumber + " and " + thirdNumber + ": ");
-	providedSum = scannerObject.nextInt();
-	scannerObject.close();
-	actualSum = firstNumber + secondNumber + thirdNumber;
-
-	if(providedSum == actualSum)
-	{
-		System.out.println("Your guess is right!");
+		System.out.print("What is " + firstNumber + " times " + secondNumber + " times " + thirdNumber + "? ");
+		int providedResponse = scanner.nextInt();
+		scanner.close();
+		
+		int answer = firstNumber * secondNumber * thirdNumber;
+		System.out.println(firstNumber + " x " + secondNumber + " x " + thirdNumber + " = " + providedResponse + " is "  + (answer == providedResponse));
 	}
-	else
-	{
-		System.out.println("Your guess is wrong. ");
-	}
-}
 }
