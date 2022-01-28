@@ -4,11 +4,11 @@ public class Question2_16
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double sideOfHexagon, areaOfHexagon;
 		System.out.print("Enter the side: ");
-		sideOfHexagon = scannerObject.nextDouble();
-		scannerObject.close();
+		sideOfHexagon = scanner.nextDouble();
+		scanner.close();
 
 		areaOfHexagon = 1.5 * Math.pow(3, 0.5) * Math.pow(sideOfHexagon, 2);
 

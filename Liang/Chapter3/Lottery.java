@@ -4,7 +4,7 @@ public class Lottery
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int enteredNumber, generatedNumber;
 		int enteredUnitDigit, enteredTensDigit;
@@ -13,8 +13,8 @@ public class Lottery
 		double award = 0.00;
 
 		System.out.print("Enter your lottery pick (two digits). ");
-		enteredNumber = scannerObject.nextInt();
-		scannerObject.close();
+		enteredNumber = scanner.nextInt();
+		scanner.close();
 
 		generatedNumber = (int)(Math.random() * 100.0);
 
@@ -22,7 +22,7 @@ public class Lottery
 		 made only to test the code
 
 		System.out.println("Enter the lottery winning number. ");
-		generatedNumber = scannerObject.nextInt();
+		generatedNumber = scanner.nextInt();
 
 		*/
 

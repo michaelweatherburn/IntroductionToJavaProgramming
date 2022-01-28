@@ -1,4 +1,3 @@
-
 public class AugmentedAssignmentsUseTypeConversion
 {
 	public static void main(String[] args)

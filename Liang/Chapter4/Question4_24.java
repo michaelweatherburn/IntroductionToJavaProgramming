@@ -3,18 +3,18 @@ public class Question4_24
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject  = new Scanner(System.in);
+    Scanner scanner  = new Scanner(System.in);
     String firstCity = null, secondCity = null, thirdCity = null, swap = null;
 
     //input
     System.out.print("Enter the first city: ");
-    firstCity = scannerObject.nextLine();
+    firstCity = scanner.nextLine();
 
     System.out.print("Enter the second city: ");
-    secondCity = scannerObject.nextLine();
+    secondCity = scanner.nextLine();
 
     System.out.print("Enter the third city: ");
-    thirdCity = scannerObject.nextLine();
+    thirdCity = scanner.nextLine();
 
     if(firstCity.compareToIgnoreCase(secondCity) > 0)
     {

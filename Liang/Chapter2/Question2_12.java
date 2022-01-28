@@ -4,14 +4,14 @@ public class Question2_12
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double acceleration, takeoffSpeed, minimumRunwayLength;
 
 
 		System.out.print("Enter speed and acceleration: ");
-		takeoffSpeed = scannerObject.nextDouble();
-		acceleration = scannerObject.nextDouble();
-		scannerObject.close();
+		takeoffSpeed = scanner.nextDouble();
+		acceleration = scanner.nextDouble();
+		scanner.close();
 
 		minimumRunwayLength = Math.pow(takeoffSpeed, 2)/(2*acceleration);
 

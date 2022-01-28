@@ -4,18 +4,18 @@ public class Question3_5
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int today, daysElapsed, futureDay;
 		String todayString = null, futureDayString = null;
 
 		System.out.print("Enter today's day: ");
-		today = scannerObject.nextInt();
+		today = scanner.nextInt();
 		//assuming that the user knows better than to mess with the system and enter something within 0-6
 
 		System.out.print("Enter the number of days that have elapsed since today: ");
-		daysElapsed = scannerObject.nextInt();
+		daysElapsed = scanner.nextInt();
 
-		scannerObject.close();
+		scanner.close();
 
 		futureDay = (today + daysElapsed) % 7;
 

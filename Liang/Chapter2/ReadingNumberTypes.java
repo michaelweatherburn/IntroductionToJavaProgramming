@@ -4,26 +4,26 @@ public class ReadingNumberTypes
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter a byte value. ");
-		byte byteValue = scannerObject.nextByte();
+		byte byteValue = scanner.nextByte();
 
 		System.out.println("Enter a short value. ");
-		short shortValue = scannerObject.nextShort();
+		short shortValue = scanner.nextShort();
 
 		System.out.println("Enter an integer value. ");
-		int integerValue = scannerObject.nextInt();
+		int integerValue = scanner.nextInt();
 
 		System.out.println("Enter a long value. ");
-		long longValue = scannerObject.nextLong();
+		long longValue = scanner.nextLong();
 
 		System.out.println("Enter a floating-point single precision value. ");
-		float floatValue = scannerObject.nextFloat();
+		float floatValue = scanner.nextFloat();
 
 		System.out.println("Enter a floating-point double precision value. ");
-		double doubleValue = scannerObject.nextDouble();
+		double doubleValue = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 	}
 }

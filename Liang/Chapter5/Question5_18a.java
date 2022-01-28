@@ -3,10 +3,10 @@ public class Question5_18a
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Enter the number of rows in the pattern. ");
-		int input = scannerObject.nextInt();
+		int input = scanner.nextInt();
 
 		for (int i = 1; i <= input; i++)
 		{

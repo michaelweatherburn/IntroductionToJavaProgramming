@@ -3,11 +3,11 @@ public class ChineseZodiac
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the year. ");
-		short year = scannerObject.nextShort();
-		scannerObject.close();
+		short year = scanner.nextShort();
+		scanner.close();
 
 
 		switch(year % 12)

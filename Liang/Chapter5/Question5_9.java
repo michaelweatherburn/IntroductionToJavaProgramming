@@ -3,9 +3,9 @@ public class Question5_9
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number of students. ");
-		int numberOfStudents = scannerObject.nextInt();
+		int numberOfStudents = scanner.nextInt();
 
 		String highestScoringStudent = "";
 		String secondHighestScoringStudent = "";
@@ -19,15 +19,15 @@ public class Question5_9
 		while (count < numberOfStudents)
 		{
 			// rid the input buffer of the extra newline character leftover by previous nextInt methods
-			scannerObject.nextLine();
+			scanner.nextLine();
 
 			// input the current student's name and score
 			System.out.println("Student #" + (count + 1));
 			System.out.print("Name: ");
-			currentStudent = scannerObject.nextLine();
+			currentStudent = scanner.nextLine();
 
 			System.out.print("Score: ");
-			currentScore = scannerObject.nextInt();
+			currentScore = scanner.nextInt();
 
 			// check if the current student's score is greater than the greatest score
 			if (currentScore > highestScore)

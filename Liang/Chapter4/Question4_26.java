@@ -4,9 +4,9 @@ public class Question4_26
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter an amount, for example, 11.56: ");
-    String input = scannerObject.next();  //since it just *has* to be a currency value, and it cannot have spaces in between
+    String input = scanner.next();  //since it just *has* to be a currency value, and it cannot have spaces in between
 
     int numberOfOneDollars = Integer.parseInt(input.substring(0, input.indexOf('.')));
     int remainingAmount = Integer.parseInt(input.substring(input.indexOf('.') + 1));

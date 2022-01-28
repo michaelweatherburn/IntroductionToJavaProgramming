@@ -3,9 +3,9 @@ public class Question5_32
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter your lottery pick (two digits): ");
-		int enteredNumber = scannerObject.nextInt();
+		int enteredNumber = scanner.nextInt();
 
 		int generatedTensDigit = (int) (Math.random() * 10);
 		int generatedUnitDigit;

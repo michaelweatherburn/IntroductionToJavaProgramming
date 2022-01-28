@@ -3,12 +3,12 @@ public class SalesTax
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the purchase amount. ");
-		double purchaseAmount = scannerObject.nextDouble();
+		double purchaseAmount = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 double tax = purchaseAmount * 0.06;
 

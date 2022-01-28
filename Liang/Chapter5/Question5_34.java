@@ -3,7 +3,7 @@ public class Question5_34
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		// write the program's logic within a loop, one whose loop-continuation-condition depends on two counters ComputerWins and UserWins
 
 		int userWins = 0;
@@ -19,7 +19,7 @@ public class Question5_34
 		{
 			// while the computer/user has not won more than 2 times than its' opponent...
 			System.out.print("scissor (0), rock (1), paper (2): ");
-			userChoice = scannerObject.nextByte();
+			userChoice = scanner.nextByte();
 			computerChoice = (byte) (Math.random() * 3);
 
 

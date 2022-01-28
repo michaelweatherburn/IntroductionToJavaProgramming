@@ -3,12 +3,12 @@ public class GreatestCommonDivisor2
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.printf("Enter the first number. ");
-		int firstNumber = scannerObject.nextInt();
+		int firstNumber = scanner.nextInt();
 
 		System.out.printf("Enter the second number. ");
-		int secondNumber = scannerObject.nextInt();
+		int secondNumber = scanner.nextInt();
 
 		int divisor, dividend, remainder = -1;
 		int gcd = 1;

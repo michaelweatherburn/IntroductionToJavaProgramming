@@ -3,11 +3,11 @@ public class Question4_17
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter a year: ");
-    int year = scannerObject.nextInt();
+    int year = scanner.nextInt();
     System.out.print("Enter a month: ");
-    String month = scannerObject.next();
+    String month = scanner.next();
     int numberOfDays = 0;
 
     switch(month)

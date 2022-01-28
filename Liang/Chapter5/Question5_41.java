@@ -3,12 +3,12 @@ public class Question5_41
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter numbers: ");
 		int input;
 		int max = 0, count = 0;
 		do {
-			input = scannerObject.nextInt();
+			input = scanner.nextInt();
 			if (input > max)
 			{
 				max = input;

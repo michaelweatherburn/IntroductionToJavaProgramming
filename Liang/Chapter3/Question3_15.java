@@ -4,7 +4,7 @@ public class Question3_15
 {
 public static void main(String[] args)
 {
-	Scanner scannerObject = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
 	int providedNumber, generatedNumber;
 	int providedUnit, generatedUnit;
@@ -13,8 +13,8 @@ public static void main(String[] args)
 
 	generatedNumber = (int)(Math.random() * 1000);
 	System.out.print("Enter your guess three digit number. ");
-	providedNumber = scannerObject.nextInt();
-	scannerObject.close();
+	providedNumber = scanner.nextInt();
+	scanner.close();
 
 	providedUnit = providedNumber % 10;
 	providedTens = (providedNumber / 10) % 10;

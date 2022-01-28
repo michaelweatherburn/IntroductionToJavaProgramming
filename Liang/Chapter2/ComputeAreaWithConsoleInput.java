@@ -4,12 +4,12 @@ public class ComputeAreaWithConsoleInput{
 
 	public static void main(String[] args){
 		//create a Scanner object
-	Scanner scannerObject = new Scanner(System.in);
+	Scanner scanner = new Scanner(System.in);
 
 	//prompt the user to enter a radius
 	System.out.print("Enter a number for radius: ");
-	double radius = scannerObject.nextDouble();
-	scannerObject.close();
+	double radius = scanner.nextDouble();
+	scanner.close();
 
 	//compute area
 	double area = radius * radius * 3.14159;

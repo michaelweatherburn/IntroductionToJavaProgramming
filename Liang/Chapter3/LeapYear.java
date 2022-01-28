@@ -4,11 +4,11 @@ public class LeapYear
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the year that you want to check for leapness. ");
 
-		int yearProvided = scannerObject.nextInt();
-		scannerObject.close();
+		int yearProvided = scanner.nextInt();
+		scanner.close();
 
 		//finish it within a one-liner
 		if((yearProvided % 4 == 0 && yearProvided % 100 != 0 ) || yearProvided % 400 == 0)

@@ -3,10 +3,10 @@ public class Question4_11
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.print("Enter an integer between 0 and 15: ");
-    int number = scannerObject.nextInt();
+    int number = scanner.nextInt();
 
     if(number >= 10 && number <= 15)
     {

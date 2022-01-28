@@ -4,14 +4,14 @@ public class Question3_7
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double amount;
 		int numberOfOneDollars, numberOfCents, numberOfPennies, numberOfNickels, numberOfQuarters, numberOfDimes;
 
 		System.out.print("Enter the amount. ");
-		amount = scannerObject.nextDouble();
-		scannerObject.close();
+		amount = scanner.nextDouble();
+		scanner.close();
 
 		numberOfCents = (int)(amount * 100); //filtered out the unnecessary digits
 		numberOfOneDollars = numberOfCents / 100;

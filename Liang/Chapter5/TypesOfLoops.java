@@ -3,7 +3,7 @@ public class TypesOfLoops
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		/* There are two kinds of loops: 
 
@@ -30,7 +30,7 @@ public class TypesOfLoops
 		do
 		{
 				System.out.println("Enter a number. Enter 0 to exit. ");
-				a = scannerObject.nextInt();
+				a = scanner.nextInt();
 				System.out.println("Value of sentinel character: " + a);
 		} while(a != 0);
 

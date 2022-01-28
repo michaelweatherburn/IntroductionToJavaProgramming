@@ -3,9 +3,9 @@ public class RelationalOperatorsWithChar
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Please provide a character. ");
-    char input = scannerObject.nextLine().charAt(0);
+    char input = scanner.nextLine().charAt(0);
 
     if('a' <= input && input <= 'z')
     {

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NextMethodInScannerObject
+public class NextMethodInscanner
 {
   public static void main(String[] args)
   {
@@ -13,10 +13,10 @@ public class NextMethodInScannerObject
       Also, next(), like other methods, jumps over the first character if that first character is a whitespace. This is unlike the nextLine() method, which cannot ignore the newline character, no matter wherever it is used in a program. This is why next() can be used to enter data which requires multiple words, like so:
     */
 
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the name. ");
-    String firstName = scannerObject.next();
-    String lastName = scannerObject.next();
+    String firstName = scanner.next();
+    String lastName = scanner.next();
 
     System.out.println("The Name is: " + firstName + lastName);
     /* notice that the use of next() does not leave room for whitespaces in the middle of the two words. The first next() does not read (consume) the character in the buffer. It stays there, until the other next() merely skips over it in order to find something useful.

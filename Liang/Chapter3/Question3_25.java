@@ -4,25 +4,25 @@ public class Question3_25
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double a, b, c, d, e, f;
 		double x, y;
 		double x1, y1, x2, y2, x3, y3, x4, y4, denominator;
 
 		System.out.print("Enter the co-ordinates of the points on the first line. ");
-		x1 = scannerObject.nextDouble();
-		y1 = scannerObject.nextDouble();
-		x2 = scannerObject.nextDouble();
-		y2 = scannerObject.nextDouble();
+		x1 = scanner.nextDouble();
+		y1 = scanner.nextDouble();
+		x2 = scanner.nextDouble();
+		y2 = scanner.nextDouble();
 
 		System.out.print("Enter the co-ordinates of the points on the second line. ");
-		x3 = scannerObject.nextDouble();
-		y3 = scannerObject.nextDouble();
-		x4 = scannerObject.nextDouble();
-		y4 = scannerObject.nextDouble();
+		x3 = scanner.nextDouble();
+		y3 = scanner.nextDouble();
+		x4 = scanner.nextDouble();
+		y4 = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		a = y2 - y1;
 		b = x1 - x2;

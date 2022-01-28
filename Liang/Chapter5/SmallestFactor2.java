@@ -1,9 +1,9 @@
 import java.util.Scanner;
 public class SmallestFactor2 {
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the number. ");
-		int n = scannerObject.nextInt();
+		int n = scanner.nextInt();
 
 		boolean found = false;
 		int factor = 2;

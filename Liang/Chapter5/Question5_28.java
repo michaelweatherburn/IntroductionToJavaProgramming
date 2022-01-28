@@ -3,11 +3,11 @@ public class Question5_28
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Year: ");
-		int year = scannerObject.nextInt();
+		int year = scanner.nextInt();
 		System.out.print("What day is the first Day of January? (0-6, 0 for Sunday) ");
-		int firstDayOfYear = scannerObject.nextInt();
+		int firstDayOfYear = scanner.nextInt();
 
 		// Step 1. Determine whether the year is a leap year. If it is, then the number of days in a February would be 29, else 28
 

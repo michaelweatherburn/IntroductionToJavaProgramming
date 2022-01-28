@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Question3_30
 {
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		String meridiem = "AM";
 		long millisecondsSinceUnixEpoch = System.currentTimeMillis();
@@ -20,8 +20,8 @@ public class Question3_30
 
 		//add or subtract the offset from the hours
 		System.out.print("Enter the time zone offset to GMT. ");
-		long offsetInHours = scannerObject.nextInt();
-		scannerObject.close();
+		long offsetInHours = scanner.nextInt();
+		scanner.close();
 		
 		hours += offsetInHours;
 		//remove whole days from hours

@@ -3,9 +3,9 @@ public class Question5_19
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number of rows in the pyramid to form. ");
-		int input = scannerObject.nextInt();
+		int input = scanner.nextInt();
 
 		/* optimised solution: along the lines of Question5_17a. */
 

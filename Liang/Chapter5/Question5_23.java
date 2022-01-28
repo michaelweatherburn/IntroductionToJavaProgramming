@@ -4,9 +4,9 @@ public class Question5_23
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number of terms in the summation. ");
-		int numberOfTerms = scannerObject.nextInt();
+		int numberOfTerms = scanner.nextInt();
 
 		double sumLargerFirst = 0.0;
 		double sumSmallerFirst = 0.0;

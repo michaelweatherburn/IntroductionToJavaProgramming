@@ -6,14 +6,14 @@ public class FahrenheitToCelsius
 		public static void main(String[] args)
 		{
 			//create a Scanner object
-			Scanner scannerObject = new Scanner(System.in);
+			Scanner scanner = new Scanner(System.in);
 
 			double fahrenheit;
 			double celsius;
 
 			System.out.println("Enter the value in Fahrenheit: ");
-			fahrenheit = scannerObject.nextDouble();
-			scannerObject.close();
+			fahrenheit = scanner.nextDouble();
+			scanner.close();
 
 			celsius = (5.0 / 9.0) * (fahrenheit - 32);
 

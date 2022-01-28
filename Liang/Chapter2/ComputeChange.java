@@ -4,12 +4,12 @@ public class ComputeChange
 	public static void main(String[] args)
 	{
 
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the amount in dollars and cents. ");
-		double amount = scannerObject.nextDouble();
+		double amount = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		int numberOfCents = (int)(amount * 100.0);
 		int numberOfDollars = numberOfCents / 100;

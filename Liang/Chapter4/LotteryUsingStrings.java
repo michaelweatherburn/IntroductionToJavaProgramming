@@ -3,17 +3,17 @@ public class LotteryUsingStrings
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     //first, generate a random two-digit integer, then convert it into String
 
     String lotteryString = "" + (int)Math.floor(Math.random() * 10) + (int)Math.floor(Math.random() * 10);
     //If you try to multiply by 100 directly, it would work, but there's the probability of getting Strings like "8", which wouldn't show up as "08", unlike what we're expecting
 
     System.out.println("Enter the lottery string. ");
-    lotteryString = scannerObject.nextLine();
+    lotteryString = scanner.nextLine();
 
     System.out.print("Enter your lottery pick (two digits): ");
-    String userInput = scannerObject.nextLine();
+    String userInput = scanner.nextLine();
 
     System.out.println("The lottery number is " + lotteryString);
     if(lotteryString.equals(userInput))

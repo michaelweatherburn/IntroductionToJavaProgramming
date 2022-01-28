@@ -3,9 +3,9 @@ public class Question4_8
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter an ASCII code: ");
-    int number = scannerObject.nextInt();
+    int number = scanner.nextInt();
 
     if(number >= 0 && number <= 127)
     {

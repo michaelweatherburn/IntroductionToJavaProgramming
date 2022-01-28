@@ -4,23 +4,23 @@ public class Question3_11
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int month, year, numberOfDays = 0;
 		String monthName = null;
 		boolean isLeapYear;
 
 		System.out.print("Enter the month (1-12): ");
-		month = scannerObject.nextInt();
+		month = scanner.nextInt();
 
 		System.out.print("Enter the year: ");
-		year = scannerObject.nextInt();
+		year = scanner.nextInt();
 
-		scannerObject.close();
+		scanner.close();
 
-		//Step 1: Check the "leapness" of the leap year
+		// Step 1: Check the "leapness" of the year
 		isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
-		//Step 2: Prepare the monthName switch
+		// Step 2: Use the month switch
 		switch(month)
 		{
 			case 1: monthName = "January";

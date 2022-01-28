@@ -3,9 +3,9 @@ public class Question4_13
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter a letter: ");
-    char inputCharacter = scannerObject.next().charAt(0);
+    char inputCharacter = scanner.next().charAt(0);
 
     if(Character.isLetter(inputCharacter))
     {

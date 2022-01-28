@@ -3,9 +3,9 @@ public class Question5_17a
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter an integer from 1 to 15: ");
-		int input = scannerObject.nextInt();
+		int input = scanner.nextInt();
 
 		if (input >= 1 && input <= 15)
 		{

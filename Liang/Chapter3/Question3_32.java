@@ -15,17 +15,17 @@ public class Question3_32
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double x0, y0, x1, y1, x2, y2;
 
 		System.out.print("Enter three points for p0, p1 and p2: ");
-		x0 = scannerObject.nextDouble();
-		y0 = scannerObject.nextDouble();
-		x1 = scannerObject.nextDouble();
-		y1 = scannerObject.nextDouble();
-		x2 = scannerObject.nextDouble();
-		y2 = scannerObject.nextDouble();
-		scannerObject.close();
+		x0 = scanner.nextDouble();
+		y0 = scanner.nextDouble();
+		x1 = scanner.nextDouble();
+		y1 = scanner.nextDouble();
+		x2 = scanner.nextDouble();
+		y2 = scanner.nextDouble();
+		scanner.close();
 
 		if((y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) > 0)
 		{

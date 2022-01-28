@@ -4,24 +4,24 @@ public class Question3_28
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double x1, y1, w1, h1;
 		double x2, y2, w2, h2;
 
 		System.out.print("Enter r1's co-ordinates, width, and height: ");
-		x1 = scannerObject.nextDouble();
-		y1 = scannerObject.nextDouble();
-		w1 = scannerObject.nextDouble();
-		h1 = scannerObject.nextDouble();
+		x1 = scanner.nextDouble();
+		y1 = scanner.nextDouble();
+		w1 = scanner.nextDouble();
+		h1 = scanner.nextDouble();
 
 		System.out.print("Enter r2's co-ordinates, width and height: ");
-		x2 = scannerObject.nextDouble();
-		y2 = scannerObject.nextDouble();
-		w2 = scannerObject.nextDouble();
-		h2 = scannerObject.nextDouble();
+		x2 = scanner.nextDouble();
+		y2 = scanner.nextDouble();
+		w2 = scanner.nextDouble();
+		h2 = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		if((Math.abs(x2 - x1) <= (w1 - w2) / 2.0) && (Math.abs(y2 - y1) <= (h1 - h2) / 2.0))
 			System.out.print("r2 is inside r1."); //maybe it touches the periphery, that's why the equals sign is for

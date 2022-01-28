@@ -3,13 +3,13 @@ public class TestDoWhile
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int sum = 0;
 		int data;
 		do
 		{
 			System.out.println("Enter an integer (0 to exit loop): ");
-			data = scannerObject.nextInt();
+			data = scanner.nextInt();
 			sum += data;
 		} while (data != 0);
 

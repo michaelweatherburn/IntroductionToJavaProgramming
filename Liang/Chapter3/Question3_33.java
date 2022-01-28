@@ -4,19 +4,19 @@ public class Question3_33
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double firstPackageWeight, secondPackageWeight, firstPackagePrice, secondPackagePrice;
 
 		System.out.print("Enter weight and price for package 1. ");
-		firstPackageWeight = scannerObject.nextDouble();
-		firstPackagePrice = scannerObject.nextDouble();
+		firstPackageWeight = scanner.nextDouble();
+		firstPackagePrice = scanner.nextDouble();
 
 		System.out.print("Enter weight and price for package 2. ");
-		secondPackageWeight = scannerObject.nextDouble();
-		secondPackagePrice = scannerObject.nextDouble();
+		secondPackageWeight = scanner.nextDouble();
+		secondPackagePrice = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		if((firstPackageWeight/firstPackagePrice) > (secondPackageWeight/secondPackagePrice))
 		{

@@ -4,12 +4,12 @@ public class Figure3_3UsingElseIf
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int score;
 
 		System.out.print("Enter the score obtained. ");
-		score = scannerObject.nextInt();
-		scannerObject.close();
+		score = scanner.nextInt();
+		scanner.close();
 
 		if(score > 90)
 		{

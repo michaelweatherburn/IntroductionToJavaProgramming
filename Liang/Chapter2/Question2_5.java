@@ -4,12 +4,12 @@ public class Question2_5
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("Enter the subtotal and a gratuity rate: ");
-		double subtotal = scannerObject.nextDouble();
-		double gratuityRatePercentage = scannerObject.nextDouble();
-		scannerObject.close();
+		double subtotal = scanner.nextDouble();
+		double gratuityRatePercentage = scanner.nextDouble();
+		scanner.close();
 		double gratuityRate = gratuityRatePercentage / 100.0;
 
 		double gratuity = subtotal * gratuityRate;

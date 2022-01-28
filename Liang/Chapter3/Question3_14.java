@@ -4,13 +4,13 @@ public class Question3_14
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int coinTossResult = Math.random() > 0.5 ? 1 : 0;
 		int coinTossGuess;
 
 		System.out.print("Enter 1 for heads, 0 for tails. ");
-		coinTossGuess = scannerObject.nextInt();
-		scannerObject.close();
+		coinTossGuess = scanner.nextInt();
+		scanner.close();
 
 		if(coinTossGuess == coinTossResult)
 		{

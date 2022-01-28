@@ -4,7 +4,7 @@ public class Question4_25
   static final int lowermostUpperCaseLetterValue = 65;
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     double randomNumber = Math.random();
 
     String randomNumberString = ("" + randomNumber).substring(2);

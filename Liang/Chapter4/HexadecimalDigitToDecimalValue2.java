@@ -4,9 +4,9 @@ public class HexadecimalDigitToDecimalValue2
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter a hexadecimal digit. ");
-    String userInput = scannerObject.next();
+    String userInput = scanner.next();
 
     if(userInput.length() > 1)
     {

@@ -3,9 +3,9 @@ public class Question4_14
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter a letter grade: ");
-    char letterGrade = scannerObject.next().charAt(0);
+    char letterGrade = scanner.next().charAt(0);
     byte numericEquivalent = 0;
 
     //long-standing assumption: letter grades are ALWAYS in uppercase :)

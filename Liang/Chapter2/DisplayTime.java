@@ -4,11 +4,11 @@ public class DisplayTime
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the time in seconds. ");
 
-		long seconds = scannerObject.nextLong();
-		scannerObject.close();
+		long seconds = scanner.nextLong();
+		scanner.close();
 		long minutes = seconds / 60;
 		seconds = seconds % 60;
 

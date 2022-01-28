@@ -3,14 +3,14 @@ public class Question5_1
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter an integer, the input ends if it is 0: ");
 		int inputInteger;
 
 		int negativeIntegerCount = 0, positiveIntegerCount = 0, totalCount = 0, sum = 0;
 		int iteration = 0;
 		do {
-			inputInteger = scannerObject.nextInt();
+			inputInteger = scanner.nextInt();
 			if (inputInteger > 0)
 			{
 				positiveIntegerCount++;

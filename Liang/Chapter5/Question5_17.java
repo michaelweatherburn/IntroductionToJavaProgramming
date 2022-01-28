@@ -3,9 +3,9 @@ public class Question5_17
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter an integer from 1 to 15: ");
-		int input = scannerObject.nextInt();
+		int input = scanner.nextInt();
 
 		/* no-brainer solution: re-use variables as less as possible, break up the input into right-angled triangle and find the relation between each row's number and the output to be printed for that row 
 

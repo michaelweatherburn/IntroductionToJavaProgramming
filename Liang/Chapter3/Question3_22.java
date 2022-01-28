@@ -5,13 +5,13 @@ public class Question3_22
 	private static final double CIRCLE_RADIUS = 10.0;
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double x, y;
 		System.out.print("Enter the coordinates of the point, in (x, y) format: ");
-		x = scannerObject.nextDouble();
-		y = scannerObject.nextDouble();
-		scannerObject.close();
+		x = scanner.nextDouble();
+		y = scanner.nextDouble();
+		scanner.close();
 
 		if(Math.pow(x * x + y * y, 0.5) < CIRCLE_RADIUS)
 		{

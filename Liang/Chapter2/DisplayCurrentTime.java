@@ -2,7 +2,6 @@ public class DisplayCurrentTime
 {
 	public static void main(String[] args)
 	{
-
 		//displaying the date using the same approach would be difficult, since different years have different dates and you just can't figure out which years are leap and which ones are non-leap and it becomes a whole lot of confusion
 		long timeSinceUnixEpoch;
 		System.out.println(timeSinceUnixEpoch = System.currentTimeMillis());

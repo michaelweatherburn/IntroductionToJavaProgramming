@@ -3,10 +3,10 @@ public class Question5_14
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the two numbers whose GCD is to be calculated. ");
-		int firstNumber = scannerObject.nextInt();
-		int secondNumber = scannerObject.nextInt();
+		int firstNumber = scanner.nextInt();
+		int secondNumber = scanner.nextInt();
 
 		int minimum = Math.min(firstNumber, secondNumber);
 		int gcd = 1;

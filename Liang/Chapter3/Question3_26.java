@@ -8,10 +8,10 @@ public class Question3_26
 	{
 		boolean isDivisibleByBoth = false, isDivisibleByEitherOrBoth = false, isDivisibleByEitherButNotBoth = false;
 
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number. ");
-		int number = scannerObject.nextInt();
-		scannerObject.close();
+		int number = scanner.nextInt();
+		scanner.close();
 
 		if(number % FIRST_DIVISOR == 0 && number % SECOND_DIVISOR == 0)
 		{

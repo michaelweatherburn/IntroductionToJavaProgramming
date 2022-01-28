@@ -5,18 +5,18 @@ public class ComputeAndInterpretBMI {
 	private final static double KILOGRAMS_PER_POUND = 0.45359237;
 
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		String interpretation;
 		double BMI, weightInPounds, heightInInches, weightInKilograms, heightInMeters;
 
 		System.out.print("Enter your weight in pounds. ");
-		weightInPounds = scannerObject.nextDouble();
+		weightInPounds = scanner.nextDouble();
 
 		System.out.print("Enter your height in inches. ");
-		heightInInches = scannerObject.nextDouble();
+		heightInInches = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		weightInKilograms = weightInPounds * KILOGRAMS_PER_POUND;
 		heightInMeters = heightInInches * METERS_PER_INCH;

@@ -4,11 +4,11 @@ public class ComparisionMethodsInStringObject
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     String s1 = "Subham";
     String s2 = "Subham";
     System.out.println("Enter the name of the second String. ");
-    String s3 = scannerObject.next();
+    String s3 = scanner.next();
 
     /* Notice that? string reference comparision is extremely unhelpful, as it can only take you so far. To actually work with strings, you will have to use the equals() method. This method employs two halves:
 

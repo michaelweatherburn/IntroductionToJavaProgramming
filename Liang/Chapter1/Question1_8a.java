@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Question1_8a{
 
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the radius of the circle. ");
-		double radius = scannerObject.nextDouble();
-		scannerObject.close();
+		double radius = scanner.nextDouble();
+		scanner.close();
 
 		double PI = Pi.calculatePi();
 

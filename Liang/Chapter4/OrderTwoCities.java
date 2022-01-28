@@ -3,11 +3,11 @@ public class OrderTwoCities
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the two city names, in two separate lines: ");
 
-    String firstCity = scannerObject.nextLine();
-    String secondCity = scannerObject.nextLine();
+    String firstCity = scanner.nextLine();
+    String secondCity = scanner.nextLine();
 
     System.out.print("The cities in alphabetical order are ");
     if(firstCity.compareTo(secondCity) < 0)

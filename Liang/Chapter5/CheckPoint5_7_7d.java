@@ -3,9 +3,9 @@ public class CheckPoint5_7_7d
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the value of n: ");
-		int n = scannerObject.nextInt();
+		int n = scanner.nextInt();
 		int count = 5;
 		while (count < n)
 		{

@@ -4,20 +4,20 @@ public class Question2_21
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double futureInvestmentValue, investmentAmount, monthlyInterestRate, annualInterestRatePercentage, numberOfYears;
 
 		System.out.print("Enter investment amount: ");
-		investmentAmount = scannerObject.nextDouble();
+		investmentAmount = scanner.nextDouble();
 
 		System.out.print("Enter annual interest rate in percentage: ");
-		annualInterestRatePercentage = scannerObject.nextDouble();
+		annualInterestRatePercentage = scanner.nextDouble();
 
 		System.out.print("Enter number of years: ");
-		numberOfYears = scannerObject.nextDouble();
+		numberOfYears = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		monthlyInterestRate = annualInterestRatePercentage / 1200.0;
 		futureInvestmentValue = investmentAmount * Math.pow(1 + monthlyInterestRate, numberOfYears * 12.0);

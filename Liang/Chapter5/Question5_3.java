@@ -3,7 +3,7 @@ public class Question5_3
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.printf("%-8s%8s\n", "Kilograms", "Pounds");
 		for (int i = 1; i < 200; i++)
 		{

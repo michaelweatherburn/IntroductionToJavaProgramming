@@ -5,12 +5,12 @@ public class Dec2Hex
 	public static final int DECIMAL_RADIX = 10;
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		String hexadecimalEquivalent = "";
 
 		System.out.println("Enter the decimal number. ");
-		int decimalNumber = scannerObject.nextInt();
+		int decimalNumber = scanner.nextInt();
 		String remainder = null;
 
 		while(decimalNumber != 0)

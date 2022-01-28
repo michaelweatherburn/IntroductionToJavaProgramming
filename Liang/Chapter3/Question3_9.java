@@ -3,14 +3,14 @@ public class Question3_9
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int firstNineDigits;
 		int d1, d2, d3, d4, d5, d6, d7, d8, d9, d10;
 
-		System.out.print("Enter the first nine digits as an integer: ");
-		firstNineDigits = scannerObject.nextInt();
-		scannerObject.close();
+		System.out.print("Enter the first nine digits of an ISBN as integer: ");
+		firstNineDigits = scanner.nextInt();
+		scanner.close();
 
 		d9 = firstNineDigits % 10;
 		d8 = (firstNineDigits / 10) % 10;
@@ -23,10 +23,11 @@ public class Question3_9
 		d1 = (firstNineDigits / 100000000) % 10;
 
 		d10 = (d1 + d2 * 2 + d3 * 3 + d4 * 4 + d5 * 5 + d6 * 6 + d7 * 7 + d8 * 8 + d9 * 9) % 11;
-		System.out.print(d1 + "" + d2 + "" + d3 + "" + d4 + "" + d5 + "" + d6 + "" + d7 + "" + d8 + "" + d9);
-		if(d10 == 10)
-			System.out.print('X');
-		else
-			System.out.print(d10);
+		System.out.print("The ISBN-10 number is " + d1 + d2 + d3 + d4 + d5 + d6 + d7 + d8 + d9);
+		if (d10 == 10) {
+			System.out.println("X");
+		} else {
+			System.out.println(d10);
+		}
 	}
 }

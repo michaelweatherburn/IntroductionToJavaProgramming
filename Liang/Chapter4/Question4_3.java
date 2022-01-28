@@ -10,7 +10,7 @@ public class Question4_3
   public static void main(String[] args)
   {
     //convert from String notation to individual variables
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     double atlanta_latitude = Double.parseDouble(ATLANTA_GPS_COORDINATES.substring(0, ATLANTA_GPS_COORDINATES.indexOf(',')));
     double atlanta_longitude = Double.parseDouble(ATLANTA_GPS_COORDINATES.substring(ATLANTA_GPS_COORDINATES.lastIndexOf(' ')));
 

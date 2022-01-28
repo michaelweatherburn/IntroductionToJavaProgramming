@@ -1,37 +1,21 @@
 import java.util.Scanner;
+public class Question3_10 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-public class Question3_10
-{
-	public static void main(String[] args)
-	{
-		Scanner scannerObject = new Scanner(System.in);
-		int firstNumber = (int)(Math.random() * 100);
-		int secondNumber = (int)(Math.random()  * 100);
-		int providedAnswer, actualAnswer;
+		int number1 = (int) (Math.random() * 1000);
+		int number2 = (int) (Math.random() * 1000);
 
-		int temporary = 0;
-		//swap the numbers if they're not in their natural order
-		if(secondNumber > firstNumber)
-		{
-			temporary = firstNumber;
-			firstNumber = secondNumber;
-			secondNumber = temporary;
+		System.out.print("What is " + number1 + " times " + number2 + "? ");
+		int providedAnswer = scanner.nextInt();
+		int actualAnswer = number1 * number2;
+		scanner.close();
+
+		if (providedAnswer == actualAnswer) {
+			System.out.println("You are correct. ");
+		} else {
+			System.out.println("You are incorrect. ");
+			System.out.println(number1 + " times " + number2 + " should be " + actualAnswer);
 		}
-
-		actualAnswer = firstNumber + secondNumber;
-
-		System.out.print("What is " + firstNumber + " + " + secondNumber + "? ");
-		providedAnswer = scannerObject.nextInt();
-		scannerObject.close();
-
-		if(providedAnswer == actualAnswer)
-		{
-			System.out.print("You're right! ");
-		}
-		else
-		{
-			System.out.print("You're wrong. ");
-		}
-
 	}
 }

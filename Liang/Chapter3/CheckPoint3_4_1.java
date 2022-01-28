@@ -4,14 +4,14 @@ public class CheckPoint3_4_1
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int score;
 		double payScale = 19000;
 
 		System.out.print("Enter score: ");
-		score = scannerObject.nextInt();
-		scannerObject.close();
+		score = scanner.nextInt();
+		scanner.close();
 
 		if(score > 90)
 		{

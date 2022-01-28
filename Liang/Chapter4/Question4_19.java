@@ -3,9 +3,9 @@ public class Question4_19
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter the first 9 digits of ISBN as a String: ");
-    String firstNineISBNDigits = scannerObject.next();
+    String firstNineISBNDigits = scanner.next();
     int d1 = 0, d2 = 0, d3 = 0, d4 = 0, d5 = 0, d6 = 0, d7 = 0, d8 = 0, d9 = 0, d10 = 0;
     d1 = firstNineISBNDigits.charAt(0) - 48;
     d2 = firstNineISBNDigits.charAt(1) - 48;

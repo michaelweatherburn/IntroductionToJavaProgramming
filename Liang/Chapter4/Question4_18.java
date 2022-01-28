@@ -3,9 +3,9 @@ public class Question4_18
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter two characters: ");
-    String inputString = scannerObject.next();
+    String inputString = scanner.next();
     String major = null, year = null;
     if(inputString.length() != 2)
     {

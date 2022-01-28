@@ -3,7 +3,7 @@ public class SubtractionQuiz
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int firstNumber = (int)(Math.random() * 10);
 		int secondNumber = (int)(Math.random() * 10);
@@ -18,8 +18,8 @@ public class SubtractionQuiz
 		result = firstNumber - secondNumber;
 
 		System.out.print("What is " + firstNumber + " - " + secondNumber + " ? ");
-		answerProvided = scannerObject.nextInt();
-		scannerObject.close();
+		answerProvided = scanner.nextInt();
+		scanner.close();
 
 		if(result == answerProvided)
 		{

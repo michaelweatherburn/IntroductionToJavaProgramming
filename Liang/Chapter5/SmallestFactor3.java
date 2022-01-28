@@ -3,9 +3,9 @@ public class SmallestFactor3
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the number: ");
-		int n = scannerObject.nextInt();
+		int n = scanner.nextInt();
 
 		int factor = 2;
 		while(factor <= n && n % factor != 0) {

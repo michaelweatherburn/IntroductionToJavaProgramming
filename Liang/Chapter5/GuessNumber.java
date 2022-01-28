@@ -3,11 +3,11 @@ public class GuessNumber
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int randomNumber = (int)(Math.random() * 101);
 
 		System.out.println("What is your guess? ");
-		int guessedNumber = scannerObject.nextInt();
+		int guessedNumber = scanner.nextInt();
 
 		while(randomNumber != guessedNumber)
 		{
@@ -20,7 +20,7 @@ public class GuessNumber
 				System.out.println("Too low. Please try again. ");
 			}
 
-			guessedNumber = scannerObject.nextInt();
+			guessedNumber = scanner.nextInt();
 		}
 
 		System.out.println("You guessed right! ");

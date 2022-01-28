@@ -3,7 +3,7 @@ public class SubtractionQuizLoop2
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		final int NUMBER_OF_QUESTIONS = 5;
 		int correctCount = 0;
@@ -32,7 +32,7 @@ public class SubtractionQuizLoop2
 			// quiz the user
 			actualAnswer = firstRandomNumber - secondRandomNumber;
 			System.out.println("What is " + firstRandomNumber + " - " + secondRandomNumber + "? ");
-			providedAnswer = scannerObject.nextInt();
+			providedAnswer = scanner.nextInt();
 
 
 			output += (firstRandomNumber + " - " + secondRandomNumber + " = " + providedAnswer + " ");

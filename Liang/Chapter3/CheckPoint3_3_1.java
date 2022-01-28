@@ -4,10 +4,10 @@ public class CheckPoint3_3_1
 	public static void main(String[] args)
 	{
 		int x = 0, y = 0;
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter a value for y. ");
-		y = scannerObject.nextInt();
-		scannerObject.close();
+		y = scanner.nextInt();
+		scanner.close();
 
 		if(y > 0)
 		{

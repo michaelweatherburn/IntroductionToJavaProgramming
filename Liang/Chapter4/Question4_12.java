@@ -4,10 +4,10 @@ public class Question4_12
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Enter a hexadecimal digit. ");
-    char hexadecimalDigit = scannerObject.next().charAt(0);
+    char hexadecimalDigit = scanner.next().charAt(0);
     int correspondingNumber = 0;
     String binaryValue = null;
 

@@ -3,9 +3,9 @@ public class Question5_8
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter the number of students. ");
-		int numberOfStudents = scannerObject.nextInt();
+		int numberOfStudents = scanner.nextInt();
 		String highestScoringStudent = "";
 		int highestScore = 0;
 		int count = 0;
@@ -22,11 +22,11 @@ public class Question5_8
 			by the upcoming nextLine/next method to be the end of input. That is why the new line needs to be consumed
 			and removed from the buffer so that the input that follows may be available to the following next/nextLine
 			method. This is what I"m doing below: */
-			scannerObject.nextLine();
-			currentStudent = scannerObject.nextLine();
+			scanner.nextLine();
+			currentStudent = scanner.nextLine();
 
 			System.out.print("Score: ");
-			currentScore = scannerObject.nextInt();
+			currentScore = scanner.nextInt();
 
 			if (currentScore > highestScore)
 			{

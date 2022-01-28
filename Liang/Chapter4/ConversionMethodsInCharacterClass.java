@@ -4,11 +4,11 @@ public class ConversionMethodsInCharacterClass
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     //this method returns the opposite case of whatever case you passed it.
 
     System.out.println("Enter a letter. ");
-    char inputCharacter = scannerObject.nextLine().charAt(0);
+    char inputCharacter = scanner.nextLine().charAt(0);
 
     if(Character.isLetter(inputCharacter))
     {

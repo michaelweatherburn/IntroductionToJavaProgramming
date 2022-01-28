@@ -3,10 +3,10 @@ public class Question4_1
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Enter the length of a pentagon from the center to the vertex. ");
-    double radius = scannerObject.nextDouble();
+    double radius = scanner.nextDouble();
     double area = Math.pow(radius, 2) * 2.5 * Math.sin((Math.PI * 2.0)/5.0);
 
     //alternative: using System.out.printf() to display rounded-off output

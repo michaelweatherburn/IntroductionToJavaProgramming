@@ -3,24 +3,24 @@ public class Question4_23
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     String employeeName = null;
     double weeklyWorkHours = 0, hourlyPayRate = 0, federalTaxRate = 0, stateTaxRate = 0;
 
     System.out.print("Enter employee's name: ");
-    employeeName = scannerObject.nextLine();
+    employeeName = scanner.nextLine();
 
     System.out.print("Enter Number of hours worked in a week: ");
-    weeklyWorkHours = scannerObject.nextDouble();
+    weeklyWorkHours = scanner.nextDouble();
 
     System.out.print("Enter Hourly pay rate: ");
-    hourlyPayRate = scannerObject.nextDouble();
+    hourlyPayRate = scanner.nextDouble();
 
     System.out.print("Enter Feferal Tax Withholding Rate: ");
-    federalTaxRate = scannerObject.nextDouble();
+    federalTaxRate = scanner.nextDouble();
 
     System.out.print("Enter State Tax Withholding Rate: ");
-    stateTaxRate = scannerObject.nextDouble();
+    stateTaxRate = scanner.nextDouble();
 
     double grossPay = weeklyWorkHours * hourlyPayRate;
     double federalWithholding = grossPay * federalTaxRate;

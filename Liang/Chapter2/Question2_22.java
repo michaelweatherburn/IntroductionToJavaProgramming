@@ -4,14 +4,14 @@ public class Question2_22
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		//enter the input as an integer with last two digits as cents
 
 		int formattedInput, numberOfOneDollars, numberOfDimes, numberOfNickels, numberOfQuarters, numberOfPennies;
 
 		System.out.print("Enter the currency without decimal points, where the last two digits will signify cents. ");
-		formattedInput = scannerObject.nextInt();
-		scannerObject.close();
+		formattedInput = scanner.nextInt();
+		scanner.close();
 
 		numberOfOneDollars = formattedInput / 100;   //integer division, so no issues
 		formattedInput %= 100;  //reduce formattedInput to its remainder (strip all the dollars)

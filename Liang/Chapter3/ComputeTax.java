@@ -30,14 +30,14 @@ public class ComputeTax {
 //arguably the worst way to define constants. The proper way to do it is to create an array and store the contents there, indexed from 0 to 3. Hence we'll avoid a lot of duplicate code creation and end up with code that does NOT require writing the outer if that we'll write now
 //but since the book hasn't introduced us to arrays yet, we'll have to do everything manually.
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double taxableIncome = 0, incomeTax = 0;
 
 		 System.out.print("Enter the amount of taxable income. ");
-		 taxableIncome = scannerObject.nextDouble();
+		 taxableIncome = scanner.nextDouble();
 
-		 scannerObject.close();
+		 scanner.close();
 
 		 //enable useful error message
 		 if(taxableIncome <= 0)
@@ -53,7 +53,7 @@ public class ComputeTax {
 		 System.out.println("3. Head of Household. ");
 
 		 System.out.print("Enter your choice. ");
-		 byte choice = scannerObject.nextByte();
+		 byte choice = scanner.nextByte();
 
 		 if(choice == 0)
 		 {

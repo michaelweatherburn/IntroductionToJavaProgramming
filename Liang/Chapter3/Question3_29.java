@@ -4,21 +4,21 @@ public class Question3_29
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double x1, y1, r1, x2, y2, r2;
 
 		System.out.print("Enter r1's center's co-ordinates, radius: ");
-		x1 = scannerObject.nextDouble();
-		y1 = scannerObject.nextDouble();
-		r1 = scannerObject.nextDouble();
+		x1 = scanner.nextDouble();
+		y1 = scanner.nextDouble();
+		r1 = scanner.nextDouble();
 
 		System.out.print("Enter r2's center's co-ordinates, radius: ");
-		x2 = scannerObject.nextDouble();
-		y2 = scannerObject.nextDouble();
-		r2 = scannerObject.nextDouble();
+		x2 = scanner.nextDouble();
+		y2 = scanner.nextDouble();
+		r2 = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		double distanceBetweenCenters = Math.pow( Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2), 0.5);
 		if(distanceBetweenCenters < Math.abs(r2 - r1))

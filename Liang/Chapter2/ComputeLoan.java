@@ -4,19 +4,19 @@ public class ComputeLoan
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double annualInterestRatePercentage, numberOfYears, loanPrincipal;
 		System.out.println("Enter the annual interest rate as percentage. ");
-		annualInterestRatePercentage = scannerObject.nextDouble();
+		annualInterestRatePercentage = scanner.nextDouble();
 
 		System.out.println("Enter the number of years until which the amount is to be paid. ");
-		numberOfYears = scannerObject.nextDouble();
+		numberOfYears = scanner.nextDouble();
 
 		System.out.println("Enter the principal amount. ");
-		loanPrincipal = scannerObject.nextDouble();
+		loanPrincipal = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		double annualInterestRate = annualInterestRatePercentage/100.0;
 		double monthlyInterestRate = annualInterestRate / 12.0;

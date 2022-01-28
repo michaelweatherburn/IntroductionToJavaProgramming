@@ -3,7 +3,7 @@ public class Question5_2
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		final int NUMBER_OF_QUESTIONS = 10;
 		int count = 0;
 		int correctCount = 0;
@@ -23,7 +23,7 @@ public class Question5_2
 
 			actualAnswer = firstRandomNumber + secondRandomNumber;
 			System.out.println("What is " + firstRandomNumber + " + " + secondRandomNumber + "? ");
-			providedAnswer = scannerObject.nextInt();
+			providedAnswer = scanner.nextInt();
 
 			output += (firstRandomNumber + " + " + secondRandomNumber + " = " + providedAnswer + " ");
 			if (actualAnswer == providedAnswer)

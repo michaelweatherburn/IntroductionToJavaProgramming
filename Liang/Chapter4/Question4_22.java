@@ -3,12 +3,12 @@ public class Question4_22
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter string s1: ");
-    String firstString = scannerObject.nextLine();
+    String firstString = scanner.nextLine();
 
     System.out.print("Enter string s2: ");
-    String secondString = scannerObject.nextLine();
+    String secondString = scanner.nextLine();
 
     if(firstString.contains(secondString))
     {

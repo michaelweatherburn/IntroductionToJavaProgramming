@@ -4,13 +4,13 @@ public class ComputeAreaWithConstant
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		final double PI = 3.14159;  //declare a named constant
 
 			System.out.println("Enter a radius for the circle. ");
-			double radius = scannerObject.nextDouble();
+			double radius = scanner.nextDouble();
 
-			scannerObject.close();
+			scanner.close();
 
 			//compute area
 			double area = radius * radius * PI;

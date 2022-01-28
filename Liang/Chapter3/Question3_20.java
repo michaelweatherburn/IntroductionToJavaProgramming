@@ -4,13 +4,13 @@ public class Question3_20
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double windChillTemperature, windSpeed, temperature;
 
 		System.out.print("Enter the outside temperature. (It should be between -58F and 41F. ) ");
-		temperature = scannerObject.nextDouble();
-		scannerObject.close();
+		temperature = scanner.nextDouble();
+		scanner.close();
 
 		if(!(temperature > -58 && temperature < 41))
 		{
@@ -19,7 +19,7 @@ public class Question3_20
 		}
 
 		System.out.print("Enter the wind speed. (It must be >= 2). ");
-		windSpeed = scannerObject.nextDouble();
+		windSpeed = scanner.nextDouble();
 
 		if(!(windSpeed >= 2))
 		{

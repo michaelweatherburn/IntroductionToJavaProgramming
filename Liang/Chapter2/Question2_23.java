@@ -3,20 +3,20 @@ public class Question2_23
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double distance, fuelEfficiency, mileage, costOfTrip;
 
 		System.out.println("Enter the driving distance in miles: ");
-		distance = scannerObject.nextDouble();
+		distance = scanner.nextDouble();
 
 		System.out.println("Enter miles per gallon: ");
-		mileage = scannerObject.nextDouble();
+		mileage = scanner.nextDouble();
 
 		System.out.println("Enter price per gallon: ");
-		fuelEfficiency = scannerObject.nextDouble();
+		fuelEfficiency = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		costOfTrip = distance / mileage * fuelEfficiency;
 

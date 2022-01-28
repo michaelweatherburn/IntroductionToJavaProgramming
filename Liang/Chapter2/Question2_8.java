@@ -4,12 +4,12 @@ public class Question2_8
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     long timeSinceUnixEpoch = System.currentTimeMillis();
     System.out.print("Enter the time zone offset to GMT: ");
-    byte timezoneOffsetHours = scannerObject.nextByte();
-    scannerObject.close();
+    byte timezoneOffsetHours = scanner.nextByte();
+    scanner.close();
 
     timeSinceUnixEpoch /= 1000;
     timeSinceUnixEpoch += (timezoneOffsetHours * 60 * 60);  //add/subtract the requisite amount of hours to epoch time

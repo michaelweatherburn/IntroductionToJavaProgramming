@@ -3,10 +3,10 @@ public class Palindrome
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the string that needs to be checked. ");
-		String inputString = scannerObject.nextLine();
+		String inputString = scanner.nextLine();
 
 		int low = 0;	//the index of the first character in the String
 		int high = inputString.length() - 1;	// the index of the last character in the String

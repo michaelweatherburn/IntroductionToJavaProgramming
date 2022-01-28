@@ -4,7 +4,7 @@ public class Question4_6
   static final double CIRCLE_RADIUS = 40.0;
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     double angle1, angle2, angle3, x1, y1, x2, y2, x3, y3, a, b, c, A, B, C;
 
     //create three random angles

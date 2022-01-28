@@ -3,10 +3,10 @@ public class Question5_36
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int sum = 0;
 		System.out.print("Enter the first 9 digits of an ISBN as integer: ");
-		int userInput = scannerObject.nextInt();
+		int userInput = scanner.nextInt();
 		String firstNineDigits = "";
 		String tenthDigit = "";
 

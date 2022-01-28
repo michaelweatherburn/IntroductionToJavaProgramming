@@ -3,9 +3,9 @@ public class Question5_16
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the input number. ");
-		int inputInteger = scannerObject.nextInt();
+		int inputInteger = scanner.nextInt();
 
 		int count = 2;
 		String output = "";

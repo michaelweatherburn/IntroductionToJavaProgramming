@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class Question3_1 {
 	public static void main(String[] args) {
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double a, b, c, r1, r2, discriminant;
 
 		System.out.print("Enter a, b, c: ");
-		a = scannerObject.nextDouble();
-		b = scannerObject.nextDouble();
-		c = scannerObject.nextDouble();
+		a = scanner.nextDouble();
+		b = scanner.nextDouble();
+		c = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		discriminant = b * b - 4 * a * c;
 		if(discriminant > 0)

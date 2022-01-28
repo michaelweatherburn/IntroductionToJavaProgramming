@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-public class ReadingSingleCharacterUsingScannerObject
+public class ReadingSingleCharacterUsingscanner
 {
   public static void main(String[] args)
   {
     char characterToStore = ' ';
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     //step 1. Prompt user to enter a single character
     System.out.println("Enter a single character. ");
 
     //step 2. Read the line that follows:
-    String userInput = scannerObject.nextLine();
+    String userInput = scanner.nextLine();
 
     //step 3 (Optional) Check whether the stringlength is 1. It maybe required for the user to enter only one character.
 

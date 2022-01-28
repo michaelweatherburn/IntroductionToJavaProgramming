@@ -3,14 +3,14 @@ public class Question5_22
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Loan Amount: ");
-		double principal = scannerObject.nextDouble();
+		double principal = scanner.nextDouble();
 		System.out.print("Number of Years: ");
-		int numberOfYears = scannerObject.nextInt();
+		int numberOfYears = scanner.nextInt();
 		int numberOfMonths = numberOfYears * 12;
 		System.out.print("Annual Interest Rate: ");
-		double annualInterestRate = scannerObject.nextDouble();
+		double annualInterestRate = scanner.nextDouble();
 		double monthlyInterestRate = annualInterestRate / 12;
 
 		double monthlyPayment = (principal * monthlyInterestRate / 100) / (1 - (1 / Math.pow(1 + monthlyInterestRate / 100, numberOfMonths)));

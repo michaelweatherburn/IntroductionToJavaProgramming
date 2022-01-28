@@ -4,15 +4,15 @@ public class Question3_8
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int firstNumber, secondNumber, thirdNumber;
 
 		System.out.print("Enter three integers consecutively: ");
-		firstNumber = scannerObject.nextInt();
-		secondNumber = scannerObject.nextInt();
-		thirdNumber = scannerObject.nextInt();
-		scannerObject.close();
+		firstNumber = scanner.nextInt();
+		secondNumber = scanner.nextInt();
+		thirdNumber = scanner.nextInt();
+		scanner.close();
 
 		//what is the best way to sort three numbers (if you can't have them as an array)?
 		System.out.print("Sorted Order: ");

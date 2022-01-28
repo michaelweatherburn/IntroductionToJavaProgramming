@@ -3,7 +3,7 @@ public class ComparisonMethodsInStringObject
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     String s1 = "Subham";
     String s2 = "subham";
     String s3 = "sub";

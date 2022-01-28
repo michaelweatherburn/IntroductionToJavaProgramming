@@ -1,9 +1,9 @@
 import java.util.Scanner;
-public class NextLineMethodInScannerObject
+public class NextLineMethodInscanner
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     /*The nextLine() method works very differently from the other methods. If the input buffer contains
     a newLine, possibly left over by another method, then nextLine() cannot skip over it. This can cause
@@ -11,13 +11,13 @@ public class NextLineMethodInScannerObject
     */
 
     System.out.println("Enter the roll number of the student. ");
-    int rollNumber = scannerObject.nextInt();
+    int rollNumber = scanner.nextInt();
 
     //System.out.println("Enter the students' mother's name. ");
-    //String mothersName  = scannerObject.nextLine();
+    //String mothersName  = scanner.nextLine();
 
     System.out.println("Enter the name of the student. ");
-    String fullName = scannerObject.nextLine();
+    String fullName = scanner.nextLine();
 
     System.out.println("Details: " + rollNumber /* + mothersName */ + fullName);
 

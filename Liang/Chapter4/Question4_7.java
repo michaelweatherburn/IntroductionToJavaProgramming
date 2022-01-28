@@ -3,10 +3,10 @@ public class Question4_7
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Enter the radius of the bounding circle: ");
-    double radius = scannerObject.nextDouble();
+    double radius = scanner.nextDouble();
 
     //calculate the numbers:
     double x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;

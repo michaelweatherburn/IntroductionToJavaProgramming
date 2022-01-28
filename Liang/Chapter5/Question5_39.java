@@ -7,7 +7,7 @@ public class Question5_39
 	// the goal salary is 30000 per year, and commission sought is goal salary minus base salary of 5000
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double commissionSought = SALARY_SOUGHT - BASE_SALARY;
 		double salesAmount = 0.0;
 		do {

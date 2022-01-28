@@ -7,7 +7,7 @@ public class Question3_6
 
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int heightInFeet = 0, heightInInches = 0;
 		double heightInMeters = 0.0;
@@ -15,15 +15,15 @@ public class Question3_6
 		double BMI = 0.0;
 
 		System.out.print("Enter weight in pounds: ");
-		weightInPounds = scannerObject.nextDouble();
+		weightInPounds = scanner.nextDouble();
 
 		System.out.print("Enter feet: ");
-		heightInFeet = scannerObject.nextInt();
+		heightInFeet = scanner.nextInt();
 
 		System.out.print("Enter inches: ");
-		heightInInches = scannerObject.nextInt();
+		heightInInches = scanner.nextInt();
 
-		scannerObject.close();
+		scanner.close();
 
 		heightInInches = heightInFeet * 12 + heightInInches;
 		heightInMeters = heightInInches * METERS_PER_INCH;

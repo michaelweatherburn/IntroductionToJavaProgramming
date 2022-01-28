@@ -4,19 +4,19 @@ public class Question2_10
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double energyRequired, massOfWater, initialTemperature, finalTemperature;
 
 		System.out.print("Enter the amount of water in kilograms: ");
-		massOfWater = scannerObject.nextDouble();
+		massOfWater = scanner.nextDouble();
 
 		System.out.print("Enter the initial temperature: ");
-		initialTemperature = scannerObject.nextDouble();
+		initialTemperature = scanner.nextDouble();
 
 		System.out.print("Enter the final temperature: ");
-		finalTemperature = scannerObject.nextDouble();
+		finalTemperature = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		energyRequired = massOfWater * (finalTemperature - initialTemperature) * 4184;
 

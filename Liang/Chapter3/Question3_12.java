@@ -5,13 +5,13 @@ public class Question3_12
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     int threeDigitNumber;
     boolean isPalindrome;
 
     System.out.print("Enter a three-digit integer. ");
-    threeDigitNumber = scannerObject.nextInt();
-    scannerObject.close();
+    threeDigitNumber = scanner.nextInt();
+    scanner.close();
 
     isPalindrome = ( threeDigitNumber % 10 == threeDigitNumber / 100 % 10) ? true : false;
     if(isPalindrome)

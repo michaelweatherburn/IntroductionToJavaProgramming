@@ -4,12 +4,12 @@ public class Question4_2
   private final static double EARTH_RADIUS = 6371.01;
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
     System.out.println("Enter Point 1 (latitude and longitude) in degrees: ");
-    String location1 = scannerObject.nextLine();
+    String location1 = scanner.nextLine();
     System.out.println("Enter Point 2 (latitude and longitude) in degrees: ");
-    String location2 = scannerObject.nextLine();
+    String location2 = scanner.nextLine();
 
     double location1_latitude = Double.parseDouble(location1.substring(0, location1.indexOf(",")));
     double location1_longitude = Double.parseDouble(location1.substring(location1.lastIndexOf(" ")));

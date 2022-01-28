@@ -4,16 +4,16 @@ public class ExponentOperations{
 	public static void main(String[] args)
 	{
 		//create a Scanner object
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		//ask for user input
 		System.out.println("Enter the number. ");
-		double base = scannerObject.nextDouble();
+		double base = scanner.nextDouble();
 
 		System.out.println("Enter the exponent you want to raise the number to. ");
-		double exponent = scannerObject.nextDouble();
+		double exponent = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		System.out.println("Answer: " + Math.pow(base, exponent));
 	}

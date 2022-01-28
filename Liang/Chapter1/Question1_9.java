@@ -3,15 +3,15 @@ import java.util.Scanner;
 public class Question1_9{
 	public static void main(String[] args)
 	{
-			Scanner scannerObject = new Scanner(System.in);
+			Scanner scanner = new Scanner(System.in);
 
 			System.out.println("Enter the height of the rectangle. ");
-			double height = scannerObject.nextDouble();
+			double height = scanner.nextDouble();
 
 			System.out.println("Enter the width of the rectangle. ");
-			double width = scannerObject.nextDouble();
+			double width = scanner.nextDouble();
 
-			scannerObject.close();
+			scanner.close();
 
 			double area = height * width;
 			double perimeter = 2 * (height + width);

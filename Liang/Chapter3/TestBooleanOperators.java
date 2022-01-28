@@ -4,12 +4,12 @@ public class TestBooleanOperators
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		//get an integer number from the user
 		System.out.print("Enter the integer to be tested. ");
-		int input = scannerObject.nextInt();
-		scannerObject.close();
+		int input = scanner.nextInt();
+		scanner.close();
 
 		if(input % 2 == 0 && input % 3 == 0)
 		{

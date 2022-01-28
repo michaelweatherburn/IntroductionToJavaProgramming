@@ -4,11 +4,11 @@ public class Question5_21
 	final static double DOUBLE_EPSILON = 1E-17;
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Loan Amount: ");
-		double principal = scannerObject.nextDouble();
+		double principal = scanner.nextDouble();
 		System.out.print("Number of Years: ");
-		double numberOfYears = scannerObject.nextDouble();
+		double numberOfYears = scanner.nextDouble();
 		double numberOfMonths = numberOfYears * 12;
 
 		double annualRateOfInterest;

@@ -5,19 +5,19 @@ public class Question3_31
 
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double amount = 0, result = 0;
 
 		System.out.print("Enter the exchange rate from USD to RMB: ");
-		double exchangeRateUSDRMB = scannerObject.nextDouble();
+		double exchangeRateUSDRMB = scanner.nextDouble();
 
 		System.out.print("Enter 0 to convert USD -> RMB, or 1 to convert RMB -> USD. ");
-		byte choice = scannerObject.nextByte();
+		byte choice = scanner.nextByte();
 
 		if(choice == 0)
 		{
 			System.out.print("Enter amount in USD. ");
-			amount = scannerObject.nextDouble();
+			amount = scanner.nextDouble();
 
 			result = amount * exchangeRateUSDRMB;
 
@@ -25,7 +25,7 @@ public class Question3_31
 		else if(choice == 1)
 		{
 			System.out.print("Enter amount in RMB. ");
-			amount = scannerObject.nextDouble();
+			amount = scanner.nextDouble();
 
 			result = amount / exchangeRateUSDRMB;
 		}
@@ -34,7 +34,7 @@ public class Question3_31
 			System.out.print("Invalid option. The program will now exit. ");
 			System.exit(1);
 		}
-		scannerObject.close();
+		scanner.close();
 
 		//set amount and result to contain ONLY two digits after the decimal point, since they're currencies
 		amount = (int)(amount * 100)/100.0;

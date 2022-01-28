@@ -4,7 +4,7 @@ public class Question5_33
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		// perfect number: a number that is divisible by the sum of all of its divisors except itself (1 is considered as a divisor)
 
 		for (int i = 2; i <= 10000; i++)

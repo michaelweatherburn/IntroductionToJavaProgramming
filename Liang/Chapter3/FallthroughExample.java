@@ -3,11 +3,11 @@ public class FallthroughExample
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the day number. (0-6)");
-		byte dayOfWeek = scannerObject.nextByte();
-		scannerObject.close();
+		byte dayOfWeek = scanner.nextByte();
+		scanner.close();
 
 		switch (dayOfWeek)
 		{

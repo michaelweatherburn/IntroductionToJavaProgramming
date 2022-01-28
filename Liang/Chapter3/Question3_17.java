@@ -3,7 +3,7 @@ public class Question3_17
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		//rock paper scissor
 
 		byte computerChoice, yourChoice;
@@ -11,8 +11,8 @@ public class Question3_17
 
 		computerChoice = (byte)(Math.random() * 3);
 		System.out.print("Scissor(0), rock(1), paper(2): ");
-		yourChoice = scannerObject.nextByte();
-		scannerObject.close();
+		yourChoice = scanner.nextByte();
+		scanner.close();
 
 		switch(computerChoice)
 		{

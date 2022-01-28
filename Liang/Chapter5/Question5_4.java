@@ -3,7 +3,7 @@ public class Question5_4
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.printf("%-10s%-10s\n", "Miles", "Kilometers");
 		for (int i = 1; i <= 10; i++)
 		{

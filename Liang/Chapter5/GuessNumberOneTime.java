@@ -3,12 +3,12 @@ public class GuessNumberOneTime
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int randomNumber = (int)(Math.random() * 101);
 		int guessedNumber = 0;
 
 		System.out.printf("\nEnter your guess: ");
-		guessedNumber = scannerObject.nextInt();
+		guessedNumber = scanner.nextInt();
 
 		if(guessedNumber == randomNumber)
 		{

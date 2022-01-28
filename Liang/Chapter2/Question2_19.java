@@ -4,7 +4,7 @@ public class Question2_19
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		//calculate the area of a triangle using Heron's formula
 
@@ -13,14 +13,14 @@ public class Question2_19
 		double s, area;
 
 		System.out.print("Enter three points for the triangle: ");
-		x1 = scannerObject.nextDouble();
-		y1 = scannerObject.nextDouble();
-		x2 = scannerObject.nextDouble();
-		y2 = scannerObject.nextDouble();
-		x3 = scannerObject.nextDouble();
-		y3 = scannerObject.nextDouble();
+		x1 = scanner.nextDouble();
+		y1 = scanner.nextDouble();
+		x2 = scanner.nextDouble();
+		y2 = scanner.nextDouble();
+		x3 = scanner.nextDouble();
+		y3 = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		side1 = Math.pow( Math.pow(x1 - x2 , 2) + Math.pow(y1 - y2, 2), 0.5);
 		side2 = Math.pow( Math.pow(x2 - x3, 2) + Math.pow(y2 - y3, 2), 0.5);

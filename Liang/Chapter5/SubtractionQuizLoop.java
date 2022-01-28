@@ -4,7 +4,7 @@ public class SubtractionQuizLoop
 	public static final int NUMBER_OF_GUESSES = 5;
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int count = 0;
 		int firstRandomNumber = 0, secondRandomNumber = 0;
 		long startTime = System.currentTimeMillis();
@@ -26,7 +26,7 @@ public class SubtractionQuizLoop
 
 			answers[count] = secondRandomNumber - firstRandomNumber;
 			System.out.println("What is " + secondRandomNumber + " - " + firstRandomNumber + "? ");
-			guesses[count] = scannerObject.nextInt();
+			guesses[count] = scanner.nextInt();
 			verdicts[count] = (answers[count] == guesses[count]);
 			count++;
 		}

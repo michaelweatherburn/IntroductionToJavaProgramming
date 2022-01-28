@@ -14,14 +14,14 @@ public class Question3_27
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		double x, y;
 
 		//take input from the user
 		System.out.print("Enter the co-ordinates of the point. ");
-		x = scannerObject.nextDouble();
-		y = scannerObject.nextDouble();
-		scannerObject.close();
+		x = scanner.nextDouble();
+		y = scanner.nextDouble();
+		scanner.close();
 
 		//first things first: check whether the point lies in the first quadrant
 		//after that bring in the calculated value of y from the third equation (hypotenuse)

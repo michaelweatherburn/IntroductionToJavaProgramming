@@ -9,11 +9,11 @@ public class AdditionQuiz
 		int firstNumber = (int)(System.currentTimeMillis() % FIRST_PRIME);
 		int secondNumber = (int)(System.currentTimeMillis() % SECOND_PRIME);
 
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.print("What is " + firstNumber + " + " + secondNumber + "? ");
-		int answerProvided = scannerObject.nextInt();
-		scannerObject.close();
+		int answerProvided = scanner.nextInt();
+		scanner.close();
 
 		int expectedSum =  firstNumber + secondNumber;
 		boolean result = expectedSum == answerProvided;

@@ -8,12 +8,11 @@ public class Question1_7
 	}
 
 	public static void main(String[] args){
-		//creating scannerObject
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the number of terms until which the series is to be calculated. ");
-		int n = scannerObject.nextInt();
-		scannerObject.close();
+		int n = scanner.nextInt();
+		scanner.close();
 		double sum = 0;
 		double answer;
 

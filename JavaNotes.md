@@ -579,7 +579,7 @@ Example:
 ```java
 while(input != 0)
 {
-  input = scannerObject.nextInt();
+  input = scanner.nextInt();
   //more code goes here
 }
 ```

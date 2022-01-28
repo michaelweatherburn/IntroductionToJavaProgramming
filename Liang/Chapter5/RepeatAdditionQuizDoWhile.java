@@ -3,7 +3,7 @@ public class RepeatAdditionQuizDoWhile
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int firstRandomNumber = (int)(Math.random() * 10);
 		int secondRandomNumber = (int)(Math.random() * 10);
@@ -21,7 +21,7 @@ public class RepeatAdditionQuizDoWhile
 			{
 				System.out.printf("Wrong answer. Try again: What is %d + %d? ", firstRandomNumber, secondRandomNumber);
 			}
-			providedAnswer = scannerObject.nextInt();
+			providedAnswer = scanner.nextInt();
 		} while(expectedAnswer != providedAnswer);
 
 		

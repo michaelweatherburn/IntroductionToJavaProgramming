@@ -4,29 +4,29 @@ public class Question1_13
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter the the coefficients of the first equation. ");
 		System.out.print("x's coefficient: ");
-		double a = scannerObject.nextDouble();
+		double a = scanner.nextDouble();
 
 		System.out.print("y's coefficient");
-		double b = scannerObject.nextDouble();
+		double b = scanner.nextDouble();
 
 		System.out.print("constant term: ");
-		double e = scannerObject.nextDouble();
+		double e = scanner.nextDouble();
 
 		System.out.println("Enter the coefficients of the second equation. ");
 		System.out.print("x's coefficient");
-		double c = scannerObject.nextDouble();
+		double c = scanner.nextDouble();
 
 		System.out.print("y's coefficient");
-		double d = scannerObject.nextDouble();
+		double d = scanner.nextDouble();
 
 		System.out.print("constant term: ");
-		double f = scannerObject.nextDouble();
+		double f = scanner.nextDouble();
 
-		scannerObject.close();
+		scanner.close();
 
 		double x = (e * d - b * f)/(a * d - b * c);
 		double y = (a * f - e * c)/(a * d - b * c);

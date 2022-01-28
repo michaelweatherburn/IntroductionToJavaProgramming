@@ -3,9 +3,9 @@ public class SplitFullNameIntoConstituents
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter the full name of the person. ");
-    String fullName = scannerObject.nextLine();
+    String fullName = scanner.nextLine();
     fullName = fullName.trim();
     //remove any useless extra characters from the string
 

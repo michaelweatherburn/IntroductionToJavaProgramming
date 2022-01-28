@@ -3,16 +3,16 @@ public class Question5_30
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Principal: ");
-		double principal = scannerObject.nextDouble();
+		double principal = scanner.nextDouble();
 		double amount = principal;	//working copy of the variable pricipal
 
 		System.out.print("Annual Interest Rate: ");
-		double annualInterestRate = scannerObject.nextDouble();
+		double annualInterestRate = scanner.nextDouble();
 		double monthlyInterestRate = annualInterestRate / 12;
 		System.out.print("Number of months: ");
-		int numberOfMonths = scannerObject.nextInt();
+		int numberOfMonths = scanner.nextInt();
 
 		for (int i = 1; i <= numberOfMonths; i++)
 		{

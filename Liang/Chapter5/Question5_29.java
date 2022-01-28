@@ -3,11 +3,11 @@ public class Question5_29
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("Year: ");
-		int year = scannerObject.nextInt();
+		int year = scanner.nextInt();
 		System.out.print("First Day of the Year (0-6, 0 stands for Sunday): ");
-		int firstDayOfYear = scannerObject.nextInt();
+		int firstDayOfYear = scanner.nextInt();
 		int firstDayOfMonth = firstDayOfYear;
 		int numberOfDaysInCurrentMonth = 0;
 		// initially set to 0 since January 1's day is being provided by the user

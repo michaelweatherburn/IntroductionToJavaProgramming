@@ -4,16 +4,16 @@ public class Question3_21
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		int dayOfTheWeek, dayOfTheMonth, month, year, century, yearOfTheCentury;
 		String dayOfTheWeekString = null;
 
 		System.out.print("Enter year. ");
-		year = scannerObject.nextInt();
+		year = scanner.nextInt();
 
 		System.out.print("Enter month (1 - 12): ");
-		month = scannerObject.nextInt();
+		month = scanner.nextInt();
 
 		if(month == 1 || month == 2)
 		{
@@ -22,8 +22,8 @@ public class Question3_21
 		}
 
 		System.out.print("Enter the day of the month(1 - 31): ");
-		dayOfTheMonth = scannerObject.nextInt();
-		scannerObject.close();
+		dayOfTheMonth = scanner.nextInt();
+		scanner.close();
 
 		century = year / 100;
 		yearOfTheCentury = year % 100;

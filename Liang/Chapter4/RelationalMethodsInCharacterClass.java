@@ -3,9 +3,9 @@ public class RelationalMethodsInCharacterClass
 {
   public static void main(String[] args)
   {
-    Scanner scannerObject = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("Enter a character. ");
-    char inputCharacter = scannerObject.nextLine().charAt(0);
+    char inputCharacter = scanner.nextLine().charAt(0);
     if(Character.isLetterOrDigit(inputCharacter))
     {
       //this is a digit/letter

@@ -4,14 +4,14 @@ public class Question3_18
 {
 	public static void main(String[] args)
 	{
-		Scanner scannerObject = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 
 		double costOfShipping = 0.0;
 		double weightInPounds;
 
 		System.out.print("Enter the weight of the product. ");
-		weightInPounds = scannerObject.nextDouble();
-		scannerObject.close();
+		weightInPounds = scanner.nextDouble();
+		scanner.close();
 
 		if(weightInPounds > 0 && weightInPounds <= 1)
 			costOfShipping = 3.5;
