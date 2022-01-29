@@ -1,26 +1,24 @@
 import java.util.Scanner;
+public class Question3_12 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-//three-digit palindrome finder
-public class Question3_12
-{
-  public static void main(String[] args)
-  {
-    Scanner scanner = new Scanner(System.in);
-    int threeDigitNumber;
-    boolean isPalindrome;
+		System.out.print("Enter a three-digit integer: ");
+		int input = scanner.nextInt();
+		scanner.close();
 
-    System.out.print("Enter a three-digit integer. ");
-    threeDigitNumber = scanner.nextInt();
-    scanner.close();
+		int number = Math.abs(input);	// consider negative integers
 
-    isPalindrome = ( threeDigitNumber % 10 == threeDigitNumber / 100 % 10) ? true : false;
-    if(isPalindrome)
-    {
-      System.out.print(threeDigitNumber + " is a palindrome. ");
-    }
-    else
-    {
-      System.out.print(threeDigitNumber + " is not a palindrome. ");
-    }
-  }
+		int unitsDigit = number % 10;
+		int tensDigit = number / 10 % 10;
+		int hundredsDigit = number / 100 % 10;
+
+		if ((hundredsDigit == 0 && tensDigit == 0) ||	// if the input is a single-digit number
+				(hundredsDigit == 0 && (unitsDigit == tensDigit)) || // or two-digit number with both digits matching
+				(hundredsDigit == unitsDigit)) {	// or three-digit number where hundred's place matches unit's place
+			System.out.println(input + " is a palindrome. ");
+		} else {
+			System.out.println(input + " is not a palindrome. ");
+		}
+	}
 }

@@ -1,58 +1,52 @@
 import java.util.Scanner;
+public class Question3_15 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
 
-public class Question3_15
-{
-public static void main(String[] args)
-{
-	Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter your lottery pick (three digits). ");
+		int userInput = scanner.nextInt();
+		scanner.close();
 
-	int providedNumber, generatedNumber;
-	int providedUnit, generatedUnit;
-	int providedTens, generatedTens;
-	int providedHundreds, generatedHundreds;
+		int userInputUnitDigit = userInput % 10;
+		int userInputTensDigit = (userInput / 10) % 10;
+		int userInputHundredsDigit = (userInput / 100) % 10;
 
-	generatedNumber = (int)(Math.random() * 1000);
-	System.out.print("Enter your guess three digit number. ");
-	providedNumber = scanner.nextInt();
-	scanner.close();
+		int lotteryNumber = (int) (Math.random() * 1000);
+		System.out.println("The lottery number is " + lotteryNumber);
 
-	providedUnit = providedNumber % 10;
-	providedTens = (providedNumber / 10) % 10;
-	providedHundreds = (providedNumber / 100) % 10;
+		int lotteryNumberUnitDigit = lotteryNumber % 10;
+		int lotteryNumberTensDigit = (lotteryNumber / 10) % 10;
+		int lotteryNumberHundredsDigit = (lotteryNumber / 100) % 10;
 
-	generatedUnit = generatedNumber % 10;
-	generatedTens = (generatedNumber / 10) % 10;
-	generatedHundreds = (generatedNumber / 100) % 10;
+		if (userInput == lotteryNumber) {
+			System.out.println("Exact Match: You win 15000 USD. ");
+		} else if (
+			(userInputUnitDigit == lotteryNumberUnitDigit ^
+			userInputUnitDigit == lotteryNumberTensDigit ^
+			userInputUnitDigit == lotteryNumberHundredsDigit) &&
+			(userInputTensDigit == lotteryNumberUnitDigit ^
+			userInputTensDigit == lotteryNumberTensDigit ^
+			userInputTensDigit == lotteryNumberHundredsDigit) &&
+			(userInputHundredsDigit == lotteryNumberUnitDigit ^ 
+			userInputHundredsDigit == lotteryNumberTensDigit ^
+			userInputHundredsDigit == lotteryNumberHundredsDigit)
+			) {
+			System.out.println("Match All Digits: You win 5000 USD. ");
+		} else if (
+			userInputUnitDigit == lotteryNumberUnitDigit ||
+			userInputUnitDigit == lotteryNumberTensDigit ||
+			userInputUnitDigit == lotteryNumberHundredsDigit ||
+			userInputTensDigit == lotteryNumberUnitDigit ||
+			userInputTensDigit == lotteryNumberTensDigit ||
+			userInputTensDigit == lotteryNumberHundredsDigit ||
+			userInputHundredsDigit == lotteryNumberUnitDigit ||
+			userInputHundredsDigit == lotteryNumberTensDigit ||
+			userInputHundredsDigit == lotteryNumberHundredsDigit
+			) {
+			System.out.println("Match one digit: you win 2000 USD. ");
+		} else {
+			System.out.println("Sorry, better luck next time. ");
+		}
 
-	if(providedNumber == generatedNumber)
-	{
-		System.out.println("Congratulations! You won 10000");
 	}
-	else if(
-	        (generatedUnit == providedUnit ^ generatedUnit == providedTens ^ generatedUnit == providedHundreds)
-	        &&
-	        (generatedTens == providedUnit ^ generatedTens == providedTens ^ generatedTens == providedHundreds)
-	        &&
-	        (generatedHundreds == providedUnit ^ generatedHundreds == providedTens ^ generatedHundreds == providedHundreds)
-	        )
-	{
-		System.out.print("Congratulations! You won 3000");
-	}
-	else if(
-	        (generatedUnit == providedUnit ^ generatedUnit == providedTens ^ generatedUnit == providedHundreds)
-	        ||
-	        (generatedTens == providedUnit ^ generatedTens == providedTens ^ generatedTens == providedHundreds)
-	        ||
-	        (generatedHundreds == providedUnit ^ generatedHundreds == providedTens ^ generatedHundreds == providedHundreds)
-	        )
-	{
-    System.out.println("Congratulations! You won 1000");
-	}
-  else
-  {
-    System.out.println("Sorry, better luck next time. ");
-  }
-
-  System.out.println("Winning number: " + generatedNumber);
-}
 }
