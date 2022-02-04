@@ -1,57 +1,51 @@
-public class Question3_24
-{
-	public static void main(String[] args)
-	{
-		byte rank, suit;
-		String rankString = "", suitString = "";
+public class Question3_24 {
+	public static void main(String[] args) {
+		int positionInDeck = (int) (Math.random() * 52);
+		int suit = positionInDeck / 13;
+		int rank = positionInDeck % 13;
 
-		rank = (byte)(Math.random() * 13 + 1);
-
-		/*
-		Math.random() generates 0 <= number < 1
-		Math.random() * 12 + 1 generates
-		0 + 1 <= number < 13 + 1
-		=> 1 <= number < 14
-		explicitly type casted to floor integers
-		*/
-
-		suit = (byte)(Math.random() * 4 + 1);
-
-		switch(rank)
-		{
-			case 1: rankString = "Ace";
+		String suitString = null, rankString = null;
+		switch (suit) {
+		case 0:
+			suitString = "Clubs";
 			break;
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-			case 7:
-			case 8:
-			case 9:
-			case 10: rankString = rankString + rank;
-			/* could have used an if-else construct with two booleans fused with an && for shorter code, but I used a fallthrough because I felt like it */
+		case 1:
+			suitString = "Diamonds";
 			break;
-			case 11: rankString = "Jack";
+		case 2:
+			suitString = "Hearts";
 			break;
-			case 12: rankString = "Queen";
-			break;
-			case 13: rankString = "King";
+		case 3:
+			suitString = "Spades";
 			break;
 		}
 
-		switch(suit)
-		{
-			case 1: suitString = "Clubs";
+		switch (rank) {
+		case 0:
+			rankString = "Ace";
 			break;
-			case 2: suitString = "Diamonds";
+		case 1:
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+			rankString = "" + (rank + 1);
 			break;
-			case 3: suitString = "Hearts";
+		case 10:
+			rankString = "Jack";
 			break;
-			case 4: suitString = "Spades";
+		case 11:
+			rankString = "Queen";
+			break;
+		case 12:
+			rankString = "King";
 			break;
 		}
 
-		System.out.println("The card you picked is the " + rankString + " of " + suitString);
+		System.out.println("The card you picked is " + rankString + " of " + suitString);
 	}
 }

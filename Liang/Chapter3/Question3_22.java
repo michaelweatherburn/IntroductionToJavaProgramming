@@ -1,25 +1,17 @@
 import java.util.Scanner;
-
-public class Question3_22
-{
-	private static final double CIRCLE_RADIUS = 10.0;
-	public static void main(String[] args)
-	{
+public class Question3_22 {
+	public static void main(String[] args) {
+		final double CIRCLE_RADIUS = 10.0;
 		Scanner scanner = new Scanner(System.in);
 
-		double x, y;
-		System.out.print("Enter the coordinates of the point, in (x, y) format: ");
-		x = scanner.nextDouble();
-		y = scanner.nextDouble();
+		System.out.print("Enter a point with two coordinates: ");
+		double x = scanner.nextDouble();
+		double y = scanner.nextDouble();
 		scanner.close();
 
-		if(Math.pow(x * x + y * y, 0.5) < CIRCLE_RADIUS)
-		{
-			System.out.print("Point (" + x + ", " + y + ") is inside the circle. ");
-		}
-		else
-		{
-			System.out.print("Point (" + x + ", " + y + ") is outside the circle. ");
-		}
+		double distanceFromOrigin = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+		boolean isPointWithinCircle = distanceFromOrigin <= CIRCLE_RADIUS;
+		
+		System.out.print("Point (" + x + ", " + y + ") is " + (isPointWithinCircle ? "" : "not ") + "within the circle. ");
 	}
 }

@@ -1,34 +1,28 @@
 import java.util.Scanner;
-
-public class Question3_20
-{
-	public static void main(String[] args)
-	{
+public class Question3_20 {
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		double windChillTemperature, windSpeed, temperature;
+		System.out.print("Enter the temperature in Farhenheit between -58\u00B0F and 42\u00B0F: ");
+		double temperature = scanner.nextDouble();
 
-		System.out.print("Enter the outside temperature. (It should be between -58F and 41F. ) ");
-		temperature = scanner.nextDouble();
+		System.out.print("Enter the wind speed (>= 2) in miles per hour: ");
+		double windSpeed = scanner.nextDouble();
+
 		scanner.close();
 
-		if(!(temperature > -58 && temperature < 41))
-		{
-			System.out.print("Invalid outside temperature entered. The program will now exit. ");
-			System.exit(1);
+		boolean isTemperatureInputValid = -58.0 < temperature && temperature < 41.0;
+		boolean isWindSpeedInputValid = 2.0 <= windSpeed;
+
+		if (!isTemperatureInputValid && !isWindSpeedInputValid) {
+			System.out.println("The temperature and wind speed inputs are invalid. ");
+		} else if (!isTemperatureInputValid) {
+			System.out.println("The temperature input is invalid. ");
+		} else if (!isWindSpeedInputValid) {
+			System.out.println("The wind speed input is invalid. ");
+		} else {
+			double windChillTemperature = 35.74 + 0.6215 * temperature - 35.75 * Math.pow(windSpeed, 0.16) + 0.4275 * temperature * Math.pow(windSpeed, 0.16);
+			System.out.println("The wind chill index is " + (int) (windChillTemperature * 100000) / 100000.0);
 		}
-
-		System.out.print("Enter the wind speed. (It must be >= 2). ");
-		windSpeed = scanner.nextDouble();
-
-		if(!(windSpeed >= 2))
-		{
-			System.out.print("Invalid wind speed entered. The program will now exit. ");
-			System.exit(1);
-		}
-
-		windChillTemperature = 35.74 + 0.6215 * temperature + 0.4275 * temperature * Math.pow(windSpeed, 0.16) - 35.75 * Math.pow(windSpeed, 0.16);
-
-		System.out.println("Required wind-chill temperature: " + windChillTemperature);
 	}
 }

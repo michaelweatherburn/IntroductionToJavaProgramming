@@ -1,28 +1,22 @@
 import java.util.Scanner;
+public class Question3_23 {
+	public static void main(String[] args) {
+		final double RECTANGLE_CENTRE_X = 1.0;
+		final double RECTANGLE_CENTRE_Y = 1.0;
+		final double RECTANGLE_HEIGHT = 5.0;
+		final double RECTANGLE_WIDTH = 10.0;
 
-public class Question3_23
-{
-	private final static double RECTANGLE_WIDTH = 10;
-	private final static double RECTANGLE_HEIGHT = 5;
-	public static void main(String[] args)
-	{
 		Scanner scanner = new Scanner(System.in);
 
-		double x, y;
-		System.out.print("Enter the x and y co-ordinates of the point. ");
-
-		x = scanner.nextDouble();
-		y = scanner.nextDouble();
+		System.out.print("Enter a point with two coordinates: ");
+		double x = scanner.nextDouble();
+		double y = scanner.nextDouble();
 		scanner.close();
 
-		System.out.print("Point " + x + ", " + y + " is ");
-		if(x > -RECTANGLE_WIDTH / 2 && x < RECTANGLE_WIDTH/2 && y > -RECTANGLE_HEIGHT/2 && y < RECTANGLE_HEIGHT/2)
-		{
-			System.out.print("in the rectangle. ");
-		}
-		else
-		{
-			System.out.print("not in the rectangle. ");
-		}
+		boolean isPointWithinRectangle =
+		(RECTANGLE_CENTRE_X - RECTANGLE_WIDTH / 2 <= x && x <= RECTANGLE_CENTRE_X + RECTANGLE_WIDTH / 2) &&
+		(RECTANGLE_CENTRE_Y - RECTANGLE_HEIGHT / 2 <= y && y <= RECTANGLE_CENTRE_Y + RECTANGLE_HEIGHT / 2);
+
+		System.out.println("Point (" + x + ", " + y + ") is" + (isPointWithinRectangle ? "" : " not") + " in the rectangle. ");
 	}
 }
