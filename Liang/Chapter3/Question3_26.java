@@ -1,9 +1,7 @@
 import java.util.Scanner;
-
-public class Question3_26
-{
-	private final static int FIRST_DIVISOR = 5;
-	private final static int SECOND_DIVISOR = 6;
+public class Question3_26 {
+	private final static int FIRST_DIVISOR = 4;
+	private final static int SECOND_DIVISOR = 5;
 	public static void main(String[] args)
 	{
 		boolean isDivisibleByBoth = false, isDivisibleByEitherOrBoth = false, isDivisibleByEitherButNotBoth = false;
@@ -13,17 +11,14 @@ public class Question3_26
 		int number = scanner.nextInt();
 		scanner.close();
 
-		if(number % FIRST_DIVISOR == 0 && number % SECOND_DIVISOR == 0)
-		{
+		if (number % FIRST_DIVISOR == 0 && number % SECOND_DIVISOR == 0) {
 			isDivisibleByBoth = true;
 			isDivisibleByEitherOrBoth = true;
 		}
-		if(number % FIRST_DIVISOR == 0 || number % SECOND_DIVISOR == 0)
-		{
+		if (number % FIRST_DIVISOR == 0 || number % SECOND_DIVISOR == 0) {
 			isDivisibleByEitherOrBoth = true;
 		}
-		if(number % FIRST_DIVISOR == 0 ^ number % SECOND_DIVISOR == 0)
-		{
+		if (number % FIRST_DIVISOR == 0 ^ number % SECOND_DIVISOR == 0) {
 			isDivisibleByEitherButNotBoth = true;
 		}
 

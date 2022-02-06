@@ -1,48 +1,35 @@
 import java.util.Scanner;
-
-public class Question3_25
-{
-	public static void main(String[] args)
-	{
+public class Question3_25 {
+	public static void main(String[] args) {
+		final double EPSILON_DOUBLE = 10E-14;
 		Scanner scanner = new Scanner(System.in);
 
-		double a, b, c, d, e, f;
-		double x, y;
-		double x1, y1, x2, y2, x3, y3, x4, y4, denominator;
-
-		System.out.print("Enter the co-ordinates of the points on the first line. ");
-		x1 = scanner.nextDouble();
-		y1 = scanner.nextDouble();
-		x2 = scanner.nextDouble();
-		y2 = scanner.nextDouble();
-
-		System.out.print("Enter the co-ordinates of the points on the second line. ");
-		x3 = scanner.nextDouble();
-		y3 = scanner.nextDouble();
-		x4 = scanner.nextDouble();
-		y4 = scanner.nextDouble();
-
+		System.out.print("Enter x1, y1, x2, y2, x3, y3, x4, y4: ");
+		double x1 = scanner.nextDouble();
+		double y1 = scanner.nextDouble();
+		double x2 = scanner.nextDouble();
+		double y2 = scanner.nextDouble();
+		double x3 = scanner.nextDouble();
+		double y3 = scanner.nextDouble();
+		double x4 = scanner.nextDouble();
+		double y4 = scanner.nextDouble();
 		scanner.close();
 
-		a = y2 - y1;
-		b = x1 - x2;
-		e = x1 * (y2 - y1) - y1 * (x2 - x1);
+		double a = y1 - y2;
+		double b = x2 - x1;
+		double e = a * x1 + b * y1;
+		double c = y3 - y4;
+		double d = x4 - x3;
+		double f = c * x3 + d * y3;
 
-		c = y4 - y3;
-		d = x3 - x4;
-		f = x3 * (y4 - y3) - y3 * (x4 - x3);
-
-		denominator = a * d - b * c;
-		if(denominator == 0)
-		{
-			System.out.print("The two lines are parallel (they'll never intersect.) ");
-		}
-		else
-		{
-			x = (e * d - b * f) / denominator;
-			y = (a * f - e * c) / denominator;
-
-			System.out.print("The two lines intersect at " + x + ", " + y);
+		double x = 0, y = 0;
+		double denominator = a * d - b * c;
+		if (Math.abs(denominator) < EPSILON_DOUBLE) {
+			System.out.println("The 2 lines are parallel. ");
+		} else {
+			x = (e * d - b * f) / (a * d - b * c);
+			y = (a * f - e * c) / (a * d - b * c);
+			System.out.println("The intersecting point is at (" + x + ", " + y + ")");
 		}
 	}
 }
