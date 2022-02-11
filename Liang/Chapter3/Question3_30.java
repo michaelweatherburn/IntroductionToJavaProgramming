@@ -1,39 +1,28 @@
 import java.util.Scanner;
-
-public class Question3_30
-{
+public class Question3_30 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		String meridiem = "AM";
-		long millisecondsSinceUnixEpoch = System.currentTimeMillis();
-		//get the seconds
-		long seconds = millisecondsSinceUnixEpoch / 1000;
-		//get the minutes
-		long minutes = seconds / 60;
-		//now remove excess seconds from seconds
-		seconds = seconds % 60;
-		//get the hours
-		long hours = minutes / 60;
-		//now remove excess minutes from minutes
-		minutes = minutes % 60;
-
-		//add or subtract the offset from the hours
-		System.out.print("Enter the time zone offset to GMT. ");
-		long offsetInHours = scanner.nextInt();
+		System.out.print("Enter the time zone offset to GMT: ");
+		double timezoneOffsetInHours = scanner.nextDouble();
 		scanner.close();
-		
-		hours += offsetInHours;
-		//remove whole days from hours
-		hours %= 24;
 
-		if(hours > 12)
-		{
-			hours %= 12;
-			meridiem = "PM";
-		}
+		long totalMilliseconds = System.currentTimeMillis();
+		long totalSeconds = totalMilliseconds / 1000;
 
-		System.out.println("The current time is " + hours + ":" + minutes + ":" + seconds  + " " + meridiem);
+		long remainingSeconds = (long) (totalSeconds + timezoneOffsetInHours * 60 * 60) % (24 * 60 * 60);
 
+		long hours = remainingSeconds / (60 * 60);
+		remainingSeconds = remainingSeconds % (60 * 60);
+		long minutes = remainingSeconds / 60;
+		long seconds = remainingSeconds % 60;
+
+		String timeOfDayRelativeToMeridiem = (hours / 12 == 0) ? "AM" : "PM";
+		hours %= 12;
+		if (hours == 0) {
+			hours = 12;
+		} 
+
+		System.out.println("The current time is " + hours + ":" + minutes + ":" + seconds + " " + timeOfDayRelativeToMeridiem);
 	}
 }
