@@ -1,33 +1,25 @@
 import java.util.Scanner;
-
-public class Question3_33
-{
-	public static void main(String[] args)
-	{
+public class Question3_33 {
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter weight and price for package 1: ");
+		double firstPackageWeight = scanner.nextDouble();
+		double firstPackagePrice = scanner.nextDouble();
 
-		double firstPackageWeight, secondPackageWeight, firstPackagePrice, secondPackagePrice;
-
-		System.out.print("Enter weight and price for package 1. ");
-		firstPackageWeight = scanner.nextDouble();
-		firstPackagePrice = scanner.nextDouble();
-
-		System.out.print("Enter weight and price for package 2. ");
-		secondPackageWeight = scanner.nextDouble();
-		secondPackagePrice = scanner.nextDouble();
+		System.out.print("Enter weight and price for package 2: ");
+		double secondPackageWeight = scanner.nextDouble();
+		double secondPackagePrice = scanner.nextDouble();
 
 		scanner.close();
 
-		if((firstPackageWeight/firstPackagePrice) > (secondPackageWeight/secondPackagePrice))
-		{
+		double firstPackageRate = firstPackageWeight / firstPackagePrice;
+		double secondPackageRate = secondPackageWeight / secondPackagePrice;
+
+		if (firstPackageRate > secondPackageRate) {
 			System.out.println("Package 1 has a better price. ");
-		}
-		else if((firstPackageWeight/firstPackagePrice) == (secondPackageWeight/secondPackagePrice))
-		{
-			System.out.println("Both packages have the same price. ");
-		}
-		else
-		{
+		} else if (firstPackageRate == secondPackageRate) {
+			System.out.println("Two packages have the same price. ");
+		} else {
 			System.out.println("Package 2 has a better price. ");
 		}
 	}

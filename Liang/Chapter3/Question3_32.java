@@ -1,44 +1,55 @@
-import java.util.Scanner;
-//another great Question
+/*
+		How to prove the validity of this expression?
 
-/* solving this fully would require knowledge of creating new frames of reference from existing frames of reference
+		y = m * x + c is the y-intercept form of a line
+		Here, m = (y1 - y0) / (x1 - x0) + c
 
-Representing a point on a plane using the (r, theta) notation instead of the (x,y) notation. Changing frame of reference by an angle of theta. Moving the origin from (0,0) to (x1, y1).
+		m = slope, c = y-intercept
 
-After that, from the new frame of reference, if the point has an y-value more than 0, then the point is to the left of the line, else if y-value is less than 0, it is to the right of the line
+		Since (x0, y0) is a point on the line
+		y0 = m * x0 + c solves this equation
 
-Derivation of that inequality is key to solving the problem.
+		Evaluating c from this equation
+
+		c = (y0 * x1 - x0 * y1) / (x1 - x0);
+
+		The equation becomes
+		y = mx + c
+		or y = ((y1 - y0) * x) / (x1 - x0) + (y0 * x1 - x0 * y1) / (x1 - x0)
+
+		If p2 is on the left hand side of the line, we can draw a line with the same slope, parallel to p0p1, on which p2 lies
+		That line's equation would be y = mx + c + c1
+		Where (c1 > 0) (a line parallel to and on the left/above the original line will have higher y-intercept)
+
+		If p2 is on the right hand side of the line, we can draw a line with the same slope, parallel to p0p1, on which p2 lies
+		That line's equation would be y = mx + c + c1
+		Where (c1 < 0) (a line parallel to and on the right/below the original line will have lower y-intercept)
+
+		Solve the inequalities for the value of c1
 
 */
-
-public class Question3_32
-{
-	public static void main(String[] args)
-	{
+import java.util.Scanner;
+public class Question3_32 {
+	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		double x0, y0, x1, y1, x2, y2;
 
 		System.out.print("Enter three points for p0, p1 and p2: ");
-		x0 = scanner.nextDouble();
-		y0 = scanner.nextDouble();
-		x1 = scanner.nextDouble();
-		y1 = scanner.nextDouble();
-		x2 = scanner.nextDouble();
-		y2 = scanner.nextDouble();
+		double x0 = scanner.nextDouble();
+		double y0 = scanner.nextDouble();
+		double x1 = scanner.nextDouble();
+		double y1 = scanner.nextDouble();
+		double x2 = scanner.nextDouble();
+		double y2 = scanner.nextDouble();
+
 		scanner.close();
 
-		if((y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) > 0)
-		{
-			System.out.println("The point (" + x2 + ", " + y2 + ") is on the left side of the line from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
+		double differenceInYIntercept = (x1 - x0) * (y2 - y0) - (x2 - x0) * (y1 - y0);
+		if (differenceInYIntercept > 0) {
+			System.out.println("p2 is on the left side of the line. ");
+		} else if (differenceInYIntercept == 0) {
+			System.out.println("p2 is on the same line");
+		} else {
+			System.out.println("p2 is on the right side of the line ");
 		}
-		else if((y2 - y0)*(x1 - x0) - (x2 - x0)*(y1 - y0) == 0)
-		{
-			System.out.println("The point (" + x2 + ", " + y2 + ") is on the line from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
-		}
-		else
-		{
-			System.out.println("The point (" + x2 + ", " + y2 + ") is on the right side of the line from (" + x0 + ", " + y0 + ") to (" + x1 + ", " + y1 + "). ");
-		}
-
 	}
 }
